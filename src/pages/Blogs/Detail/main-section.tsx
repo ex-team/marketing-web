@@ -41,7 +41,7 @@ function MainSection(props: Props) {
         <div className="content-container p-grid">
           <div className="left-content p-col p-lg-8">
             <div className="heading p-mb-4">
-              {loading ? <Skeleton width="750%" height="30px" className="p-mb-2 p-mt-2" /> : <h1>{blog.title}</h1>}
+              {loading ? <Skeleton width="75%" height="30px" className="p-mb-2 p-mt-2" /> : <h1>{blog.title}</h1>}
             </div>
             {loading ? <Skeleton width="100%" /> : <p className="p-text-justify">{blog.description}</p>}
           </div>

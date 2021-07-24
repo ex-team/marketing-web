@@ -49,32 +49,46 @@ function MainSection(props: Props) {
             </div>
           )}
           <div className="p-grid p-justify-center">
-            {services.map((data, idx) => (
-              <div key={idx} className="services p-col-12 p-md-6 ">
-                <div className="pricing p-shadow-4" style={{ backgroundColor: data.background }}>
-                  <div className="heading p-justify-center">
-                    <img src={data.images} alt="" />
-                    <h1>{data.title}</h1>
+            {services.map((data, idx) => {
+              if (loading) {
+                return (
+                  <div key={idx} className="services p-col-12 p-md-6 ">
+                    <div className="pricing p-shadow-4" style={{ backgroundColor: data.background }}>
+                      <div className="heading p-justify-center">
+                        <Skeleton width="100%" height="100%" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="body">
-                    <table className="table-service">
-                      <tbody>
-                        {data.services.map((service, key) => (
-                          <tr key={key}>
-                            <td>{service.name}</td>
-                            {service.value === 'ok' ? (
-                              <td><i className="pi pi-check-circle"></i></td>
-                            ) : (
-                              <td>{service.value}</td>
-                            )}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                )
+              } else {
+                return (
+                  <div key={idx} className="services p-col-12 p-md-6 ">
+                    <div className="pricing p-shadow-4" style={{ backgroundColor: data.background }}>
+                      <div className="heading p-justify-center">
+                        <img src={data.images} alt="" />
+                        <h1>{data.title}</h1>
+                      </div>
+                      <div className="body">
+                        <table className="table-service">
+                          <tbody>
+                            {data.services.map((service, key) => (
+                              <tr key={key}>
+                                <td>{service.name}</td>
+                                {service.value === 'ok' ? (
+                                  <td><i className="pi pi-check-circle"></i></td>
+                                ) : (
+                                  <td>{service.value}</td>
+                                )}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                )
+              }
+            })}
           </div>
 
           <div className="content-services">

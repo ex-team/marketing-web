@@ -1,6 +1,8 @@
-import React, {useEffect} from 'react'
-import { Button } from 'primereact/button';
+import React, { useEffect, useState } from 'react';
+
 import Glide from '@glidejs/glide';
+import { Button } from 'primereact/button';
+import { Skeleton } from 'primereact/skeleton';
 
 export interface Props {
   data: any;
@@ -10,6 +12,8 @@ export interface Props {
 
 function IndustrySection(props: Props) {
   const industries = props.data;
+  const [loading, setLoading] = useState(true);
+
   const glide = new Glide('#industrySlider', {
     type: 'slider',
     startAt: 0,
@@ -34,6 +38,10 @@ function IndustrySection(props: Props) {
 
   useEffect(() => {
     glide.mount();
+    const load = setTimeout(() => {
+      setLoading(false);
+    }, 600);
+    return () => clearTimeout(load);
   });
 
   return (
@@ -42,14 +50,34 @@ function IndustrySection(props: Props) {
         <div className="content-section">
           <div className="p-grid">
             <div className="p-col-12 p-md-6 p-lg-4 industry-description">
-              <div className="heading-section">
-                <h1>{ props.heading }</h1>
-                <p>{ props.subheading }</p>
-              </div>
+              {loading ? (
+                <div className="heading-section">
+                  <Skeleton width="50%" height="30px" className="p-mb-2 p-mt-2" />
+                  <Skeleton width="100%" />
+                </div>
+              ) : (
+                <div className="heading-section">
+                  <h1>{props.heading}</h1>
+                  <p>{props.subheading}</p>
+                </div>
+              )}
               <ul>
-                {industries.map((data, idx) => (
-                  <li key={idx}><i className="pi pi-check-circle"></i>{ data.title }</li>
-                ))}
+                {industries.map((data, idx) => {
+                  if (loading) {
+                    return (
+                      <li key={idx}>
+                        <Skeleton width="50%" />
+                      </li>
+                    );
+                  } else {
+                    return (
+                      <li key={idx}>
+                        <i className="pi pi-check-circle"></i>
+                        {data.title}
+                      </li>
+                    );
+                  }
+                })}
               </ul>
             </div>
             <div className="p-col-12 p-md-6 p-lg-8 industry-picture">
@@ -58,17 +86,33 @@ function IndustrySection(props: Props) {
                   <div className="glide" id="industrySlider">
                     <div className="glide__track" data-glide-el="track">
                       <ul className="glide__slides p-align-center">
-                        {industries.map((data, idx) => (
-                          <li className="glide__slide p-shadow-3" key={idx}>
-                            <div className="content p-justify-center">
-                              <div className="heading-title centered">
-                                <h1>{data.title}</h1>
-                                <p>{data.description}</p>
-                              </div>
-                              <img className="image-banner" src={data.images} alt={data.title} />
-                            </div>
-                          </li>
-                        ))}
+                        {industries.map((data, idx) => {
+                          if (loading) {
+                            return (
+                              <li className="glide__slide p-shadow-3" key={idx}>
+                                <div className="content p-justify-center">
+                                  <div className="heading-title centered">
+                                    <Skeleton width="50%" height="30px" className="p-mb-2 p-mt-2" />
+                                    <Skeleton width="100%" />
+                                  </div>
+                                  <Skeleton width="100%" height="100%" />
+                                </div>
+                              </li>
+                            );
+                          } else {
+                            return (
+                              <li className="glide__slide p-shadow-3" key={idx}>
+                                <div className="content p-justify-center">
+                                  <div className="heading-title centered">
+                                    <h1>{data.title}</h1>
+                                    <p>{data.description}</p>
+                                  </div>
+                                  <img className="image-banner" src={data.images} alt={data.title} />
+                                </div>
+                              </li>
+                            );
+                          }
+                        })}
                       </ul>
                     </div>
 
@@ -92,7 +136,7 @@ function IndustrySection(props: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default IndustrySection
+export default IndustrySection;
