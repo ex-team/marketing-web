@@ -68,6 +68,7 @@ class App extends React.Component<Props, {}> {
   render() {
     return (
       <React.Fragment>
+        {/* <Router basename="/marketing-web"> */}
         <Router>
           <RouteEventWrapper>
             <TransitionGroup className="transition-group">
