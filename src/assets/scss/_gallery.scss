@@ -1,0 +1,121 @@
+// GALLERY STYLING
+
+.main-container {
+  padding: 100px 0;
+  background-color: #fff;
+
+  .btn-category {
+    border-radius: 35px;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+
+  .gallery .picture {
+    min-width: 350px;
+    height: 280px;
+    padding: 10px !important;
+    border-radius: 3px;
+  }
+
+  .gallery .picture:hover {
+    filter: opacity(0.8);
+    transform: scale(1.02);
+    transition: transform 0.5s ease-in-out !important;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+
+  .gallery video {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+  }
+
+  .modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 1002;
+  }
+
+  .open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    overflow: hidden;
+  }
+
+  .modal img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .modal video {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .modal .p-button-rounded {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 2rem;
+    width: 2rem;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .modal .description {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    cursor: help;
+
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
