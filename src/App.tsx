@@ -66,10 +66,11 @@ class App extends React.Component<Props, {}> {
   }
 
   render() {
+    console.log(process.env)
     return (
       <React.Fragment>
-        {/* <Router basename="/marketing-web"> */}
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
+        {/* <Router> */}
           <RouteEventWrapper>
             <TransitionGroup className="transition-group">
               <CSSTransition timeout={{ enter: 300, exit: 300 }} classNames="fade">
