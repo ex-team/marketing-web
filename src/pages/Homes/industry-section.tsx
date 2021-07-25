@@ -101,7 +101,7 @@ function IndustrySection(props: Props) {
                             );
                           } else {
                             return (
-                              <li className="glide__slide p-shadow-3" key={idx}>
+                              <li className="glide__slide p-shadow-4" key={idx}>
                                 <div className="content p-justify-center">
                                   <div className="heading-title centered">
                                     <h1>{data.title}</h1>

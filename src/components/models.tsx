@@ -1,6 +1,8 @@
 // Footer
 import appStore from './../assets/images/AppStoreBadge.svg';
 import playStore from './../assets/images/GooglePlayBadge.svg';
+import SERVICE1 from './../assets/images/box1.png';
+import SERVICE2 from './../assets/images/box2.png';
 import IMG_1 from './../assets/images/img-1.jpg';
 import IMG_2 from './../assets/images/img-2.jpg';
 import IMG_3 from './../assets/images/img-3.jpg';
@@ -11,7 +13,6 @@ import IMG_7 from './../assets/images/img-7.jpg';
 import IMG_8 from './../assets/images/img-8.jpg';
 import IMG_9 from './../assets/images/img-9.jpg';
 import BANNER_BG from './../assets/images/img-home.jpg';
-import logoLight from './../assets/images/logo_light_digipeta.svg';
 import logoLight2 from './../assets/images/logo-light.png';
 import IMGPARTNER_1 from './../assets/images/logo/logo-1.svg';
 import IMGPARTNER_2 from './../assets/images/logo/logo-2.svg';
@@ -20,8 +21,7 @@ import IMGPARTNER_4 from './../assets/images/logo/logo-4.svg';
 import IMGPARTNER_5 from './../assets/images/logo/logo-5.svg';
 import IMGPARTNER_6 from './../assets/images/logo/logo-6.svg';
 import IMGPARTNER_7 from './../assets/images/logo/logo-7.svg';
-import SERVICE1 from './../assets/images/box1.png';
-import SERVICE2 from './../assets/images/box2.png';
+import logoLight from './../assets/images/logo_light_digipeta.svg';
 
 const VIDEO_1 = '/videos/video-1.mp4';
 // const VIDEO_2 = '/videos/video-2.mp4';
@@ -44,18 +44,18 @@ export const dataHomes = {
   industries: true, // true for show, false to hidden
   industries_heading: 'Industry',
   industries_subheading:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    'GIS telah digunakan dalam berbagai bidang, meliputi perencanaan, pertanian, industri, infrastruktur, pengelolaan aset, monitoring, mitigasi bencana, survey dan lain lain.',
   services: true, // true for show, false to hidden
   services_heading: 'Service',
   services_subheading:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    'Sistem informasi yang kami bangun dapat digunakan lintas platform, meliputi platform desktop/ PC, WebGIS maupun mobile (Android).',
   samples: true, // true for show, false to hidden
   samples_heading: 'Sample Projects',
   samples_subheading:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    'Kami konsultan jasa yang bergerak dibidang Geospatial Information System hadir untuk membantu anda dalam membangun dan mengembangkan Sistem Informasi berbasis GIS. Banyak projects yang telah kami kerjakan diantara-nya :',
   blogs: true, // true for show, false to hidden
   blogs_heading: 'News and Product Updates',
-  blogs_subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+  blogs_subheading: 'Dapatkan berbagi informasi dan berita terbaru terkait produk dan layanan kami.',
   galleries: true, // true for show, false to hidden
   galleries_heading: 'Recent Gallery',
   galleries_subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
@@ -125,91 +125,100 @@ export const dataFeatures = [
   {
     title: 'Webgis',
     description: 'Explore the hidden waterfall deep inside the Amazon Jungle',
-    images: IMG_1
+    images: IMG_1,
   },
   {
     title: 'Mobile GIS',
     description: 'Explore the hidden waterfall deep inside the Amazon Jungle',
-    images: IMG_2
+    images: IMG_2,
   },
   {
     title: 'Integrasi',
     description: 'Explore the hidden waterfall deep inside the Amazon Jungle',
-    images: IMG_3
+    images: IMG_3,
   },
   {
     title: 'Custom',
     description: 'Explore the hidden waterfall deep inside the Amazon Jungle',
-    images: IMG_4
-  }
-]
+    images: IMG_4,
+  },
+];
 
 export const dataAbouts = {
-  abouts : 'Kami spesialis dalam pengembangan Sistem berbasis Webgis dan Mobile GIS. Webgis mampu memberikan kemudahan akses dalam pengelolaan data, integrasi dengan Mobile sebagai alat pengambilan dan pengiriman data secara realtime dari lokasi mampu meningkatkan efisiensi kerja dan menghemat biaya.'
-}
+  abouts:
+    'Kami spesialis dalam pengembangan Sistem berbasis Webgis dan Mobile GIS. Webgis mampu memberikan kemudahan akses dalam pengelolaan data, integrasi dengan Mobile sebagai alat pengambilan dan pengiriman data secara realtime dari lokasi mampu meningkatkan efisiensi kerja dan menghemat biaya.',
+};
 
 export const dataIndustries = [
   {
     id: 1,
     title: 'Infrastruktur',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_1
+    description:
+      'Di bidang infrastruktur kami menyediakan dan mengembangkan sistem inventarisasi dan monitoring aset seperti jalan, drainase, irigasi, pipa pdam, power plant, bangunan dan lain-lain.',
+    images: IMG_1,
   },
   {
     id: 2,
     title: 'Utilitas',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_2
+    description:
+      'Penyediaan dan pengembangan sistem untuk monitoring kondisi obyek utilitas perkotaan seperti tiang listrik, lampu lalu lintas, hidran, gorong-gorong dan lain-lain. ',
+    images: IMG_2,
   },
   {
     id: 3,
     title: 'Transportasi',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_3
+    description:
+      'Di bidang transportasi dan logistik kami menyediakan dan mengembangkan sistem untuk tracking kendaraan maupun barang.',
+    images: IMG_3,
   },
   {
     id: 4,
     title: 'Lingkungan',
     description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_4
+    images: IMG_4,
   },
   {
     id: 5,
     title: 'Kehutanan',
     description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_5
+    images: IMG_5,
   },
   {
     id: 6,
     title: 'Perkebunan',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_6
+    description:
+      'Di bidang perkebunan kami melayani pengembangan sistem berbasis GIS dan android yang digunakan untuk kegiatan penanaman, perawatan, pemupukan sampai pemanenan.',
+    images: IMG_6,
   },
   {
     id: 7,
     title: 'Pertambangan',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_7
+    description:
+      'Di pertambangan kami menyediakan sistem berbasis GIS dan Android untuk kegiatan monitoring eksplorasi, lahan maupun pengelolaan aset infrastruktur seperti jalan, stockpile dan lain-lain.',
+    images: IMG_7,
   },
   {
     id: 8,
     title: 'Perminyakan',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_8
+    description:
+      'Di sektor perminyakan kami melayani untuk pengelolaan maupun pemantauan aset seperti sumur minyak, utilitas, pipa, acces road dll.',
+    images: IMG_8,
   },
   {
     id: 9,
     title: 'Smart City',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_9
-  }
+    description:
+      'Kami menyediakan sistem untuk pelaporan kejadian berbasis lokasi. Sistem ini digunakan untuk mempercepat penanganan permasalahan seperti kerusakan infrastruktur dan bencana seperti kebakaran, longsor, banjir dan lain-lain.',
+    images: IMG_9,
+  },
 ];
 
 export const dataServices = [
   {
     id: 1,
     title: 'Paket Standar',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    description:
+      'Paket paling dasar dengan berbagai fitur yang kami berikan untuk keperluan menampilkan hasil dari pengelolahan data spasial.',
     background: '#fdf8e3',
     images: SERVICE1,
     services: [
@@ -253,7 +262,8 @@ export const dataServices = [
   {
     id: 2,
     title: 'Paket Custom',
-    description: 'Paket standar plus pilihan fitur atau sistem yang diinginkan (akan dilakukan diskusi konsep terlebih dahulu)',
+    description:
+      'Paket standar plus pilihan fitur atau sistem yang diinginkan (akan dilakukan diskusi konsep terlebih dahulu).',
     background: '#f0f3fa',
     images: SERVICE2,
     services: [
@@ -293,39 +303,46 @@ export const dataServices = [
         value: 'ok',
       },
     ],
-  }
+  },
 ];
 
 export const dataSamples = [
   {
     id: 1,
-    title: 'Webgis Jalan & Jembatan',
-    description: 'Lorem Ipsum',
+    title: 'Sistem Informasi Jalan dan Infrastruktur,',
+    description: 'Berisi tentang informasi database jalan dan pembangunan infrastruktur',
     thumbnail: IMG_1,
     url: 'https://www.youtube.com/embed/E7wJTI-1dvQ',
   },
   {
     id: 2,
-    title: 'Webgis Pipa PDAM',
-    description: 'Lorem Ipsum',
-    thumbnail: IMG_2,
+    title: 'Sistem Informasi Daerah Irigasi,',
+    description: 'Berisi tentang informasi database hasil survey aset dan Daerah Irigasi.',
+    thumbnail: IMG_4,
     url: 'https://www.youtube.com/embed/E7wJTI-1dvQ',
   },
   {
     id: 3,
-    title: 'Webgis Jalur KAI',
-    description: 'Lorem Ipsum',
+    title: 'Sistem Informasi Jalan dan Jembatan,',
+    description: 'Berisi tentang informasi Jalan, Titik Kerusakan dan Jembatan',
     thumbnail: IMG_3,
     url: 'https://www.youtube.com/embed/E7wJTI-1dvQ',
   },
   {
     id: 4,
-    title: 'Webgis Lain-nya',
+    title: 'Sistem Informasi Pipa PDAM,',
+    description: 'Berisi tentang informasi Pipa PDAM',
+    thumbnail: IMG_3,
+    url: 'https://www.youtube.com/embed/E7wJTI-1dvQ',
+  },
+  {
+    id: 5,
+    title: 'Dan Sistem Informasi Lain-nya',
     description: 'Lorem Ipsum',
     thumbnail: IMG_4,
     url: 'https://www.youtube.com/embed/E7wJTI-1dvQ',
   },
-]
+];
 
 export const dataPartners = [
   { id: 1, name: 'A Company', url: 'company.com', images: IMGPARTNER_1 },
@@ -353,7 +370,8 @@ export const dataPages = [
     id: 2,
     name: 'Service',
     heading: 'Service & Pricing',
-    subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    subheading:
+      'Sistem informasi yang kami bangun dapat digunakan lintas platform, meliputi platform desktop/ PC, WebGIS maupun mobile (Android).',
     banner: BANNER_BG,
     title: '',
     description: '',
@@ -362,7 +380,7 @@ export const dataPages = [
     id: 3,
     name: 'Blog',
     heading: 'Blogs',
-    subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    subheading: 'Dapatkan berbagi informasi dan berita terbaru terkait produk dan layanan kami.',
     banner: BANNER_BG,
     title: '',
     description: '',
@@ -374,7 +392,8 @@ export const dataFooter = [
   {
     logo: logoLight,
     logo2: logoLight2,
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    description:
+      'Kami konsultan jasa yang bergerak dibidang Geospatial Information System hadir untuk membantu anda dalam membangun dan mengembangkan Sistem Informasi berbasis GIS (Geographic Information System).',
     downloads: [
       {
         name: 'Apps Store',
@@ -401,36 +420,49 @@ export const dataFooter = [
         name: 'Blogs',
         url: '/blogs',
       },
+      {
+        name: 'Karomap',
+        url: 'https://www.karomap.com/',
+      },
     ],
     contacts: [
       {
         name: 'Phone',
-        description: '082123456789',
+        description: '(62) 274 2820 302',
+      },
+      {
+        name: 'Whatsapp',
+        description: '+62 896 2349 8800',
       },
       {
         name: 'Email',
-        description: 'comapny@mail.com',
+        description: 'contact@digipeta.com',
       },
       {
         name: 'Alamat',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+        description: 'Jl. Cendrawasih, Mejing Lor, Ambarketawang, Gamping, Sleman 55294',
       },
     ],
     socials: [
       {
         name: 'Facebook',
         icon: 'facebook',
-        url: 'https://facebook.com',
+        url: 'https://www.facebook.com/digipeta.id',
       },
       {
         name: 'Twitter',
         icon: 'twitter',
-        url: 'https://twitter.com',
+        url: 'https://twitter.com/digipeta',
+      },
+      {
+        name: 'Linkedin',
+        icon: 'info',
+        url: 'https://www.linkedin.com/in/digipeta-semesta-30612216b/',
       },
       {
         name: 'Youtube',
         icon: 'youtube',
-        url: 'https://youtube.com',
+        url: 'https://www.youtube.com/channel/UC0xnj0tLDCiPHiZrFPnE2Wg',
       },
       {
         name: 'Google',

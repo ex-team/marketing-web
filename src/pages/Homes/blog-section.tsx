@@ -54,7 +54,7 @@ function BlogSection(props: Props) {
               } else {
                 return (
                   <div key={idx} className="p-col p-md-6 p-xl-4 blog-box">
-                    <div className="blog-cover p-shadow-3">
+                    <div className="blog-cover p-shadow-4">
                       <Link to={'/blogs/' + data.slug}>
                         <img src={data.images} alt={data.title} />
                       </Link>

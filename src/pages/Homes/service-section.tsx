@@ -38,7 +38,7 @@ function ServiceSection(props: Props) {
                 ))}
                 </ul>
                 <div className="more p-d-flex p-jc-center">
-                  <Link to="/services">{loading ? <Skeleton width="20%" height="30px" /> : <Button label="Dapatkan Sekarang!" />}</Link>
+                  <Link to="/services">{loading ? <Skeleton width="20%" height="30px" /> : <Button label="Dapatkan Sekarang" />}</Link>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
+
 import { Button } from 'primereact/button';
-import { Link } from 'react-router-dom';
 
 export interface Props {
   data: any;
@@ -30,10 +30,14 @@ function SampleSection(props: Props) {
         <div className="content-section">
           <div className="p-grid">
             <div className="sample p-col-12 p-md-7">
-              <div className="video-embed p-shadow-4" >
+              <div className="video-embed p-shadow-4">
                 <img src={sample1.thumbnail} alt={sample1.title} />
                 <div className="play-btn">
-                  <Button icon="pi pi-play" className="p-button-rounded p-button-primary" onClick={() => getSrc(sample1.url, sample1.title)} />
+                  <Button
+                    icon="pi pi-play"
+                    className="p-button-rounded p-button-primary"
+                    onClick={() => getSrc(sample1.url, sample1.title)}
+                  />
                 </div>
               </div>
             </div>
@@ -41,7 +45,11 @@ function SampleSection(props: Props) {
               <div className="video-embed p-shadow-4">
                 <img src={sample2.thumbnail} alt={sample2.title} />
                 <div className="play-btn">
-                  <Button icon="pi pi-play" className="p-button-rounded p-button-primary" onClick={() => getSrc(sample2.url, sample2.title)} />
+                  <Button
+                    icon="pi pi-play"
+                    className="p-button-rounded p-button-primary"
+                    onClick={() => getSrc(sample2.url, sample2.title)}
+                  />
                 </div>
               </div>
             </div>
@@ -51,27 +59,36 @@ function SampleSection(props: Props) {
               <div className="video-embed p-shadow-4">
                 <img src={sample3.thumbnail} alt={sample3.title} />
                 <div className="play-btn">
-                  <Button icon="pi pi-play" className="p-button-rounded p-button-primary" onClick={() => getSrc(sample3.url, sample3.title)} />
+                  <Button
+                    icon="pi pi-play"
+                    className="p-button-rounded p-button-primary"
+                    onClick={() => getSrc(sample3.url, sample3.title)}
+                  />
                 </div>
               </div>
             </div>
             <div className="sample p-col-12 p-md-6">
               <div className="heading-section">
-                <h1>{ props.heading }</h1>
+                <h1>{props.heading}</h1>
                 <p>{props.subheading}</p>
                 <ul>
                   {samples.map((data, idx) => (
-                    <li key={idx}><i className="pi pi-check-circle"></i>{ data.title }</li>
+                    <li key={idx}>
+                      <i className="pi pi-check-circle"></i>
+                      {data.title}
+                    </li>
                   ))}
                 </ul>
-                <div className="more p-d-flex p-jc-center">
-                  <Link to="/services"> <Button label="Hubungi kami" /></Link>
+                <div className="more p-d-flex p-jc-left">
+                  <a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">
+                    <Button label="Hubungi Kami" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div className={modal ? 'modal open' : 'modal'}>
-            <iframe src={tempSrc}   allow='autoplay; encrypted-media'  title='video'/>
+            <iframe src={tempSrc} allow="autoplay; encrypted-media" title="video" />
             <Button icon="pi pi-times" className="p-button-rounded p-button-danger" onClick={() => setModal(false)} />
             <div className="description p-justify-center p-text-center">
               <h1>{tempTitle}</h1>
@@ -80,7 +97,7 @@ function SampleSection(props: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default SampleSection
+export default SampleSection;

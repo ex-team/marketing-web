@@ -104,15 +104,15 @@ function MainSection(props: Props) {
                 <li><i className="pi pi-check-circle"></i>Garansi : 3 bulan</li>
               </ul>
             </div>
-            <p>Download Browsur :</p>
+            <h3>Download Browsur :</h3>
             <ul>
               <li>Produk dan Detail keterangan produk</li>
               <li>Cara pemesanan dan pembayaran</li>
             </ul>
-            <p>Cara pemesanan :</p>
+            <h3>Cara pemesanan :</h3>
             <ul>
               <li>Form Pemesanan (Google Form)</li>
-              <li>Konsultasi  (hub WA)</li>
+              <li><a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">Konsultasi  (hub WA)</a></li>
             </ul>
           </div>
         </div>
