@@ -18,6 +18,7 @@ import IndexDetail from './pages/Blogs/Detail';
 import IndexHome from './pages/Homes/index';
 import IndexService from './pages/Services/index';
 
+
 const routes = [
   { path: '/', component: IndexHome, exact: true },
   { path: '/services', component: IndexService, exact: true },
@@ -66,11 +67,10 @@ class App extends React.Component<Props, {}> {
   }
 
   render() {
-    console.log(process.env)
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
-        {/* <Router> */}
+          {/* <Router> */}
           <RouteEventWrapper>
             <TransitionGroup className="transition-group">
               <CSSTransition timeout={{ enter: 300, exit: 300 }} classNames="fade">
