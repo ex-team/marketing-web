@@ -33,25 +33,25 @@ function SampleSection(props: Props) {
               <div className="video-embed p-shadow-4" >
                 <img src={sample1.thumbnail} alt={sample1.title} />
                 <div className="play-btn">
-                  <Button icon="pi pi-play" className="p-button-rounded p-button-danger" onClick={() => getSrc(sample1.url, sample1.title)} />
+                  <Button icon="pi pi-play" className="p-button-rounded p-button-primary" onClick={() => getSrc(sample1.url, sample1.title)} />
                 </div>
               </div>
             </div>
             <div className="sample p-col-12 p-md-5">
-              <div className="video-embed p-shadow-4" onClick={() => getSrc(sample1.url, sample1.title)}>
-                <img src={sample2.thumbnail} alt={sample1.title} />
+              <div className="video-embed p-shadow-4">
+                <img src={sample2.thumbnail} alt={sample2.title} />
                 <div className="play-btn">
-                  <Button icon="pi pi-play" className="p-button-rounded p-button-danger" onClick={() => getSrc(sample1.url, sample1.title)} />
+                  <Button icon="pi pi-play" className="p-button-rounded p-button-primary" onClick={() => getSrc(sample2.url, sample2.title)} />
                 </div>
               </div>
             </div>
           </div>
           <div className="p-grid">
             <div className="sample p-col-12 p-md-6">
-              <div className="video-embed p-shadow-4" onClick={() => getSrc(sample1.url, sample1.title)}>
-                <img src={sample3.thumbnail} alt={sample1.title} />
+              <div className="video-embed p-shadow-4">
+                <img src={sample3.thumbnail} alt={sample3.title} />
                 <div className="play-btn">
-                  <Button icon="pi pi-play" className="p-button-rounded p-button-danger" onClick={() => getSrc(sample1.url, sample1.title)} />
+                  <Button icon="pi pi-play" className="p-button-rounded p-button-primary" onClick={() => getSrc(sample3.url, sample3.title)} />
                 </div>
               </div>
             </div>

@@ -53,7 +53,7 @@ function MainSection(props: Props) {
               if (loading) {
                 return (
                   <div key={idx} className="services p-col-12 p-md-6 ">
-                    <div className="pricing p-shadow-4" style={{ backgroundColor: data.background }}>
+                    <div className="pricing p-shadow-4">
                       <div className="heading p-justify-center">
                         <Skeleton width="100%" height="100%" />
                       </div>

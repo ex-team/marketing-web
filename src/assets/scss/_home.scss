@@ -401,35 +401,8 @@ video {
   }
 }
 
-.blog-container {
-  padding: 100px 0 50px;
-  background-color: #fff;
-
-  .blog-cover {
-    min-width: 320px;
-    height: 220px;
-  }
-
-  .blog-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .blog-heading {
-    padding: 16px 5px;
-    min-width: 320px;
-    min-height: 100px;
-  }
-
-  .blog-heading h1 {
-    font-size: 20px;
-    line-height: 26px;
-  }
-}
-
 .service-container {
-  padding: 100px 0 50px;
+  padding: 50px 0;
   background-color: #fff;
 
   .heading-section .services-heading{
@@ -486,7 +459,7 @@ video {
 }
 
 .sample-container{
-  padding: 100px 0 50px;
+  padding: 50px 0;
   background-color: #fff;
 
   .content-section .sample {
@@ -561,7 +534,7 @@ video {
   }
 
   .content-section .modal iframe {
-    width: 80%;
+    width: 85%;
     height: 80%;
     display: block;
     line-height: 0;
@@ -609,6 +582,32 @@ video {
   }
 }
 
+.blog-container {
+  padding: 50px 0;
+  background-color: #fff;
+
+  .blog-cover {
+    min-width: 320px;
+    height: 220px;
+  }
+
+  .blog-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .blog-heading {
+    padding: 16px 5px;
+    min-width: 320px;
+    min-height: 100px;
+  }
+
+  .blog-heading h1 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
 
 .gallery-container {
   padding: 100px 0 50px;

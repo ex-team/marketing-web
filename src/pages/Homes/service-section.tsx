@@ -24,7 +24,7 @@ function ServiceSection(props: Props) {
       <div className="container">
         <div className="content-section">
           <div className="p-grid">
-            <div className="p-col-12 p-md-4">
+            <div className="p-col-12 p-lg-4">
               <div className="heading-section">
                 <h1>{ props.heading }</h1>
                 <p>{props.subheading}</p>
@@ -42,7 +42,7 @@ function ServiceSection(props: Props) {
                 </div>
               </div>
             </div>
-            <div className="p-col-12 p-md-8">
+            <div className="p-col-12 p-lg-8">
               <div className="p-grid p-justify-center">
                 {services.map((data, idx) => (
                     <div key={idx} className="services p-col-12 p-md-6">

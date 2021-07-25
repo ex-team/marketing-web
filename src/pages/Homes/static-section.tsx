@@ -27,7 +27,7 @@ function StaticSection(props: Props) {
             ))}
           </div>
           <div className="hero-btn">
-            <a href={props.url} target="_blank" rel="noopener noreferrer">
+            <a href={props.url}>
               <Button label={props.button} />
             </a>
           </div>
