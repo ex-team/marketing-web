@@ -1,8 +1,8 @@
 // Footer
 import appStore from './../assets/images/AppStoreBadge.svg';
 import playStore from './../assets/images/GooglePlayBadge.svg';
-import SERVICE1 from './../assets/images/box1.png';
-import SERVICE2 from './../assets/images/box2.png';
+// import SERVICE1 from './../assets/images/box1.png';
+// import SERVICE2 from './../assets/images/box2.png';
 import IMG_1 from './../assets/images/img-1.jpg';
 import IMG_2 from './../assets/images/img-2.jpg';
 import IMG_3 from './../assets/images/img-3.jpg';
@@ -23,6 +23,7 @@ import IMGPARTNER_6 from './../assets/images/logo/logo-6.svg';
 import IMGPARTNER_7 from './../assets/images/logo/logo-7.svg';
 import logoLight from './../assets/images/logo_light_digipeta.svg';
 
+
 const VIDEO_1 = '/videos/video-1.mp4';
 // const VIDEO_2 = '/videos/video-2.mp4';
 
@@ -30,7 +31,7 @@ const VIDEO_1 = '/videos/video-1.mp4';
 export const dataHomes = {
   id: 1,
   header_type: 0, // 0: Static Banner, 1: Slider Banner, 2: Video Banner
-  header_title: 'GIS APPLICATION DEVELOPMENT',
+  header_title: 'GIS ON DEMAND',
   header_description: 'Pengembangan Sistem & Aplikasi berbasis GIS',
   header_button: 'Pesan Sekarang',
   header_url: 'services',
@@ -49,6 +50,11 @@ export const dataHomes = {
   services_heading: 'Service',
   services_subheading:
     'Sistem informasi yang kami bangun dapat digunakan lintas platform, meliputi platform desktop/ PC, WebGIS maupun mobile (Android).',
+  thematics: true, // true for show, false to hidden
+  thematics_heading: 'Tema',
+  thematics_subheading: 'Beberapa tema yang sudah kami kerjakan :',
+  thematics_banner1: IMG_8,
+  thematics_banner2: IMG_9,
   samples: true, // true for show, false to hidden
   samples_heading: 'Sample Projects',
   samples_subheading:
@@ -206,6 +212,12 @@ export const dataIndustries = [
   },
   {
     id: 9,
+    title: 'Bisnis',
+    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
+    images: IMG_9,
+  },
+  {
+    id: 10,
     title: 'Smart City',
     description:
       'Kami menyediakan sistem untuk pelaporan kejadian berbasis lokasi. Sistem ini digunakan untuk mempercepat penanganan permasalahan seperti kerusakan infrastruktur dan bencana seperti kebakaran, longsor, banjir dan lain-lain.',
@@ -216,93 +228,84 @@ export const dataIndustries = [
 export const dataServices = [
   {
     id: 1,
-    title: 'Paket Standar',
+    title: 'GISWeb',
     description:
-      'Paket paling dasar dengan berbagai fitur yang kami berikan untuk keperluan menampilkan hasil dari pengelolahan data spasial.',
-    background: '#fdf8e3',
-    images: SERVICE1,
-    services: [
-      {
-        id: 1,
-        name: 'Tool dasar (pan, zoom, dll)',
-        value: 'ok',
-      },
-      {
-        id: 2,
-        name: 'Tool Informasi',
-        value: 'ok',
-      },
-      {
-        id: 3,
-        name: 'Pencarian / Query',
-        value: 'ok',
-      },
-      {
-        id: 4,
-        name: 'Edit data atribut',
-        value: 'ok',
-      },
-      {
-        id: 5,
-        name: 'Attachment Foto',
-        value: 'ok',
-      },
-      {
-        id: 6,
-        name: 'Attachment Video',
-        value: 'ok',
-      },
-      {
-        id: 6,
-        name: 'Export Data',
-        value: 'ok',
-      },
-    ],
+      'Gisweb merupakan Sistem Informasi Geografi berbasis online. Gisweb sangat dibutuhkan dalam pengelolaan data spatial seperti pengelolaan aset infrastruktur pemerintah maupun yang dikelola oleh swasta. Gisweb bisa dikembangkan untuk pengelolaan aset, pengelolaan pekerjaan maupun monitoring.',
   },
   {
     id: 2,
-    title: 'Paket Custom',
+    title: 'Mobile GIS',
     description:
-      'Paket standar plus pilihan fitur atau sistem yang diinginkan (akan dilakukan diskusi konsep terlebih dahulu).',
-    background: '#f0f3fa',
-    images: SERVICE2,
-    services: [
-      {
-        id: 1,
-        name: 'Statistik',
-        value: 'ok',
-      },
-      {
-        id: 2,
-        name: 'Grafik',
-        value: 'ok',
-      },
-      {
-        id: 3,
-        name: 'Edit data Spatial',
-        value: 'ok',
-      },
-      {
-        id: 4,
-        name: 'Multi User',
-        value: 'ok',
-      },
-      {
-        id: 5,
-        name: 'Web Profile',
-        value: 'ok',
-      },
-      {
-        id: 6,
-        name: 'Integrasi Mobile',
-        value: 'ok',
-      },
-      {
-        id: 6,
-        name: 'Fitur pesanan',
-        value: 'ok',
-      },
-    ],
+      'Mobille GIS merupakan aplikasi untuk pengambilan data (Mobile Data Collection) berbasis lokasi . Aplikasi bisa disesuaikan dengan kebutuhan perusahaan/organisasi. Beberapa contoh penggunaan aplikasi ini seperti survey data kependudukan, survey pelanggan, data flora dan fauna dan lain-lain.',
+  },
+  {
+    id: 3,
+    title: 'Integrasi Webgis dan Mobile',
+    description:
+      'Pengembangan sistem integrasi Webgis dan Mobile sangat efisiensi untuk pekerjaan managemen aset. Mobile App berfungsi sebagai alat pengambilan data aset dilokasi yang akan langsung terkirim secara real time pada sistem Webgis. Sistem bisa digunakan online maupun offline. Sistem ini sangat sesuai untuk kegiatan inspeksi aset infrastruktur seperti ; Jalan, jembatan, PDAM, rehabilitasi tambang, monitoring sawit dan lain-lain.',
+  },
+  {
+    id: 4,
+    title: 'Webgis Integrated',
+    description:
+      'Sistem ini merupakan pengembangan sistem Webgis yang akan diintegrasikan dengan sistem perusahaan yang sudah ada. Seperti contoh sistem SAAS pada perusahaan perkebunan ataupun distribusi barang yang belum ada informasi spatial/lokasi.',
+  },
+  {
+    id: 5,
+    title: 'Custom',
+    description:
+      'Layanan custom berupa pengembangan sistem berbasis Webgis atau mobile dan fitur-fiturnya sesuai dengan permintaan klien seperti pengembangan fitur analisa, fitur untuk inspeksi, Scedulling, work order, record tracking, KPI dan lain-lain.',
+  },
+];
+
+export const dataThematics = [
+  {
+    id: 1,
+    title: 'Jalan & jembatan',
+  },
+  {
+    id: 2,
+    title: 'Irigasi',
+  },
+  {
+    id: 3,
+    title: 'Jaringan Pipa',
+  },
+  {
+    id: 4,
+    title: 'IMB',
+  },
+  {
+    id: 5,
+    title: 'Inspeksi aset Tambang',
+  },
+  {
+    id: 6,
+    title: 'Dermaga',
+  },
+  {
+    id: 7,
+    title: 'Kehutanan',
+  },
+  {
+    id: 8,
+    title: 'Kawasan Pemukiman',
+  },
+  {
+    id: 9,
+    title: 'Keanekaragaman Hayati',
+  },
+  {
+    id: 10,
+    title: 'Patroli Satwa',
+  },
+  {
+    id: 11,
+    title: 'Aset KAI',
+  },
+  {
+    id: 12,
+    title: 'Dan Lainnya',
   },
 ];
 

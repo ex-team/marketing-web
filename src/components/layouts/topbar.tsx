@@ -4,9 +4,10 @@ import React from 'react';
 
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 
+
+
 import logoDark from '../../assets/images/logo_digipeta.svg';
 import logoLight from '../../assets/images/logo_light_digipeta.svg';
-
 
 type TopbarState = {
   logo: any;
@@ -91,7 +92,11 @@ class Topbar extends React.Component<RouteComponentProps<{}>, TopbarState> {
           <div className="container-fluid container-md">
             <div className="logo">
               <Link className="logo" to="/">
-                <img src={this.state.logo} className="brandLogo" alt="brand-logo" />
+                {this.isDesktop ? (
+                  <img src={this.state.logo} className="brandLogo" alt="brand-logo" />
+                ) : (
+                  <img src={logoDark} className="brandLogo" alt="brand-logo" />
+                )}
               </Link>
             </div>
             <div className="menu-extras">

@@ -1,4 +1,7 @@
 import React from 'react';
+
+
+
 import {
   dataHomes,
   dataBlogs,
@@ -6,19 +9,21 @@ import {
   dataAbouts,
   dataIndustries,
   dataServices,
+  dataThematics,
   dataSamples,
   dataPartners,
   dataSliders,
 } from './../../components/models';
+import AboutSection from './about-section';
 import BlogSection from './blog-section';
+import IndustrySection from './industry-section';
 import PartnerSection from './partner-section';
+import SampleSection from './sample-section';
+// import ServiceSection from './service-section';
 import SliderSection from './slider-section';
 import StaticSection from './static-section';
+import ThematicSection from './thematic-section';
 import VideoSection from './video-section';
-import IndustrySection from './industry-section';
-import AboutSection from './about-section';
-import ServiceSection from './service-section';
-import SampleSection from './sample-section';
 
 export interface IndexState {
   homes: any;
@@ -27,6 +32,7 @@ export interface IndexState {
   abouts: any;
   industries: any;
   services: any;
+  thematics: any;
   samples: any;
   blogs: any;
   partners: any;
@@ -40,6 +46,7 @@ class Index extends React.Component<{}, IndexState> {
     abouts: dataAbouts,
     industries: dataIndustries,
     services: dataServices,
+    thematics: dataThematics,
     samples: dataSamples,
     blogs: dataBlogs,
     partners: dataPartners,
@@ -85,12 +92,7 @@ class Index extends React.Component<{}, IndexState> {
             url={this.state.homes.header_url}
           />
         )}
-        {this.state.homes.abouts && (
-          <AboutSection
-            dataFeatures={this.state.features}
-            dataAbouts={this.state.abouts}
-          />
-        )}
+        {this.state.homes.abouts && <AboutSection dataFeatures={this.state.features} dataAbouts={this.state.abouts} />}
         {this.state.homes.industries && (
           <IndustrySection
             data={this.state.industries}
@@ -98,12 +100,21 @@ class Index extends React.Component<{}, IndexState> {
             subheading={this.state.homes.industries_subheading}
           />
         )}
-        {this.state.homes.services && (
-        <ServiceSection
-          data={this.state.services}
-          heading={this.state.homes.services_heading}
-          subheading={this.state.homes.services_subheading}
-        />
+        {/* {this.state.homes.services && (
+          <ServiceSection
+            data={this.state.services}
+            heading={this.state.homes.services_heading}
+            subheading={this.state.homes.services_subheading}
+          />
+        )} */}
+        {this.state.homes.thematics && (
+          <ThematicSection
+            data={this.state.thematics}
+            heading={this.state.homes.thematics_heading}
+            subheading={this.state.homes.thematics_subheading}
+            thematics_banner1={this.state.homes.thematics_banner1}
+            thematics_banner2={this.state.homes.thematics_banner2}
+          />
         )}
         <SampleSection
           data={this.state.samples}
