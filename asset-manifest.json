@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.css": "/marketing-web/static/css/main.a121b559.chunk.css",
-    "main.js": "/marketing-web/static/js/main.59c8dcc9.chunk.js",
-    "main.js.map": "/marketing-web/static/js/main.59c8dcc9.chunk.js.map",
+    "main.css": "/marketing-web/static/css/main.f0809886.chunk.css",
+    "main.js": "/marketing-web/static/js/main.63cd589d.chunk.js",
+    "main.js.map": "/marketing-web/static/js/main.63cd589d.chunk.js.map",
     "runtime-main.js": "/marketing-web/static/js/runtime-main.3dac5d6d.js",
     "runtime-main.js.map": "/marketing-web/static/js/runtime-main.3dac5d6d.js.map",
     "static/css/2.2069dc51.chunk.css": "/marketing-web/static/css/2.2069dc51.chunk.css",
-    "static/js/2.d3bdfd9c.chunk.js": "/marketing-web/static/js/2.d3bdfd9c.chunk.js",
-    "static/js/2.d3bdfd9c.chunk.js.map": "/marketing-web/static/js/2.d3bdfd9c.chunk.js.map",
+    "static/js/2.b4151584.chunk.js": "/marketing-web/static/js/2.b4151584.chunk.js",
+    "static/js/2.b4151584.chunk.js.map": "/marketing-web/static/js/2.b4151584.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/2.2069dc51.chunk.css.map": "/marketing-web/static/css/2.2069dc51.chunk.css.map",
-    "static/css/main.a121b559.chunk.css.map": "/marketing-web/static/css/main.a121b559.chunk.css.map",
-    "static/js/2.d3bdfd9c.chunk.js.LICENSE.txt": "/marketing-web/static/js/2.d3bdfd9c.chunk.js.LICENSE.txt",
+    "static/css/main.f0809886.chunk.css.map": "/marketing-web/static/css/main.f0809886.chunk.css.map",
+    "static/js/2.b4151584.chunk.js.LICENSE.txt": "/marketing-web/static/js/2.b4151584.chunk.js.LICENSE.txt",
     "static/media/AppStoreBadge.26677bca.svg": "/marketing-web/static/media/AppStoreBadge.26677bca.svg",
     "static/media/GooglePlayBadge.4f386b7e.svg": "/marketing-web/static/media/GooglePlayBadge.4f386b7e.svg",
-    "static/media/box1.874ef7f1.png": "/marketing-web/static/media/box1.874ef7f1.png",
-    "static/media/box2.dbdb31ae.png": "/marketing-web/static/media/box2.dbdb31ae.png",
     "static/media/img-1.53f48437.jpg": "/marketing-web/static/media/img-1.53f48437.jpg",
     "static/media/img-2.bb238fc1.jpg": "/marketing-web/static/media/img-2.bb238fc1.jpg",
     "static/media/img-3.6d683c0e.jpg": "/marketing-web/static/media/img-3.6d683c0e.jpg",
@@ -40,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.3dac5d6d.js",
     "static/css/2.2069dc51.chunk.css",
-    "static/js/2.d3bdfd9c.chunk.js",
-    "static/css/main.a121b559.chunk.css",
-    "static/js/main.59c8dcc9.chunk.js"
+    "static/js/2.b4151584.chunk.js",
+    "static/css/main.f0809886.chunk.css",
+    "static/js/main.63cd589d.chunk.js"
   ]
 }
