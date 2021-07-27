@@ -1,23 +1,19 @@
-import React from 'react';
-
-
+import React, { Suspense } from 'react';
 
 import { connect } from 'react-redux';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-
-
 
 import './App.scss';
 import { fetchPrefs } from './app/reducers/prefs';
 import RouteEventWrapper from './components/RouteEventWrapper';
 import Layout from './components/layouts';
 import RedirectToDashboard from './components/redirect';
-import IndexBlog from './pages/Blogs';
-import IndexDetail from './pages/Blogs/Detail';
-import IndexHome from './pages/Homes/index';
-import IndexService from './pages/Services/index';
 
+const IndexHome = React.lazy(() => import('./pages/Homes'));
+const IndexService = React.lazy(() => import('./pages/Services'));
+const IndexDetail = React.lazy(() => import('./pages/Blogs/Detail'));
+const IndexBlog = React.lazy(() => import('./pages/Blogs'));
 
 const routes = [
   { path: '/', component: IndexHome, exact: true },
@@ -70,22 +66,28 @@ class App extends React.Component<Props, {}> {
     return (
       <React.Fragment>
         <Router basename={process.env.PUBLIC_URL}>
-          {/* <Router> */}
-          <RouteEventWrapper>
-            <TransitionGroup className="transition-group">
-              <CSSTransition timeout={{ enter: 300, exit: 300 }} classNames="fade">
-                <Switch>
-                  {routes.map((route, idx) =>
-                    route.isWithoutLayout ? (
-                      <Route path={route.path} exact={route.exact} component={route.component} key={idx} />
-                    ) : (
-                      <Route path={route.path} exact={route.exact} component={withLayout(route.component)} key={idx} />
-                    )
-                  )}
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
-          </RouteEventWrapper>
+          <Suspense fallback>
+            <RouteEventWrapper>
+              <TransitionGroup className="transition-group">
+                <CSSTransition timeout={{ enter: 300, exit: 300 }} classNames="fade">
+                  <Switch>
+                    {routes.map((route, idx) =>
+                      route.isWithoutLayout ? (
+                        <Route path={route.path} exact={route.exact} component={route.component} key={idx} />
+                      ) : (
+                        <Route
+                          path={route.path}
+                          exact={route.exact}
+                          component={withLayout(route.component)}
+                          key={idx}
+                        />
+                      )
+                    )}
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            </RouteEventWrapper>
+          </Suspense>
         </Router>
       </React.Fragment>
     );

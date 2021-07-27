@@ -37,9 +37,14 @@ class Footer extends React.Component<{}, State> {
             <div className="p-grid">
               <div className="p-col-12 p-lg-4">
                 <div className="footer-logo p-pt-0 p-pb-4">
-                  <img src={this.state.logo} alt="" />
+                  <img src={this.state.logo} alt={this.state.copyrights} />
                 </div>
                 <p className="description">{this.state.description}</p>
+                <div className="footer-logo-second p-pt-4 p-pb-0">
+                  <a href='https://karomap.com/' target="_blank" rel="noopener noreferrer">
+                    <img src={this.state.logo2} alt={this.state.copyrights} />
+                  </a>
+                </div>
               </div>
               <div className="quicklinks p-col-12 p-lg-2">
                 <h1>Quick Links</h1>

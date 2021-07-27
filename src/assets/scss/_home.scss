@@ -384,7 +384,10 @@ video {
       width: 100%;
       text-align: left;
       left: 0;
-      top: 55%;
+      top: 0%;
+      background-color: rgba(0,0,0, .5);
+      padding-top: 280px;
+      height: 100%;
 
       h1 {
         font-size: 26px;
@@ -477,7 +480,7 @@ video {
 
     .thematic {
       width: 100%;
-      height: 500px;
+      height: 480px;
     }
 
     img {

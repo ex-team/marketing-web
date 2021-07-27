@@ -372,7 +372,7 @@ export const dataPages = [
   {
     id: 2,
     name: 'Service',
-    heading: 'Service & Pricing',
+    heading: 'Layanan & Harga',
     subheading:
       'Sistem informasi yang kami bangun dapat digunakan lintas platform, meliputi platform desktop/ PC, WebGIS maupun mobile (Android).',
     banner: BANNER_BG,
