@@ -18,9 +18,7 @@ function updateState(state = initialState, action: PayloadAction<any>) {
 
 // The function below is called a thunk and allows us to perform async logic.
 export const fetchPrefs = createAsyncThunk('prefs/fetch', async () => {
-  return await new Promise(resolve => {
-    setTimeout(() => {}, 1000);
-  });
+  return await new Promise(resolve => setTimeout(resolve, 1000));
 });
 
 export const prefsSlice = createSlice({
@@ -33,6 +31,5 @@ export const prefsSlice = createSlice({
     builder.addCase(fetchPrefs.fulfilled, updateState);
   },
 });
-
 
 export default prefsSlice.reducer;

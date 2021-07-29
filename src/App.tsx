@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+
+
 import './App.scss';
 import { fetchPrefs } from './app/reducers/prefs';
 import RouteEventWrapper from './components/RouteEventWrapper';
@@ -38,7 +40,10 @@ function withLayout(WrappedComponent) {
 }
 
 export interface Props {
-  prefs: any;
+  prefs: {
+    title: string;
+    description: string;
+  };
   dispatch: any;
 }
 
@@ -59,7 +64,8 @@ class App extends React.Component<Props, {}> {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this._setMeta();
     this.props.dispatch(fetchPrefs());
-    console.log(this.props.dispatch(fetchPrefs()));
+    // console.log(this.props);
+    // console.log(this.props.dispatch(fetchPrefs()));
   }
 
   componentDidUpdate() {
