@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 
+
+
 import { connect } from 'react-redux';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -42,20 +44,22 @@ export interface Props {
 
 class App extends React.Component<Props, {}> {
   _setMeta() {
-    // document.title = this.props.prefs.title;
-    // let metaDescription = document.head.querySelector('meta[name="description"]');
-    // if (!metaDescription) {
-    //   metaDescription = document.createElement('meta');
-    //   metaDescription.name = 'description';
-    //   document.head.append(metaDescription);
-    // }
-    // metaDescription.content = this.props.prefs.description;
+    document.title = this.props.prefs.title;
+    let metaDescription = document.head.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      let meta = document.createElement('meta');
+      meta.name = 'description';
+      document.head.append(meta);
+      meta.content = this.props.prefs.description;
+    }
+    metaDescription?.setAttribute('content', this.props.prefs.description);
   }
 
   componentDidMount() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this._setMeta();
     this.props.dispatch(fetchPrefs());
+    console.log(this.props.dispatch(fetchPrefs()));
   }
 
   componentDidUpdate() {
@@ -93,5 +97,6 @@ class App extends React.Component<Props, {}> {
     );
   }
 }
+
 
 export default connect((state: any) => ({ prefs: state.prefs }))(App);

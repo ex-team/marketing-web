@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+
+
+
 import { prefsReducer } from './reducers';
+
 
 export const store = configureStore({
   reducer: {
-    counter: prefsReducer,
+    prefs: prefsReducer,
   },
 });
 

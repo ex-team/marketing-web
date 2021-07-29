@@ -23,8 +23,6 @@ function ThematicSection(props: Props) {
     return () => clearTimeout(load);
   });
 
-  console.log(window.innerWidth);
-
   return (
     <div className="thematic-container">
       <div className="container">
