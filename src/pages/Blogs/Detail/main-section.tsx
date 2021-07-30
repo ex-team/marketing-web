@@ -1,25 +1,36 @@
 import React, { useState, useEffect } from 'react';
 
+
+
 import { Skeleton } from 'primereact/skeleton';
 import { Link } from 'react-router-dom';
 
+
 export interface Props {
   data: {
-    id: number;
-    title: string;
-    slug: string;
-    category: string;
-    images: any;
-    description: string;
-    author: string;
+    author: any;
+    body: string;
+    categories: any;
+    comment_count: number;
+    configs: string;
     created_at: string;
+    deleted_at: string;
+    description: string;
+    featured_image: string;
+    id: number;
+    published: boolean;
+    published_at: string;
+    slug: string;
+    tags: any;
+    title: string;
+    type: string;
     updated_at: string;
   };
   latest: any;
 }
 function MainSection(props: Props) {
   const blogs = props.data;
-  const [blog, setBlog] = useState({ title: '', description: '' });
+  const [blog, setBlog] = useState({ title: '', body: '' });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -43,7 +54,7 @@ function MainSection(props: Props) {
             <div className="heading p-mb-4">
               {loading ? <Skeleton width="75%" height="30px" className="p-mb-2 p-mt-2" /> : <h1>{blog.title}</h1>}
             </div>
-            {loading ? <Skeleton width="100%" /> : <p className="p-text-justify">{blog.description}</p>}
+            {loading ? <Skeleton width="100%" /> : <p className="p-text-justify">{blog.body}</p>}
           </div>
           <div className="right-content p-col p-lg-4">
             <h5>Recent Blogs</h5>

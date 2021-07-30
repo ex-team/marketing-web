@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
+
+
+import { RouteComponentProps } from 'react-router-dom';
+
 import { dataBlogs } from '../../../components/models';
+import API from '../../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
 
@@ -9,10 +14,10 @@ export interface IndexDetailState {
   latest: any;
 }
 
-class IndexDetail extends Component<{}, IndexDetailState> {
+class IndexDetail extends Component<RouteComponentProps, IndexDetailState> {
   private params: any;
   state: IndexDetailState = {
-    blog: [],
+    blog: {},
     latest: dataBlogs,
   };
   constructor(props: any) {
@@ -24,7 +29,7 @@ class IndexDetail extends Component<{}, IndexDetailState> {
     window.addEventListener('scroll', this.scrollNavigation, true);
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps: RouteComponentProps) {
     if (prevProps.history.location.pathname !== this.params.match.url) {
       this.getData();
     }
@@ -46,19 +51,29 @@ class IndexDetail extends Component<{}, IndexDetailState> {
   getData() {
     this.params = this.props;
     const slug = this.params.match.params.slug;
-    if (this.params.match && this.params.match.params.slug) {
-      // next replace with axios
-      const detailBlog = dataBlogs.filter((data: any) => {
-        return Object.values(data).join(' ').toLowerCase().includes(slug.toLowerCase());
+    if (this.params.match && slug) {
+      API.getDetailPost(slug).then(result => {
+        this.setState({
+          blog: result,
+        });
+        console.log(result);
       });
-      this.setState({ blog: detailBlog[0] });
     }
   }
 
   render() {
     return (
       <React.Fragment>
-        <HeroSection data={this.state.blog} />
+        {/* <HeroSection data={this.state.blog} /> */}
+        {/* <div className="hero-container" style={{ backgroundImage: `url(${this.state.blog.featured_image})` }}>
+          <div className="container title-heading p-text-center">
+            <h1>{this.state.blog.title}</h1>
+            <span className="meta">
+              <i className="pi pi-user p-mr-2"></i> {this.state.blog.author.username} |{' '}
+              {new Date(this.state.blog.created_at).toDateString()}
+            </span>
+          </div>
+        </div> */}
         <MainSection data={this.state.blog} latest={this.state.latest} />
       </React.Fragment>
     );

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
+
+
 import { dataBlogs, dataPages } from '../../components/models';
+import API from '../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
 
@@ -8,17 +11,15 @@ export interface IndexState {
   pages: any;
   blogs: any;
   categories: any;
+  totalRecords: number;
 }
 
 class Index extends Component<{}, IndexState> {
   state: IndexState = {
     pages: dataPages[2],
-    blogs: dataBlogs,
-    categories: [
-      { id: 1, label: 'Articles', value: 'articles' },
-      { id: 2, label: 'Blogs', value: 'blogs' },
-      { id: 3, label: 'News', value: 'news' },
-    ],
+    blogs: [],
+    categories: [],
+    totalRecords: 0,
   };
   constructor(props: {}) {
     super(props);
@@ -28,10 +29,28 @@ class Index extends Component<{}, IndexState> {
 
   componentDidMount() {
     window.addEventListener('scroll', this.scrollNavigation, true);
+    this.getPostAPI();
   }
+
+  getPostAPI = () => {
+    API.getCategoryBlogs().then(result => {
+      this.setState({
+        categories: result,
+      });
+    });
+    API.getBlogs().then(result => {
+      this.setState({
+        blogs: result,
+        totalRecords: result.length,
+      });
+      console.log(result);
+    });
+  };
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.scrollNavigation, true);
   }
+
   scrollNavigation = () => {
     const doc = document.documentElement;
     const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
@@ -46,7 +65,11 @@ class Index extends Component<{}, IndexState> {
     return (
       <React.Fragment>
         <HeroSection data={this.state.pages} />
-        <MainSection data={this.state.blogs} categories={this.state.categories} totalRecords={dataBlogs.length} />
+        <MainSection
+          data={this.state.blogs}
+          categories={this.state.categories}
+          totalRecords={this.state.blogs.length}
+        />
       </React.Fragment>
     );
   }

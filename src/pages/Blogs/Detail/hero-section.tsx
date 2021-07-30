@@ -15,6 +15,7 @@ export interface Props {
   };
 }
 function HeroSection(props: Props) {
+  console.log(props);
   return (
     <div className="hero-container" style={{ backgroundImage: `url(${props.data.images})` }}>
       <div className="container title-heading p-text-center">
