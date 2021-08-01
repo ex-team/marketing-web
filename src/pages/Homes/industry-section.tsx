@@ -20,7 +20,7 @@ function IndustrySection(props: Props) {
         <div className="content-section">
           {loading ? (
             <div className="heading-section">
-              <Skeleton width="50%" height="30px" className="p-mb-2 p-mt-2" />
+              <Skeleton width="100%" height="30px" className="p-mb-2 p-mt-2" />
               <Skeleton width="100%" />
             </div>
           ) : (

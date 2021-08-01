@@ -28,7 +28,8 @@ function HeroSection(props: Props) {
       {loading ? (
         <div className="container title-heading p-justify-center">
           <Skeleton width="100%" height="30px" className="p-mb-2 p-mt-2" />
-          <Skeleton width="100%" />
+          <Skeleton width="100%" className="p-mb-2 p-mt-2"/>
+          <Skeleton width="100%" className="p-mb-2 p-mt-2"/>
         </div>
       ) : (
         <div className="container title-heading p-text-center">

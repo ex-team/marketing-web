@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 
 import { RouteComponentProps } from 'react-router-dom';
 
-import { dataBlogs } from '../../../components/models';
+
+
 import API from '../../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
@@ -18,7 +19,7 @@ class IndexDetail extends Component<RouteComponentProps, IndexDetailState> {
   private params: any;
   state: IndexDetailState = {
     blog: {},
-    latest: dataBlogs,
+    latest: [],
   };
   constructor(props: any) {
     super(props);
@@ -26,6 +27,7 @@ class IndexDetail extends Component<RouteComponentProps, IndexDetailState> {
   }
   componentDidMount() {
     this.getData();
+    this.getLatest();
     window.addEventListener('scroll', this.scrollNavigation, true);
   }
 
@@ -59,6 +61,18 @@ class IndexDetail extends Component<RouteComponentProps, IndexDetailState> {
       });
     }
   }
+
+  getLatest = () => {
+    API.getBlogs()
+      .then(result => {
+        this.setState({
+          latest: [...result],
+        });
+      })
+      .catch(e => {
+        console.error(e);
+      });
+  };
 
   render() {
     return (

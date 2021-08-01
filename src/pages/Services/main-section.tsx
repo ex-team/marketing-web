@@ -33,7 +33,11 @@ function MainSection(props: Props) {
           {loading ? (
             <div className="heading-section">
               <Skeleton width="30%" height="30px" className="p-mb-2 p-mt-2" />
-              <Skeleton width="50%" />
+              <Skeleton width="100%" className="p-mt-2"/>
+              <Skeleton width="100%" className="p-mt-2"/>
+              <Skeleton width="100%" className="p-mt-2"/>
+              <Skeleton width="100%" className="p-mt-2"/>
+              <Skeleton width="100%" className="p-mt-2"/>
             </div>
           ) : (
             <div className="heading-section">

@@ -93,11 +93,15 @@ class MainSection extends React.Component<Props, {}> {
                 {this.state.loading ? (
                   <Skeleton width="100%" height="100%" />
                 ) : (
-                  <img src={this.state.data.featured_image} alt={this.state.data.title} />
+                  <img className="p-shadow-3" src={this.state.data.featured_image} alt={this.state.data.title} />
                 )}
               </div>
               {this.state.loading ? (
-                <Skeleton width="100%" />
+                <div>
+                  <Skeleton width="100%" className="p-mt-2"/>
+                  <Skeleton width="100%" className="p-mt-2"/>
+                  <Skeleton width="100%" className="p-mt-2"/>
+                </div>
               ) : (
                 <p className="p-text-justify" dangerouslySetInnerHTML={{ __html: this.state.data.body }}></p>
               )}
@@ -122,19 +126,19 @@ class MainSection extends React.Component<Props, {}> {
                     } else {
                       return (
                         <li key={idx} className="p-mb-3">
-                          <div className="p-d-flex blogs">
-                            <div className="thumbnail-blog p-shadow-3">
-                              <img src={data.images} alt={data.title} />
+                          <div className="p-grid blogs">
+                            <div className="p-col-3">
+                              <div className="thumbnail-blog p-shadow-3">
+                                <img src={data.featured_image} alt={data.title} />
+                              </div>
                             </div>
-                            <div className="heading-blogs" style={{ flex: '1' }}>
-                              <h1>
-                                <Link to={data.slug}>{data.title}</Link>
-                              </h1>
-                              <p>
-                                {data.description.length > 100
-                                  ? data.description.slice(0, 100) + ','
-                                  : data.description}
-                              </p>
+                            <div className="p-col-9">
+                              <div className="heading-blogs" style={{ flex: '1' }}>
+                                <h1>
+                                  <Link to={data.slug}>{data.title}</Link>
+                                </h1>
+                                <div className="body" dangerouslySetInnerHTML={{ __html: data.body }}></div>
+                              </div>
                             </div>
                           </div>
                         </li>
