@@ -1,6 +1,9 @@
 import React from 'react';
 
+
+
 import { Button } from 'primereact/button';
+import { Link } from 'react-router-dom';
 
 export interface Props {
   picture: string;
@@ -21,15 +24,18 @@ function StaticSection(props: Props) {
           <p>{props.description}</p>
           <div className="features p-grid p-justify-start">
             {features.map((data, idx) => (
-            <div key={idx} className="p-col-12 p-md-3 p-lg-2">
-              <p><i className="pi pi-check-circle"></i>{data.title}</p>
-            </div>
+              <div key={idx} className="p-col-12 p-md-3 p-lg-2">
+                <p>
+                  <i className="pi pi-check-circle"></i>
+                  {data.title}
+                </p>
+              </div>
             ))}
           </div>
           <div className="hero-btn">
-            <a href={props.url}>
+            <Link to={props.url}>
               <Button label={props.button} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
