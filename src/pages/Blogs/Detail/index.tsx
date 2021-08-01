@@ -56,7 +56,6 @@ class IndexDetail extends Component<RouteComponentProps, IndexDetailState> {
         this.setState({
           blog: result,
         });
-        console.log(result);
       });
     }
   }
@@ -64,16 +63,7 @@ class IndexDetail extends Component<RouteComponentProps, IndexDetailState> {
   render() {
     return (
       <React.Fragment>
-        {/* <HeroSection data={this.state.blog} /> */}
-        {/* <div className="hero-container" style={{ backgroundImage: `url(${this.state.blog.featured_image})` }}>
-          <div className="container title-heading p-text-center">
-            <h1>{this.state.blog.title}</h1>
-            <span className="meta">
-              <i className="pi pi-user p-mr-2"></i> {this.state.blog.author.username} |{' '}
-              {new Date(this.state.blog.created_at).toDateString()}
-            </span>
-          </div>
-        </div> */}
+        <HeroSection data={this.state.blog} />
         <MainSection data={this.state.blog} latest={this.state.latest} />
       </React.Fragment>
     );

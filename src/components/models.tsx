@@ -32,8 +32,8 @@ export const dataHomes = {
   id: 1,
   header_type: 0, // 0: Static Banner, 1: Slider Banner, 2: Video Banner
   header_title: 'GIS ON DEMAND',
-  header_description: 'Pengembangan Sistem & Aplikasi berbasis GIS',
-  header_button: 'Pesan Sekarang',
+  header_description: 'Jasa Pengembangan Sistem & aplikasi berbasis GIS ',
+  header_button: 'Service / Layanan',
   header_url: 'services',
   header_image: BANNER_BG,
   header_video: VIDEO_1,
@@ -45,11 +45,11 @@ export const dataHomes = {
   industries: true, // true for show, false to hidden
   industries_heading: 'Industry',
   industries_subheading:
-    'GIS telah digunakan dalam berbagai bidang, meliputi perencanaan, pertanian, industri, infrastruktur, pengelolaan aset, monitoring, mitigasi bencana, survey dan lain lain.',
+    'Infrastruktur, Utilitas, Lingkungan, Kehutanan, Perkebunan, Pertambangan, Perminyakan, Transportasi, Bisnis, Smart City',
   services: true, // true for show, false to hidden
   services_heading: 'Service',
   services_subheading:
-    'Sistem informasi yang kami bangun dapat digunakan lintas platform, meliputi platform desktop/ PC, WebGIS maupun mobile (Android).',
+    'Gis On Demand. Konsultasikan dan diskusikan konsep sistem yang anda butuhkan bersama kami, Gratis melalui WA, Email maupun telepon langsung.',
   thematics: true, // true for show, false to hidden
   thematics_heading: 'Tema',
   thematics_subheading: 'Beberapa tema yang sudah kami kerjakan :',
@@ -59,7 +59,7 @@ export const dataHomes = {
   samples_heading: 'Sample Projects',
   samples_subheading:
     'Kami konsultan jasa yang bergerak dibidang Geospatial Information System hadir untuk membantu anda dalam membangun dan mengembangkan Sistem Informasi berbasis GIS. Banyak projects yang telah kami kerjakan diantara-nya :',
-  blogs: true, // true for show, false to hidden
+  blogs: false, // true for show, false to hidden
   blogs_heading: 'News and Product Updates',
   blogs_subheading: 'Dapatkan berbagi informasi dan berita terbaru terkait produk dan layanan kami.',
   galleries: true, // true for show, false to hidden
@@ -152,111 +152,8 @@ export const dataFeatures = [
 
 export const dataAbouts = {
   abouts:
-    'Kami spesialis dalam pengembangan Sistem berbasis Webgis dan Mobile GIS. Webgis mampu memberikan kemudahan akses dalam pengelolaan data, integrasi dengan Mobile sebagai alat pengambilan dan pengiriman data secara realtime dari lokasi mampu meningkatkan efisiensi kerja dan menghemat biaya.',
+    'Infrastruktur, Utilitas, Lingkungan, Kehutanan, Perkebunan, Pertambangan, Perminyakan, Transportasi, Bisnis, Smart City',
 };
-
-export const dataIndustries = [
-  {
-    id: 1,
-    title: 'Infrastruktur',
-    description:
-      'Di bidang infrastruktur kami menyediakan dan mengembangkan sistem inventarisasi dan monitoring aset seperti jalan, drainase, irigasi, pipa pdam, power plant, bangunan dan lain-lain.',
-    images: IMG_1,
-  },
-  {
-    id: 2,
-    title: 'Utilitas',
-    description:
-      'Penyediaan dan pengembangan sistem untuk monitoring kondisi obyek utilitas perkotaan seperti tiang listrik, lampu lalu lintas, hidran, gorong-gorong dan lain-lain. ',
-    images: IMG_2,
-  },
-  {
-    id: 3,
-    title: 'Transportasi',
-    description:
-      'Di bidang transportasi dan logistik kami menyediakan dan mengembangkan sistem untuk tracking kendaraan maupun barang.',
-    images: IMG_3,
-  },
-  {
-    id: 4,
-    title: 'Lingkungan',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_4,
-  },
-  {
-    id: 5,
-    title: 'Kehutanan',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_5,
-  },
-  {
-    id: 6,
-    title: 'Perkebunan',
-    description:
-      'Di bidang perkebunan kami melayani pengembangan sistem berbasis GIS dan android yang digunakan untuk kegiatan penanaman, perawatan, pemupukan sampai pemanenan.',
-    images: IMG_6,
-  },
-  {
-    id: 7,
-    title: 'Pertambangan',
-    description:
-      'Di pertambangan kami menyediakan sistem berbasis GIS dan Android untuk kegiatan monitoring eksplorasi, lahan maupun pengelolaan aset infrastruktur seperti jalan, stockpile dan lain-lain.',
-    images: IMG_7,
-  },
-  {
-    id: 8,
-    title: 'Perminyakan',
-    description:
-      'Di sektor perminyakan kami melayani untuk pengelolaan maupun pemantauan aset seperti sumur minyak, utilitas, pipa, acces road dll.',
-    images: IMG_8,
-  },
-  {
-    id: 9,
-    title: 'Bisnis',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle What are you waiting for?',
-    images: IMG_9,
-  },
-  {
-    id: 10,
-    title: 'Smart City',
-    description:
-      'Kami menyediakan sistem untuk pelaporan kejadian berbasis lokasi. Sistem ini digunakan untuk mempercepat penanganan permasalahan seperti kerusakan infrastruktur dan bencana seperti kebakaran, longsor, banjir dan lain-lain.',
-    images: IMG_9,
-  },
-];
-
-export const dataServices = [
-  {
-    id: 1,
-    title: 'GISWeb',
-    description:
-      'Gisweb merupakan Sistem Informasi Geografi berbasis online. Gisweb sangat dibutuhkan dalam pengelolaan data spatial seperti pengelolaan aset infrastruktur pemerintah maupun yang dikelola oleh swasta. Gisweb bisa dikembangkan untuk pengelolaan aset, pengelolaan pekerjaan maupun monitoring.',
-  },
-  {
-    id: 2,
-    title: 'Mobile GIS',
-    description:
-      'Mobille GIS merupakan aplikasi untuk pengambilan data (Mobile Data Collection) berbasis lokasi . Aplikasi bisa disesuaikan dengan kebutuhan perusahaan/organisasi. Beberapa contoh penggunaan aplikasi ini seperti survey data kependudukan, survey pelanggan, data flora dan fauna dan lain-lain.',
-  },
-  {
-    id: 3,
-    title: 'Integrasi Webgis dan Mobile',
-    description:
-      'Pengembangan sistem integrasi Webgis dan Mobile sangat efisiensi untuk pekerjaan managemen aset. Mobile App berfungsi sebagai alat pengambilan data aset dilokasi yang akan langsung terkirim secara real time pada sistem Webgis. Sistem bisa digunakan online maupun offline. Sistem ini sangat sesuai untuk kegiatan inspeksi aset infrastruktur seperti ; Jalan, jembatan, PDAM, rehabilitasi tambang, monitoring sawit dan lain-lain.',
-  },
-  {
-    id: 4,
-    title: 'Webgis Integrated',
-    description:
-      'Sistem ini merupakan pengembangan sistem Webgis yang akan diintegrasikan dengan sistem perusahaan yang sudah ada. Seperti contoh sistem SAAS pada perusahaan perkebunan ataupun distribusi barang yang belum ada informasi spatial/lokasi.',
-  },
-  {
-    id: 5,
-    title: 'Custom',
-    description:
-      'Layanan custom berupa pengembangan sistem berbasis Webgis atau mobile dan fitur-fiturnya sesuai dengan permintaan klien seperti pengembangan fitur analisa, fitur untuk inspeksi, Scedulling, work order, record tracking, KPI dan lain-lain.',
-  },
-];
 
 export const dataThematics = [
   {
@@ -306,6 +203,102 @@ export const dataThematics = [
   {
     id: 12,
     title: 'Dan Lainnya',
+  },
+];
+
+export const dataThematicSliders = [
+  {
+    id: 1,
+    title: '',
+    description: '',
+    images: IMG_1,
+  },
+  {
+    id: 2,
+    title: '',
+    description: '',
+    images: IMG_2,
+  },
+  {
+    id: 3,
+    title: '',
+    description: '',
+    images: IMG_3,
+  },
+  {
+    id: 4,
+    title: '',
+    description: '',
+    images: IMG_4,
+  },
+  {
+    id: 5,
+    title: '',
+    description: '',
+    images: IMG_5,
+  },
+  {
+    id: 6,
+    title: '',
+    description: '',
+    images: IMG_6,
+  },
+  {
+    id: 7,
+    title: '',
+    description: '',
+    images: IMG_7,
+  },
+  {
+    id: 8,
+    title: '',
+    description: '',
+    images: IMG_8,
+  },
+  {
+    id: 9,
+    title: '',
+    description: '',
+    images: IMG_9,
+  },
+  {
+    id: 10,
+    title: '',
+    description: '',
+    images: IMG_5,
+  },
+  {
+    id: 11,
+    title: '',
+    description: '',
+    images: IMG_6,
+  },
+];
+
+export const dataServices = [
+  {
+    id: 1,
+    title: 'GISWeb',
+    description:
+      'Gisweb merupakan Sistem Informasi berbasis Geografi yang dijalankan secara online. Pada saat ini GIS sudah hampir digunakan disemua bidang pekerjaan khususnya dalam pengelolaan data aset spatial baik dipemerintahan maupun swasta. Dengan ditunjang fitur-fitur analisa seperti statistik GIS mampu memberikan nilai lebih dalam penyajian data secara visual dan memudahkan dalam pengambilan keputusan.',
+  },
+  {
+    id: 2,
+    title: 'Mobile GIS',
+    description:
+      'Mobille GIS merupakan tool untuk pengambilan data (Mobile Data Collection) berbasis lokasi. Kami melayani pengembangan aplikasi khusus untuk pengambilan data yang bisa menyesuaikan kebutuhan perusahaan atau organisasi. Beberapa contoh penggunaan aplikasi mobile GIS ini seperti survey data kependudukan, survey sosial, survey pelanggan, survey flora dan fauna dan lain-lain.',
+  },
+  {
+    id: 3,
+    title: 'Integrasi Webgis dan Mobile',
+    description:
+      'Integrasi dua sistem ini sangat powerfull dalam pekerjaan managemen data dan monitoring aset. Mobile berfungsi sebagai alat pengambilan data dilokasi yang langsung akan terkirim secara realtime. Data dari lapangan yang diterima oleh Webgis akan diolah, dianalisa serta disajikan secara otomatis. Integrasi sistem ini mampu meningkatkan efisiensi kerja dan nilai ekonomis bagi organisasi baik pemerintah maupun swasta.',
+  },
+  {
+    id: 4,
+    title: 'Custom',
+    description:
+      'Layanan custom berupa pengembangan sistem dan fitur-fiturnya sesuai dengan permintaan klien. Contoh pengembangan sistem pada pemerintah seperti sistem monitoring kebakaran, sistem patroli kehutanan, monitoring aset infrastruktur, sistem informasi dan tanggap bencana. Pengembangan sistem di swasta seperti ; sistem pemanenan sawit, tracking logistik, inspeksi pipa dan haulling, analisa bisnis, dan lain-lain.',
   },
 ];
 
@@ -372,9 +365,9 @@ export const dataPages = [
   {
     id: 2,
     name: 'Service',
-    heading: 'Layanan & Harga',
+    heading: 'Layanan',
     subheading:
-      'Sistem informasi yang kami bangun dapat digunakan lintas platform, meliputi platform desktop/ PC, WebGIS maupun mobile (Android).',
+      'Gis On Demand. Konsultasikan dan diskusikan konsep sistem yang anda butuhkan bersama kami, Gratis melalui WA, Email maupun telepon langsung.',
     banner: BANNER_BG,
     title: '',
     description: '',
@@ -396,7 +389,7 @@ export const dataFooter = [
     logo: logoLight,
     logo2: logoLight2,
     description:
-      'Kami konsultan jasa yang bergerak dibidang Geospatial Information System hadir untuk membantu anda dalam membangun dan mengembangkan Sistem Informasi berbasis GIS (Geographic Information System).',
+      'Kami konsultan jasa yang bergerak dibidang Geospatial Information System hadir untuk membantu anda dalam membangun dan mengembangkan Sistem Informasi berbasis GIS.',
     downloads: [
       {
         name: 'Apps Store',

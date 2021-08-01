@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-import { dataBlogs, dataPages } from '../../components/models';
+import { dataPages } from '../../components/models';
 import API from '../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
@@ -33,18 +33,25 @@ class Index extends Component<{}, IndexState> {
   }
 
   getPostAPI = () => {
-    API.getCategoryBlogs().then(result => {
-      this.setState({
-        categories: result,
+    API.getCategoryBlogs()
+      .then(result => {
+        this.setState({
+          categories: [...result],
+        });
+      })
+      .catch(e => {
+        console.error(e);
       });
-    });
-    API.getBlogs().then(result => {
-      this.setState({
-        blogs: result,
-        totalRecords: result.length,
+    API.getBlogs()
+      .then(result => {
+        this.setState({
+          blogs: [...result],
+          totalRecords: result.length,
+        });
+      })
+      .catch(e => {
+        console.error(e);
       });
-      console.log(result);
-    });
   };
 
   componentWillUnmount() {

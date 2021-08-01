@@ -6,22 +6,23 @@ export interface Props {
     id: number;
     title: string;
     slug: string;
-    category: string;
-    images: any;
-    description: string;
-    author: string;
+    categories: any;
+    featured_image: string;
+    author: {
+      username: string;
+    };
     created_at: string;
     updated_at: string;
   };
 }
 function HeroSection(props: Props) {
-  console.log(props);
+  const blog = props.data;
   return (
-    <div className="hero-container" style={{ backgroundImage: `url(${props.data.images})` }}>
+    <div className="hero-container" style={{ backgroundImage: `url(${blog.featured_image})` }}>
       <div className="container title-heading p-text-center">
-        <h1>{props.data.title}</h1>
+        <h1>{blog.title}</h1>
         <span className="meta">
-          <i className="pi pi-user p-mr-2"></i> {props.data.author} | {new Date(props.data.created_at).toDateString()}
+          <i className="pi pi-calendar p-mr-2"></i> {new Date(blog.created_at).toDateString()}
         </span>
       </div>
     </div>

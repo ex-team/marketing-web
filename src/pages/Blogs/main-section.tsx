@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-
-
+import React from 'react';
 
 import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import { Paginator } from 'primereact/paginator';
 import { Skeleton } from 'primereact/skeleton';
-import { Link, RouteComponentProps, useRouteMatch, withRouter } from 'react-router-dom';
+import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 
 export interface Props extends RouteComponentProps {
   data: any;
@@ -15,15 +13,6 @@ export interface Props extends RouteComponentProps {
 }
 
 class MainSection extends React.Component<Props, {}> {
-  // const blogs = this.props.data;
-  // const [results, setResults] = useState([]);
-  // const [basicFirst, setBasicFirst] = useState(0);
-  // const [basicRows] = useState(9);
-  // const [pageNumber, setPageNumber] = useState(0);
-  // const [searchKey, setSearchKey] = useState('');
-  // const [sortKey, setSortKey] = useState('');
-  // const [loading, setLoading] = useState(false);
-  // const match = useRouteMatch();
   state = {
     results: [],
     basicFirst: 0,
@@ -31,49 +20,42 @@ class MainSection extends React.Component<Props, {}> {
     pageNumber: 0,
     searchKey: '',
     sortKey: '',
-    loading: false,
-    reValueBlog: [] as any[],
+    loading: true,
+    sortOptions: [],
   };
 
   componentDidMount() {}
 
   componentDidUpdate(prevProps: Props) {
-    console.log(this.props);
-    if (prevProps.data !== this.props.data) {
-      const reValueBlog = this.props.data.map(function (res) {
-        return {
-          id: res.id,
-          title: res.title,
-          slug: res.slug,
-          category: res.categories[0],
-          images: res.featured_image,
-          description: res.body,
-          author: res.author.username,
-          created_at: res.created_at,
-        };
-      });
-      const slice: any = Array.from(reValueBlog).slice(
-        this.state.pageNumber * this.state.basicRows,
-        this.state.pageNumber * this.state.basicRows + this.state.basicRows
-      );
-      this.setState({ results: slice, reValueBlog });
+    if (prevProps !== this.props) {
+      this.updateData();
+      this.updateCategory();
+      this.setLoading();
     }
   }
 
-  // console.log(reValueBlog);
+  updateData() {
+    const slice: any = [...this.props.data].slice(
+      this.state.pageNumber * this.state.basicRows,
+      this.state.pageNumber * this.state.basicRows + this.state.basicRows
+    );
+    this.setState({ results: slice });
+  }
 
-  // useEffect(() => {
-  // const getData = async () => {
-  //   const data = [...reValueBlog];
-  //   const slice: any = data.slice(pageNumber * basicRows, pageNumber * basicRows + basicRows);
-  //   setResults(slice);
-  // };
-  // const load = setTimeout(() => {
-  //   setLoading(false);
-  // }, 600);
-  // getData().then();
-  // return () => clearTimeout(load);
-  // });
+  updateCategory() {
+    const reValueCategory = this.props.categories.map(function (res) {
+      return { id: res.id, label: res.title, value: res.slug };
+    });
+    this.setState({ sortOptions: [...reValueCategory, { id: 0, label: 'All Category', value: 'all' }] });
+  }
+
+  setLoading() {
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 700);
+  }
+
+  componentWillUnmount() {}
 
   onPageChange = event => {
     this.setState({
@@ -87,31 +69,32 @@ class MainSection extends React.Component<Props, {}> {
     const value = e.target.value;
     this.setState({ searchKey: value });
     if (value !== '') {
-      const newBlog = this.state.reValueBlog.filter((data: any) => {
+      const newBlog = [...this.props.data].filter((data: any) => {
         return Object.values(data).join(' ').toLowerCase().includes(value.toLowerCase());
       });
       this.setState({ results: newBlog });
     } else {
-      this.setState({ results: this.state.reValueBlog });
+      this.setState({ results: this.props.data });
     }
   };
 
-  reValueCategory = this.props.categories.map(function (res) {
-    return { id: res.id, label: res.title, value: res.slug };
-  });
-
-  sortOptions = [...this.reValueCategory, { id: 0, label: 'All Category', value: 'all' }];
   onSortCategory = event => {
     const value = event.value;
     this.setState({ sortKey: value });
 
     if (value !== 'all') {
-      const updatedItems = this.state.reValueBlog.filter(currentEl => {
-        return currentEl.category.toLowerCase() === value.toLowerCase();
-      });
+      const updatedItems = [...this.props.data].filter(
+        currentEl =>
+          currentEl.categories.filter((e: any) => {
+            console.log(e);
+            return e.category.toLowerCase() === value.toLowerCase();
+          })
+        // console.log(currentEl);
+        // return currentEl.category.toLowerCase() === value.toLowerCase();
+      );
       this.setState({ results: updatedItems });
     } else {
-      this.setState({ results: this.state.reValueBlog });
+      this.setState({ results: this.props.data });
     }
   };
 
@@ -122,7 +105,7 @@ class MainSection extends React.Component<Props, {}> {
           <div className="filter-section p-grid">
             <div className="category p-col p-xl-4">
               <Dropdown
-                options={this.sortOptions}
+                options={this.state.sortOptions}
                 value={this.state.sortKey}
                 placeholder="Select category"
                 onChange={this.onSortCategory}
@@ -138,50 +121,68 @@ class MainSection extends React.Component<Props, {}> {
             </div>
           </div>
           <div className="content-section p-pt-4">
-            <div className="p-grid">
-              {this.state.results.map((blog: any, idx) => {
-                if (this.state.loading) {
-                  return (
-                    <div key={idx} className="p-col p-md-6 p-xl-4 blog-box">
-                      <div className="blog-cover">
-                        <Skeleton width="100%" height="100%" />
-                      </div>
-                      <div className="blog-heading">
-                        <Skeleton width="75%" height="30px" className="p-mb-2 p-mt-2" />
-                        <Skeleton width="100%" />
-                      </div>
-                    </div>
-                  );
-                } else {
-                  return (
-                    <div key={idx} className="p-col p-md-6 p-xl-4 blog-box">
-                      <div className="blog-cover p-shadow-3">
+            {this.state.loading ? (
+              <div className="p-grid">
+                <div className="p-col p-md-6 p-xl-4 blog-box">
+                  <div className="blog-cover">
+                    <Skeleton width="100%" height="100%" />
+                  </div>
+                  <div className="blog-heading">
+                    <Skeleton width="75%" height="30px" className="p-mb-2 p-mt-2" />
+                    <Skeleton width="100%" />
+                  </div>
+                </div>
+                <div className="p-col p-md-6 p-xl-4 blog-box">
+                  <div className="blog-cover">
+                    <Skeleton width="100%" height="100%" />
+                  </div>
+                  <div className="blog-heading">
+                    <Skeleton width="75%" height="30px" className="p-mb-2 p-mt-2" />
+                    <Skeleton width="100%" />
+                  </div>
+                </div>
+                <div className="p-col p-md-6 p-xl-4 blog-box">
+                  <div className="blog-cover">
+                    <Skeleton width="100%" height="100%" />
+                  </div>
+                  <div className="blog-heading">
+                    <Skeleton width="75%" height="30px" className="p-mb-2 p-mt-2" />
+                    <Skeleton width="100%" />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="p-grid">
+                {this.state.results.map((blog: any, idx) => (
+                  <div key={idx} className="p-col p-md-6 p-xl-4 blog-box">
+                    <div className="blog-cover p-shadow-3">
+                      {blog.category != null && (
                         <div className="btn-label-category p-shadow-3">
                           <span className="label-category">{blog.category}</span>
                         </div>
-                        <Link to={`${this.props.match.url}/${blog.slug}`}>
-                          <img src={blog.images} alt={blog.title} />
-                        </Link>
-                      </div>
-                      <div className="blog-heading">
-                        <h1>
-                          <Link to={`${this.props.match.url}/${blog.slug}`}>{blog.title}</Link>
-                        </h1>
-                        <span className="meta">
-                          <i className="pi pi-user p-mr-2"></i> {blog.author} |{' '}
-                          {new Date(blog.created_at).toDateString()}
-                        </span>
-                        <div className="description">
-                          <p>
-                            {blog.description.length > 100 ? blog.description.slice(0, 100) + '...' : blog.description}
-                          </p>
-                        </div>
+                      )}
+                      <Link to={`${this.props.match.url}/${blog.slug}`}>
+                        <img src={blog.featured_image} alt={blog.title} />
+                      </Link>
+                    </div>
+                    <div className="blog-heading">
+                      <h1>
+                        <Link to={`${this.props.match.url}/${blog.slug}`}>{blog.title}</Link>
+                      </h1>
+                      <span className="meta">
+                        <i className="pi pi-user p-mr-2"></i>{' '}
+                        {blog.author.username != null ? blog.author.username : 'Unknown'} |{' '}
+                        {new Date(blog.created_at).toDateString()}
+                      </span>
+                      <div className="description">
+                        <div className="body" dangerouslySetInnerHTML={{ __html: blog.body }}></div>
                       </div>
                     </div>
-                  );
-                }
-              })}
-            </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
             <div className="paginator-container">
               <Paginator
                 first={this.state.basicFirst}

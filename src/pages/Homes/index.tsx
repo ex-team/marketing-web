@@ -7,19 +7,17 @@ import {
   dataBlogs,
   dataFeatures,
   dataAbouts,
-  dataIndustries,
   dataServices,
   dataThematics,
+  dataThematicSliders,
   dataSamples,
   dataPartners,
   dataSliders,
 } from './../../components/models';
-import AboutSection from './about-section';
 import BlogSection from './blog-section';
 import IndustrySection from './industry-section';
 import PartnerSection from './partner-section';
 import SampleSection from './sample-section';
-// import ServiceSection from './service-section';
 import SliderSection from './slider-section';
 import StaticSection from './static-section';
 import ThematicSection from './thematic-section';
@@ -30,9 +28,9 @@ export interface IndexState {
   sliders: any;
   features: any;
   abouts: any;
-  industries: any;
   services: any;
   thematics: any;
+  thematicSliders: any;
   samples: any;
   blogs: any;
   partners: any;
@@ -44,9 +42,9 @@ class Index extends React.Component<{}, IndexState> {
     sliders: dataSliders,
     features: dataFeatures,
     abouts: dataAbouts,
-    industries: dataIndustries,
     services: dataServices,
     thematics: dataThematics,
+    thematicSliders: dataThematicSliders,
     samples: dataSamples,
     blogs: dataBlogs,
     partners: dataPartners,
@@ -92,28 +90,19 @@ class Index extends React.Component<{}, IndexState> {
             url={this.state.homes.header_url}
           />
         )}
-        {this.state.homes.abouts && <AboutSection dataFeatures={this.state.features} dataAbouts={this.state.abouts} />}
         {this.state.homes.industries && (
           <IndustrySection
-            data={this.state.industries}
             heading={this.state.homes.industries_heading}
             subheading={this.state.homes.industries_subheading}
           />
         )}
-        {/* {this.state.homes.services && (
-          <ServiceSection
-            data={this.state.services}
-            heading={this.state.homes.services_heading}
-            subheading={this.state.homes.services_subheading}
-          />
-        )} */}
+
         {this.state.homes.thematics && (
           <ThematicSection
             data={this.state.thematics}
+            dataSlider={this.state.thematicSliders}
             heading={this.state.homes.thematics_heading}
             subheading={this.state.homes.thematics_subheading}
-            thematics_banner1={this.state.homes.thematics_banner1}
-            thematics_banner2={this.state.homes.thematics_banner2}
           />
         )}
         <SampleSection

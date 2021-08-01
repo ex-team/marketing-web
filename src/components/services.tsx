@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -28,6 +29,7 @@ const Get = (path: string) => {
   });
 };
 
+// const getBlogs = () => Get('post/?limit=0&offset=0&type=blogs');
 const getBlogs = () => Get('post/?limit=0&offset=0&type=blogs');
 const getDetailPost = slug => Get(`post/${slug}/`);
 const getCategoryBlogs = () => Get('category/');

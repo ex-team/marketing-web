@@ -81,7 +81,7 @@ function SampleSection(props: Props) {
                 </ul>
                 <div className="more p-d-flex p-jc-left">
                   <a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">
-                    <Button label="Hubungi Kami" />
+                    <Button label="Demo Lainnya Hubungi Kami" />
                   </a>
                 </div>
               </div>
