@@ -42,7 +42,6 @@ function MainSection(props: Props) {
           ) : (
             <div className="heading-section">
               <h1>{props.data.heading}</h1>
-              <p>{props.data.subheading}</p>
               <ul className="services-heading">
                 {services.map((data, idx) => (
                   <li key={idx}>
