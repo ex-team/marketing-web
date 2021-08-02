@@ -13,6 +13,10 @@ import IMG_7 from './../assets/images/img-7.jpg';
 import IMG_8 from './../assets/images/img-8.jpg';
 import IMG_9 from './../assets/images/img-9.jpg';
 import BANNER_BG from './../assets/images/img-home.jpg';
+import LANDINGPAGE_1 from './../assets/images/landing-page1.png';
+import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
+import LANDINGPAGE_3 from './../assets/images/landing-page3.png';
+import LANDINGPAGE_4 from './../assets/images/landing-page4.png';
 import logoLight2 from './../assets/images/logo-light.png';
 import IMGPARTNER_1 from './../assets/images/logo/logo-1.svg';
 import IMGPARTNER_2 from './../assets/images/logo/logo-2.svg';
@@ -22,7 +26,6 @@ import IMGPARTNER_5 from './../assets/images/logo/logo-5.svg';
 import IMGPARTNER_6 from './../assets/images/logo/logo-6.svg';
 import IMGPARTNER_7 from './../assets/images/logo/logo-7.svg';
 import logoLight from './../assets/images/logo_light_digipeta.svg';
-
 
 const VIDEO_1 = '/videos/video-1.mp4';
 // const VIDEO_2 = '/videos/video-2.mp4';
@@ -35,7 +38,7 @@ export const dataHomes = {
   header_description: 'Jasa Pengembangan Sistem & aplikasi berbasis GIS ',
   header_button: 'Service / Layanan',
   header_url: 'services',
-  header_image: BANNER_BG,
+  header_image: LANDINGPAGE_4,
   header_video: VIDEO_1,
   abouts: true, // true for show, false to hidden
   features: true, // true for show, false to hidden
