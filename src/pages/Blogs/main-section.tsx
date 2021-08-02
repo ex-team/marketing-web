@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import { Paginator } from 'primereact/paginator';
@@ -40,6 +42,7 @@ class MainSection extends React.Component<Props, {}> {
       this.state.pageNumber * this.state.basicRows + this.state.basicRows
     );
     this.setState({ results: slice });
+    console.log(slice);
   }
 
   updateCategory() {
@@ -83,15 +86,14 @@ class MainSection extends React.Component<Props, {}> {
     this.setState({ sortKey: value });
 
     if (value !== 'all') {
-      const updatedItems = [...this.props.data].filter(
-        currentEl =>
-          currentEl.categories.filter((e: any) => {
-            console.log(e);
-            return e.category.toLowerCase() === value.toLowerCase();
-          })
+      const updatedItems = [...this.props.data].filter((data: any) => {
+        // return Object.values(data.categories).join(' ').toLowerCase().includes(value.toLowerCase());
         // console.log(currentEl);
         // return currentEl.category.toLowerCase() === value.toLowerCase();
-      );
+        return data.categories.filter((e: any) => {
+          return e.slug.toLowerCase() === value.toLowerCase();
+        });
+      });
       this.setState({ results: updatedItems });
     } else {
       this.setState({ results: this.props.data });
@@ -156,11 +158,15 @@ class MainSection extends React.Component<Props, {}> {
                 {this.state.results.map((blog: any, idx) => (
                   <div key={idx} className="p-col p-md-6 p-xl-4 blog-box">
                     <div className="blog-cover p-shadow-3">
-                      {blog.category != null && (
-                        <div className="btn-label-category p-shadow-3">
-                          <span className="label-category">{blog.category}</span>
-                        </div>
-                      )}
+                      <ul>
+                        {blog.categories.map((category: any, idx) => (
+                          <li key={idx}>
+                            <div className="btn-label-category p-shadow-3">
+                              <span className="label-category">{category.title}</span>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                       <Link to={`${this.props.match.url}/${blog.slug}`}>
                         <img src={blog.featured_image} alt={blog.title} />
                       </Link>

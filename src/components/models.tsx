@@ -53,12 +53,11 @@ export const dataHomes = {
   thematics: true, // true for show, false to hidden
   thematics_heading: 'Tema',
   thematics_subheading: 'Beberapa tema yang sudah kami kerjakan :',
-  thematics_banner1: IMG_8,
-  thematics_banner2: IMG_9,
+  thematics_banner: IMG_1,
+  thematics_slider: false, // true for show, false to hidden
   samples: true, // true for show, false to hidden
   samples_heading: 'Sample Projects',
-  samples_subheading:
-    'Kami konsultan jasa yang bergerak dibidang Geospatial Information System hadir untuk membantu anda dalam membangun dan mengembangkan Sistem Informasi berbasis GIS. Banyak projects yang telah kami kerjakan diantara-nya :',
+  samples_subheading: '',
   blogs: false, // true for show, false to hidden
   blogs_heading: 'News and Product Updates',
   blogs_subheading: 'Dapatkan berbagi informasi dan berita terbaru terkait produk dan layanan kami.',

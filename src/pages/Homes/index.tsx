@@ -103,6 +103,8 @@ class Index extends React.Component<{}, IndexState> {
             dataSlider={this.state.thematicSliders}
             heading={this.state.homes.thematics_heading}
             subheading={this.state.homes.thematics_subheading}
+            thematics_banner={this.state.homes.thematics_banner}
+            thematics_slider={this.state.homes.thematics_slider}
           />
         )}
         <SampleSection

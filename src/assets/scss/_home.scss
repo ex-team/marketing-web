@@ -270,8 +270,17 @@ video {
 }
 
 .thematic-container {
-  padding: 100px 0 50px;
+  padding: 100px 0;
   background-color: #fff;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+
+  .heading-section {
+    text-align: center;
+  }
 
   .content-section .thematic-description ul {
     padding: 0;
@@ -431,8 +440,12 @@ video {
 
 
 .sample-container{
-  padding: 50px 0;
+  padding: 100px 0;
   background-color: #fff;
+
+  .heading-section {
+    text-align: center;
+  }
 
   .content-section .sample {
     padding: 1.5rem !important;
@@ -710,6 +723,12 @@ video {
       font-size: 16px;
     }
   }
+
+  .sample-container{
+    .row2 {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -778,6 +797,12 @@ video {
       // .glide__arrow--right {
       //   right: 35%;
       // }
+    }
+  }
+
+  .sample-container{
+    .heading-section {
+      text-align: left;
     }
   }
 }

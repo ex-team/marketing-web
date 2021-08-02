@@ -30,10 +30,19 @@
     height: 220px;
     border-radius: 8px;
 
-    .btn-label-category{
+    ul {
+      list-style: none;
+      display: inline-flex;
       position: absolute;
-      top: 5%;
-      right: 5%;
+      top: 8px;
+      right: 8px;
+
+      li {
+        margin-left: 5px;
+      }
+    }
+
+    .btn-label-category{
       padding: 3px 8px;
       background-color: var(--bluegray-500);
       border-radius: 5px;
