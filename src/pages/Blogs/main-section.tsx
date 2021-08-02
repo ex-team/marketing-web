@@ -8,6 +8,7 @@ import { Paginator } from 'primereact/paginator';
 import { Skeleton } from 'primereact/skeleton';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 
+
 export interface Props extends RouteComponentProps {
   data: any;
   categories: any;
@@ -42,7 +43,7 @@ class MainSection extends React.Component<Props, {}> {
       this.state.pageNumber * this.state.basicRows + this.state.basicRows
     );
     this.setState({ results: slice });
-    console.log(slice);
+    // console.log(slice);
   }
 
   updateCategory() {
