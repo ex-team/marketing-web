@@ -3,10 +3,10 @@
     "static/js/0.7733b12b.chunk.js": "/marketing-web/static/js/0.7733b12b.chunk.js",
     "static/js/0.7733b12b.chunk.js.map": "/marketing-web/static/js/0.7733b12b.chunk.js.map",
     "main.css": "/marketing-web/static/css/main.bf4469e7.chunk.css",
-    "main.js": "/marketing-web/static/js/main.61f7c9c8.chunk.js",
-    "main.js.map": "/marketing-web/static/js/main.61f7c9c8.chunk.js.map",
-    "runtime-main.js": "/marketing-web/static/js/runtime-main.e94dc025.js",
-    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.e94dc025.js.map",
+    "main.js": "/marketing-web/static/js/main.9838d648.chunk.js",
+    "main.js.map": "/marketing-web/static/js/main.9838d648.chunk.js.map",
+    "runtime-main.js": "/marketing-web/static/js/runtime-main.d7e91d72.js",
+    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.d7e91d72.js.map",
     "static/css/3.2069dc51.chunk.css": "/marketing-web/static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js": "/marketing-web/static/js/3.9368e871.chunk.js",
     "static/js/3.9368e871.chunk.js.map": "/marketing-web/static/js/3.9368e871.chunk.js.map",
@@ -20,8 +20,8 @@
     "static/js/7.ff6c2293.chunk.js.map": "/marketing-web/static/js/7.ff6c2293.chunk.js.map",
     "static/js/8.f1a42f13.chunk.js": "/marketing-web/static/js/8.f1a42f13.chunk.js",
     "static/js/8.f1a42f13.chunk.js.map": "/marketing-web/static/js/8.f1a42f13.chunk.js.map",
-    "static/js/9.8a874e18.chunk.js": "/marketing-web/static/js/9.8a874e18.chunk.js",
-    "static/js/9.8a874e18.chunk.js.map": "/marketing-web/static/js/9.8a874e18.chunk.js.map",
+    "static/js/9.0afba684.chunk.js": "/marketing-web/static/js/9.0afba684.chunk.js",
+    "static/js/9.0afba684.chunk.js.map": "/marketing-web/static/js/9.0afba684.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/3.2069dc51.chunk.css.map": "/marketing-web/static/css/3.2069dc51.chunk.css.map",
     "static/css/main.bf4469e7.chunk.css.map": "/marketing-web/static/css/main.bf4469e7.chunk.css.map",
@@ -51,10 +51,10 @@
     "static/media/App.scss": "/marketing-web/static/media/primeicons.e61f3495.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.e94dc025.js",
+    "static/js/runtime-main.d7e91d72.js",
     "static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js",
     "static/css/main.bf4469e7.chunk.css",
-    "static/js/main.61f7c9c8.chunk.js"
+    "static/js/main.9838d648.chunk.js"
   ]
 }
