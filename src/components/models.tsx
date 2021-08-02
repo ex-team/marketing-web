@@ -157,7 +157,7 @@ export const dataAbouts = {
 export const dataThematics = [
   {
     id: 1,
-    title: 'Jalan & jembatan',
+    title: 'Jalan & Jembatan',
   },
   {
     id: 2,
@@ -173,7 +173,7 @@ export const dataThematics = [
   },
   {
     id: 5,
-    title: 'Inspeksi aset Tambang',
+    title: 'Inspeksi Aset Tambang',
   },
   {
     id: 6,
@@ -193,7 +193,7 @@ export const dataThematics = [
   },
   {
     id: 10,
-    title: 'Patroli Satwa',
+    title: 'Patroli Satwa Taman Nasional',
   },
   {
     id: 11,

@@ -68,7 +68,7 @@ function ThematicSection(props: Props) {
                   </div>
                   <div className="p-col-12 p-md-4 p-justify-center">
                     <ul>
-                      {thematics.slice(5, 9).map((data, idx) => {
+                      {thematics.slice(4, 8).map((data, idx) => {
                         if (loading) {
                           return (
                             <li key={idx}>
@@ -88,7 +88,7 @@ function ThematicSection(props: Props) {
                   </div>
                   <div className="p-col-12 p-md-4 p-justify-center">
                     <ul>
-                      {thematics.slice(10, 12).map((data, idx) => {
+                      {thematics.slice(8, 12).map((data, idx) => {
                         if (loading) {
                           return (
                             <li key={idx}>
