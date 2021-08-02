@@ -43,7 +43,7 @@ export const dataHomes = {
   features_subheading:
     'Location intelligence saves time and money for the company. Analytics departments and stakeholders are able to watch traction and save up to 37% of the managers time monthly',
   industries: true, // true for show, false to hidden
-  industries_heading: 'Industry',
+  industries_heading: 'Industri',
   industries_subheading:
     'Infrastruktur, Utilitas, Lingkungan, Kehutanan, Perkebunan, Pertambangan, Perminyakan, Transportasi, Bisnis, Smart City',
   services: true, // true for show, false to hidden
@@ -56,7 +56,7 @@ export const dataHomes = {
   thematics_banner: IMG_1,
   thematics_slider: false, // true for show, false to hidden
   samples: true, // true for show, false to hidden
-  samples_heading: 'Sample Projects',
+  samples_heading: 'Sample dan Demo',
   samples_subheading: '',
   blogs: false, // true for show, false to hidden
   blogs_heading: 'News and Product Updates',
@@ -387,8 +387,7 @@ export const dataFooter = [
   {
     logo: logoLight,
     logo2: logoLight2,
-    description:
-      'Kami konsultan jasa yang bergerak dibidang Geospatial Information System hadir untuk membantu anda dalam membangun dan mengembangkan Sistem Informasi berbasis GIS.',
+    description: 'Kami konsultan yang khusus bergerak dibidang pengembangan sistem informasi berbasis GIS',
     downloads: [
       {
         name: 'Apps Store',

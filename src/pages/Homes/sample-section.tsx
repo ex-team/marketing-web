@@ -91,7 +91,7 @@ function SampleSection(props: Props) {
           </div>
           <div className="more p-d-flex p-jc-center">
             <a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">
-              <Button label="Demo Lainnya Hubungi Kami" />
+              <Button label="Demo Sistem" />
             </a>
           </div>
           <div className={modal ? 'modal open' : 'modal'}>
