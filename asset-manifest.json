@@ -2,9 +2,9 @@
   "files": {
     "static/js/0.7733b12b.chunk.js": "/marketing-web/static/js/0.7733b12b.chunk.js",
     "static/js/0.7733b12b.chunk.js.map": "/marketing-web/static/js/0.7733b12b.chunk.js.map",
-    "main.css": "/marketing-web/static/css/main.012c3b59.chunk.css",
-    "main.js": "/marketing-web/static/js/main.5b15fa7f.chunk.js",
-    "main.js.map": "/marketing-web/static/js/main.5b15fa7f.chunk.js.map",
+    "main.css": "/marketing-web/static/css/main.dc6b8b65.chunk.css",
+    "main.js": "/marketing-web/static/js/main.f02948c7.chunk.js",
+    "main.js.map": "/marketing-web/static/js/main.f02948c7.chunk.js.map",
     "runtime-main.js": "/marketing-web/static/js/runtime-main.d1655454.js",
     "runtime-main.js.map": "/marketing-web/static/js/runtime-main.d1655454.js.map",
     "static/css/3.2069dc51.chunk.css": "/marketing-web/static/css/3.2069dc51.chunk.css",
@@ -24,7 +24,7 @@
     "static/js/9.656b1fa6.chunk.js.map": "/marketing-web/static/js/9.656b1fa6.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/3.2069dc51.chunk.css.map": "/marketing-web/static/css/3.2069dc51.chunk.css.map",
-    "static/css/main.012c3b59.chunk.css.map": "/marketing-web/static/css/main.012c3b59.chunk.css.map",
+    "static/css/main.dc6b8b65.chunk.css.map": "/marketing-web/static/css/main.dc6b8b65.chunk.css.map",
     "static/js/3.9368e871.chunk.js.LICENSE.txt": "/marketing-web/static/js/3.9368e871.chunk.js.LICENSE.txt",
     "static/js/5.a0b7afa6.chunk.js.LICENSE.txt": "/marketing-web/static/js/5.a0b7afa6.chunk.js.LICENSE.txt",
     "static/media/AppStoreBadge.26677bca.svg": "/marketing-web/static/media/AppStoreBadge.26677bca.svg",
@@ -39,7 +39,7 @@
     "static/media/img-8.fabdf94d.jpg": "/marketing-web/static/media/img-8.fabdf94d.jpg",
     "static/media/img-9.f97f588f.jpg": "/marketing-web/static/media/img-9.f97f588f.jpg",
     "static/media/img-home.c034239e.jpg": "/marketing-web/static/media/img-home.c034239e.jpg",
-    "static/media/landing-page2.0ee43197.png": "/marketing-web/static/media/landing-page2.0ee43197.png",
+    "static/media/landingpage5.a2ad5dc8.jpg": "/marketing-web/static/media/landingpage5.a2ad5dc8.jpg",
     "static/media/logo-1.a54567c1.svg": "/marketing-web/static/media/logo-1.a54567c1.svg",
     "static/media/logo-2.dac1b55a.svg": "/marketing-web/static/media/logo-2.dac1b55a.svg",
     "static/media/logo-3.04c1b2ef.svg": "/marketing-web/static/media/logo-3.04c1b2ef.svg",
@@ -55,7 +55,7 @@
     "static/js/runtime-main.d1655454.js",
     "static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js",
-    "static/css/main.012c3b59.chunk.css",
-    "static/js/main.5b15fa7f.chunk.js"
+    "static/css/main.dc6b8b65.chunk.css",
+    "static/js/main.f02948c7.chunk.js"
   ]
 }
