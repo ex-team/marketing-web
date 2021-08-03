@@ -14,9 +14,10 @@ import IMG_8 from './../assets/images/img-8.jpg';
 import IMG_9 from './../assets/images/img-9.jpg';
 import BANNER_BG from './../assets/images/img-home.jpg';
 // import LANDINGPAGE_1 from './../assets/images/landing-page1.png';
-import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
+// import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
 // import LANDINGPAGE_3 from './../assets/images/landing-page3.png';
 // import LANDINGPAGE_4 from './../assets/images/landing-page4.png';
+import LANDINGPAGE_5 from './../assets/images/landingpage5.jpg';
 import logoLight2 from './../assets/images/logo-light.png';
 import IMGPARTNER_1 from './../assets/images/logo/logo-1.svg';
 import IMGPARTNER_2 from './../assets/images/logo/logo-2.svg';
@@ -39,7 +40,7 @@ export const dataHomes = {
   header_description: 'Jasa Pengembangan Sistem & aplikasi berbasis GIS ',
   header_button: 'Service / Layanan',
   header_url: 'services',
-  header_image: LANDINGPAGE_2,
+  header_image: LANDINGPAGE_5,
   header_video: VIDEO_1,
   abouts: true, // true for show, false to hidden
   features: true, // true for show, false to hidden
@@ -65,9 +66,6 @@ export const dataHomes = {
   blogs: false, // true for show, false to hidden
   blogs_heading: 'News and Product Updates',
   blogs_subheading: 'Dapatkan berbagi informasi dan berita terbaru terkait produk dan layanan kami.',
-  galleries: true, // true for show, false to hidden
-  galleries_heading: 'Recent Gallery',
-  galleries_subheading: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   partners: true, // true for show, false to hidden
 };
 
