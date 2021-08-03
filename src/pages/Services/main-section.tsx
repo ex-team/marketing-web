@@ -65,14 +65,10 @@ function MainSection(props: Props) {
               </li>
             </ul>
             <h3>Cara pemesanan :</h3>
-            <ul>
-              <li>Form Pemesanan (Google Form)</li>
-              <li>
-                <a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">
-                  Konsultasi (hub WA)
-                </a>
-              </li>
-            </ul>
+            <ol className="order">
+              <li><a href="mailto:contact@digipeta.com" target="_blank" rel="noopener noreferrer">Send Mail</a></li>
+              <li><a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">WhatsApps : +62 89623498800 </a></li>
+            </ol>
           </div>
         </div>
       </div>

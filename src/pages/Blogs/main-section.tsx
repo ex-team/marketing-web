@@ -85,16 +85,20 @@ class MainSection extends React.Component<Props, {}> {
   onSortCategory = event => {
     const value = event.value;
     this.setState({ sortKey: value });
-
     if (value !== 'all') {
-      const updatedItems = [...this.props.data].filter((data: any) => {
-        // return Object.values(data.categories).join(' ').toLowerCase().includes(value.toLowerCase());
-        // console.log(currentEl);
-        // return currentEl.category.toLowerCase() === value.toLowerCase();
-        return data.categories.filter((e: any) => {
-          return e.slug.toLowerCase() === value.toLowerCase();
+      const updatedItems = [...this.props.data].filter(data => {
+        // console.log('Array of categories :', data.categories)
+        data.categories.map(e => {
+          // console.log(Object.values(e).join(' ').toLowerCase().includes(value.toLowerCase()))
+          return e;
         });
+        // return (data.categories.slug.indexOf(value) >= 0);
+        return data;
       });
+      // var updatedItems = [...this.props.data].map(function(el){
+      //   el.categories = el.categories.filter(function(x){ return x.slug === value; });
+      //   return el;
+      // });
       this.setState({ results: updatedItems });
     } else {
       this.setState({ results: this.props.data });

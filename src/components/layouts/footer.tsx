@@ -61,7 +61,7 @@ class Footer extends React.Component<{}, State> {
                 </div>
               </div>
               <div className="contacts p-col-12 p-lg-4">
-                <h1>Reach Us</h1>
+                <h1>Kontak</h1>
                 <div className="content">
                   <ul>
                     {this.state.contacts.map((data, idx) => (
@@ -94,7 +94,7 @@ class Footer extends React.Component<{}, State> {
                 &copy; {new Date().getFullYear()} {this.state.copyrights}
               </p>
             </div>
-            <div className="p-col-12 p-lg-7 social-media p-grid p-justify-end">
+            <div className="p-col-12 p-lg-7 social-media p-grid p-justify-end d-none">
               {this.state.socials.map((data, idx) => (
                 <a key={idx} href={data.url} target="_blank" rel="noopener noreferrer">
                   <Button className="social p-p-0 p-m-1 p-mx-xl-3">
