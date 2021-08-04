@@ -3,10 +3,10 @@
     "static/js/0.598bddc0.chunk.js": "/marketing-web/static/js/0.598bddc0.chunk.js",
     "static/js/0.598bddc0.chunk.js.map": "/marketing-web/static/js/0.598bddc0.chunk.js.map",
     "main.css": "/marketing-web/static/css/main.af1838c6.chunk.css",
-    "main.js": "/marketing-web/static/js/main.93126c15.chunk.js",
-    "main.js.map": "/marketing-web/static/js/main.93126c15.chunk.js.map",
-    "runtime-main.js": "/marketing-web/static/js/runtime-main.2805617a.js",
-    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.2805617a.js.map",
+    "main.js": "/marketing-web/static/js/main.5e7ceaa2.chunk.js",
+    "main.js.map": "/marketing-web/static/js/main.5e7ceaa2.chunk.js.map",
+    "runtime-main.js": "/marketing-web/static/js/runtime-main.44d8bc6c.js",
+    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.44d8bc6c.js.map",
     "static/css/3.2069dc51.chunk.css": "/marketing-web/static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js": "/marketing-web/static/js/3.9368e871.chunk.js",
     "static/js/3.9368e871.chunk.js.map": "/marketing-web/static/js/3.9368e871.chunk.js.map",
@@ -20,8 +20,8 @@
     "static/js/7.5d36c63a.chunk.js.map": "/marketing-web/static/js/7.5d36c63a.chunk.js.map",
     "static/js/8.3629c628.chunk.js": "/marketing-web/static/js/8.3629c628.chunk.js",
     "static/js/8.3629c628.chunk.js.map": "/marketing-web/static/js/8.3629c628.chunk.js.map",
-    "static/js/9.5b6c9f03.chunk.js": "/marketing-web/static/js/9.5b6c9f03.chunk.js",
-    "static/js/9.5b6c9f03.chunk.js.map": "/marketing-web/static/js/9.5b6c9f03.chunk.js.map",
+    "static/js/9.5889d0f5.chunk.js": "/marketing-web/static/js/9.5889d0f5.chunk.js",
+    "static/js/9.5889d0f5.chunk.js.map": "/marketing-web/static/js/9.5889d0f5.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/3.2069dc51.chunk.css.map": "/marketing-web/static/css/3.2069dc51.chunk.css.map",
     "static/css/main.af1838c6.chunk.css.map": "/marketing-web/static/css/main.af1838c6.chunk.css.map",
@@ -49,13 +49,14 @@
     "static/media/logo-7.c5279e76.svg": "/marketing-web/static/media/logo-7.c5279e76.svg",
     "static/media/logo_digipeta.6c24f196.svg": "/marketing-web/static/media/logo_digipeta.6c24f196.svg",
     "static/media/logo_light_digipeta.svg": "/marketing-web/static/media/logo_light_digipeta.6858ace6.svg",
-    "static/media/App.scss": "/marketing-web/static/media/primeicons.e61f3495.woff"
+    "static/media/App.scss": "/marketing-web/static/media/primeicons.e61f3495.woff",
+    "static/media/tema.bdcea684.jpg": "/marketing-web/static/media/tema.bdcea684.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2805617a.js",
+    "static/js/runtime-main.44d8bc6c.js",
     "static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js",
     "static/css/main.af1838c6.chunk.css",
-    "static/js/main.93126c15.chunk.js"
+    "static/js/main.5e7ceaa2.chunk.js"
   ]
 }
