@@ -13,10 +13,6 @@ import IMG_7 from './../assets/images/img-7.jpg';
 import IMG_8 from './../assets/images/img-8.jpg';
 import IMG_9 from './../assets/images/img-9.jpg';
 import BANNER_BG from './../assets/images/img-home.jpg';
-// import LANDINGPAGE_1 from './../assets/images/landing-page1.png';
-// import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
-// import LANDINGPAGE_3 from './../assets/images/landing-page3.png';
-// import LANDINGPAGE_4 from './../assets/images/landing-page4.png';
 import LANDINGPAGE_5 from './../assets/images/landingpage5.jpg';
 import logoLight2 from './../assets/images/logo-light.png';
 import IMGPARTNER_1 from './../assets/images/logo/logo-1.svg';
@@ -27,7 +23,11 @@ import IMGPARTNER_5 from './../assets/images/logo/logo-5.svg';
 import IMGPARTNER_6 from './../assets/images/logo/logo-6.svg';
 import IMGPARTNER_7 from './../assets/images/logo/logo-7.svg';
 import logoLight from './../assets/images/logo_light_digipeta.svg';
-
+// import LANDINGPAGE_1 from './../assets/images/landing-page1.png';
+// import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
+// import LANDINGPAGE_3 from './../assets/images/landing-page3.png';
+// import LANDINGPAGE_4 from './../assets/images/landing-page4.png';
+import THEMA_BG from './../assets/images/tema.jpg';
 
 const VIDEO_1 = '/videos/video-1.mp4';
 // const VIDEO_2 = '/videos/video-2.mp4';
@@ -60,7 +60,7 @@ export const dataHomes = {
   thematics: true, // true for show, false to hidden
   thematics_heading: 'Tema',
   thematics_subheading: 'Beberapa tema yang sudah kami kerjakan :',
-  thematics_banner: IMG_1,
+  thematics_banner: THEMA_BG,
   thematics_slider: false, // true for show, false to hidden
   samples: true, // true for show, false to hidden
   samples_heading: 'Sample dan Demo',

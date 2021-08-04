@@ -2,27 +2,17 @@ import React from 'react';
 
 
 
-import {
-  dataHomes,
-  dataBlogs,
-  dataFeatures,
-  dataAbouts,
-  dataServices,
-  dataThematics,
-  dataThematicSliders,
-  dataSamples,
-  dataPartners,
-  dataSliders,
-} from './../../components/models';
+import { dataHomes, dataBlogs, dataFeatures, dataAbouts, dataServices, dataThematics, dataThematicSliders, dataSamples, dataPartners, dataSliders } from './../../components/models';
 import BlogSection from './blog-section';
 import IndustrySection from './industry-section';
 import PartnerSection from './partner-section';
-import SampleSection from './sample-section';
+// import SampleSection from './sample-section';
 import SampleSection2 from './sample-section2';
 import SliderSection from './slider-section';
 import StaticSection from './static-section';
 import ThematicSection from './thematic-section';
 import VideoSection from './video-section';
+
 
 export interface IndexState {
   homes: any;
