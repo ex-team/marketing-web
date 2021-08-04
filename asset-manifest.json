@@ -2,16 +2,16 @@
   "files": {
     "static/js/0.598bddc0.chunk.js": "/marketing-web/static/js/0.598bddc0.chunk.js",
     "static/js/0.598bddc0.chunk.js.map": "/marketing-web/static/js/0.598bddc0.chunk.js.map",
-    "main.css": "/marketing-web/static/css/main.9fb8f6f8.chunk.css",
-    "main.js": "/marketing-web/static/js/main.d884a719.chunk.js",
-    "main.js.map": "/marketing-web/static/js/main.d884a719.chunk.js.map",
-    "runtime-main.js": "/marketing-web/static/js/runtime-main.0c0ef4ea.js",
-    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.0c0ef4ea.js.map",
+    "main.css": "/marketing-web/static/css/main.af1838c6.chunk.css",
+    "main.js": "/marketing-web/static/js/main.93126c15.chunk.js",
+    "main.js.map": "/marketing-web/static/js/main.93126c15.chunk.js.map",
+    "runtime-main.js": "/marketing-web/static/js/runtime-main.2805617a.js",
+    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.2805617a.js.map",
     "static/css/3.2069dc51.chunk.css": "/marketing-web/static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js": "/marketing-web/static/js/3.9368e871.chunk.js",
     "static/js/3.9368e871.chunk.js.map": "/marketing-web/static/js/3.9368e871.chunk.js.map",
-    "static/js/4.a7629dd5.chunk.js": "/marketing-web/static/js/4.a7629dd5.chunk.js",
-    "static/js/4.a7629dd5.chunk.js.map": "/marketing-web/static/js/4.a7629dd5.chunk.js.map",
+    "static/js/4.71b1fd87.chunk.js": "/marketing-web/static/js/4.71b1fd87.chunk.js",
+    "static/js/4.71b1fd87.chunk.js.map": "/marketing-web/static/js/4.71b1fd87.chunk.js.map",
     "static/js/5.94639b68.chunk.js": "/marketing-web/static/js/5.94639b68.chunk.js",
     "static/js/5.94639b68.chunk.js.map": "/marketing-web/static/js/5.94639b68.chunk.js.map",
     "static/js/6.74010fdc.chunk.js": "/marketing-web/static/js/6.74010fdc.chunk.js",
@@ -20,11 +20,11 @@
     "static/js/7.5d36c63a.chunk.js.map": "/marketing-web/static/js/7.5d36c63a.chunk.js.map",
     "static/js/8.3629c628.chunk.js": "/marketing-web/static/js/8.3629c628.chunk.js",
     "static/js/8.3629c628.chunk.js.map": "/marketing-web/static/js/8.3629c628.chunk.js.map",
-    "static/js/9.2c8b0c25.chunk.js": "/marketing-web/static/js/9.2c8b0c25.chunk.js",
-    "static/js/9.2c8b0c25.chunk.js.map": "/marketing-web/static/js/9.2c8b0c25.chunk.js.map",
+    "static/js/9.5b6c9f03.chunk.js": "/marketing-web/static/js/9.5b6c9f03.chunk.js",
+    "static/js/9.5b6c9f03.chunk.js.map": "/marketing-web/static/js/9.5b6c9f03.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/3.2069dc51.chunk.css.map": "/marketing-web/static/css/3.2069dc51.chunk.css.map",
-    "static/css/main.9fb8f6f8.chunk.css.map": "/marketing-web/static/css/main.9fb8f6f8.chunk.css.map",
+    "static/css/main.af1838c6.chunk.css.map": "/marketing-web/static/css/main.af1838c6.chunk.css.map",
     "static/js/3.9368e871.chunk.js.LICENSE.txt": "/marketing-web/static/js/3.9368e871.chunk.js.LICENSE.txt",
     "static/js/5.94639b68.chunk.js.LICENSE.txt": "/marketing-web/static/js/5.94639b68.chunk.js.LICENSE.txt",
     "static/media/AppStoreBadge.26677bca.svg": "/marketing-web/static/media/AppStoreBadge.26677bca.svg",
@@ -52,10 +52,10 @@
     "static/media/App.scss": "/marketing-web/static/media/primeicons.e61f3495.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c0ef4ea.js",
+    "static/js/runtime-main.2805617a.js",
     "static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js",
-    "static/css/main.9fb8f6f8.chunk.css",
-    "static/js/main.d884a719.chunk.js"
+    "static/css/main.af1838c6.chunk.css",
+    "static/js/main.93126c15.chunk.js"
   ]
 }
