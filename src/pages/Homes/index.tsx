@@ -18,6 +18,7 @@ import BlogSection from './blog-section';
 import IndustrySection from './industry-section';
 import PartnerSection from './partner-section';
 import SampleSection from './sample-section';
+import SampleSection2 from './sample-section2';
 import SliderSection from './slider-section';
 import StaticSection from './static-section';
 import ThematicSection from './thematic-section';
@@ -109,11 +110,16 @@ class Index extends React.Component<{}, IndexState> {
             thematics_slider={this.state.homes.thematics_slider}
           />
         )}
-        <SampleSection
+        <SampleSection2
           data={this.state.samples}
           heading={this.state.homes.samples_heading}
           subheading={this.state.homes.samples_subheading}
         />
+        {/* <SampleSection
+          data={this.state.samples}
+          heading={this.state.homes.samples_heading}
+          subheading={this.state.homes.samples_subheading}
+        /> */}
         {this.state.homes.blogs && (
           <BlogSection
             data={this.state.blogs}
