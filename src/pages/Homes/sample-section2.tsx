@@ -56,7 +56,7 @@ function SampleSection(props: Props) {
             <p>{props.subheading}</p>
             <div className="more p-d-flex p-jc-center">
               <a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">
-                <Button label="Demo Sistem" />
+                <Button label="Demo Sistem" icon="pi pi-window-maximize"/>
               </a>
             </div>
           </div>
@@ -72,8 +72,8 @@ function SampleSection(props: Props) {
                         <li className="glide__slide text-center" key={idx}>
                           <div className="content p-justify-center">
                             <div className="p-grid">
-                              <div className="sample p-col-12 p-lg-6">
-                                <img className="image-banner p-shadow-4" src={data.thumbnail} alt={data.title} />
+                              <div className="sample image-banner p-col-12 p-lg-6">
+                                <img src={data.thumbnail} alt={data.title} />
                               </div>
                               <div className="sample p-col-12 p-lg-6">
                                 <div className="heading-title centered">

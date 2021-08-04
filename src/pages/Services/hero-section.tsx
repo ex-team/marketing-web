@@ -36,7 +36,7 @@ function HeroSection(props: Props) {
           <h1>{props.data.heading}</h1>
           <p>{props.data.subheading}</p>
           <a href="http://google.com">
-            <Button label="Download Brosur" />
+            <Button label="Download Brosur" icon="pi pi-cloud-download"/>
           </a>
           <a href="https://wa.me/6289623498800/">
             <Button label="Konsultasi" icon="pi pi-phone" className="p-button-success" />

@@ -46,7 +46,7 @@ class Footer extends React.Component<{}, State> {
                   </a>
                 </div> */}
               </div>
-              <div className="quicklinks p-col-12 p-lg-2">
+              <div className="quicklinks p-col-12 p-lg-3">
                 <h1>Quick Links</h1>
                 <div className="content">
                   <ul>
@@ -60,7 +60,7 @@ class Footer extends React.Component<{}, State> {
                   </ul>
                 </div>
               </div>
-              <div className="contacts p-col-12 p-lg-4">
+              <div className="contacts p-col-12 p-lg-5">
                 <h1>Kontak</h1>
                 <div className="content">
                   <ul>
@@ -70,18 +70,6 @@ class Footer extends React.Component<{}, State> {
                       </li>
                     ))}
                   </ul>
-                </div>
-              </div>
-              <div className="downloads p-col-12 p-lg-2">
-                <h1>Get the App</h1>
-                <div className="content">
-                  <div className="logo">
-                    {this.state.downloads.map((data, idx) => (
-                      <a key={idx} href={data.url} target="_blank" rel="noopener noreferrer">
-                        <img className="p-pt-2 p-mx-1" src={data.icon} alt={data.name} />
-                      </a>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>

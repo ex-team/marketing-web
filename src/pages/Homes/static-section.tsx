@@ -37,7 +37,7 @@ function StaticSection(props: Props) {
           </div>
           <div className="hero-btn">
             <Link to={props.url}>
-              <Button label={props.button} />
+              <Button label={props.button} icon="pi pi-chevron-circle-right" />
             </Link>
             <a href={props.url_wa} target="_blank" rel="noopener noreferrer">
               <Button label={props.button_wa} icon="pi pi-phone" className="p-button-success" />

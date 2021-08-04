@@ -87,6 +87,15 @@
         }
       }
 
+      .order {
+        list-style: none;
+        display: inline-flex;
+        button {
+          margin-right: 16px;
+          min-width: 100px;
+        }
+      }
+
     }
 
     .content-services .download-brosur {

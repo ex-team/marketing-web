@@ -60,15 +60,19 @@ function MainSection(props: Props) {
             <ul className="download-brosur">
               <li>
                 <a href="http://google.com">
-                  <Button label="Download Brosur" />
+                  <Button label="Download Brosur"  icon="pi pi-cloud-download"/>
                 </a>
               </li>
             </ul>
             <h3>Cara pemesanan :</h3>
-            <ol className="order">
-              <li><a href="mailto:contact@digipeta.com" target="_blank" rel="noopener noreferrer">Send Mail</a></li>
-              <li><a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">WhatsApps : +62 89623498800 </a></li>
-            </ol>
+            <ul className="order">
+              <li><a href="mailto:contact@digipeta.com" target="_blank" rel="noopener noreferrer">
+                <Button label="Kirim Email" icon="pi pi-comment" className="p-button-primary" />
+              </a></li>
+              <li><a href="https://wa.me/6289623498800/" target="_blank" rel="noopener noreferrer">
+                <Button label="Konsultasi" icon="pi pi-phone" className="p-button-success" />
+              </a></li>
+            </ul>
           </div>
         </div>
       </div>
