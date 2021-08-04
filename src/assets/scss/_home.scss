@@ -184,9 +184,17 @@ video {
     text-align: center;
   }
 
+  .content-section .thematic-description {
+    margin-top: 30px;
+  }
+
+  .content-section .thematic-description .theme {
+    padding: 0 0.5rem !important;
+  }
   .content-section .thematic-description ul {
     padding: 0;
     list-style: none;
+    margin: 0 !important;
 
     i {
       margin-right: 16px;
