@@ -201,153 +201,7 @@ video {
       color: $success;
     }
   }
-  .thematic-picture .slider-banner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    color: white;
-
-    .heading-section {
-      color: #000;
-      margin-left: 100px;
-
-      h1 {
-        font-size: 34px;
-      }
-    }
-
-    .glide-wrapper {
-      flex: 1 1 auto;
-      display: flex;
-      min-height: 520px;
-      height: 60vh;
-    }
-
-    .glide {
-      display: block;
-
-      .glide__track {
-        display: block;
-        height: 100%;
-
-        .glide__slides {
-          margin: 0;
-          height: 520px;
-          padding: 16px 0;
-
-          .glide__slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-              background: $dark;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-        }
-      }
-
-      &.glide-dark {
-        .glide__arrow {
-          color: rgba(black, 0.87);
-          border-color: rgba(black, 0.5);
-        }
-      }
-    }
-
-    .content {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .content .centered {
-      position: absolute;
-      padding: 16px 20px 16px 30px;
-      width: 100%;
-      text-align: left;
-      left: 0;
-      top: 0%;
-      background-color: rgba(0,0,0, .5);
-      padding-top: 280px;
-      height: 100%;
-
-      h1 {
-        font-size: 26px;
-        font-weight: 600;
-        margin-top: 0;
-      }
-
-      p {
-        font-size: 16px;
-        min-height: 50px;
-        max-height: 100px;
-      }
-    }
-  }
 }
-
-.service-container {
-  padding: 50px 0;
-  background-color: #fff;
-
-  .heading-section .services-heading{
-    padding-left: 10px !important;
-  }
-
-  .heading-section ul {
-    list-style: none;
-
-    i {
-      margin-right: 12px;
-      color: $success;
-    }
-  }
-
-  .services {
-    padding: 1.5rem 1rem !important;
-  }
-
-  .pricing {
-    width: 100%;
-    height: 500px;
-    padding: 16px;
-
-    .heading {
-      text-align: center;
-      padding: 10px;
-      width: 100%;
-
-      h1 {
-        font-size: 20px;
-        margin: 12px 0;
-      }
-
-      img {
-        width: 100%;
-        height: 200px;
-        object-fit: contain;
-      }
-    }
-
-    .body {
-      padding: 0 20px;
-      .table-service {
-        width: 100%;
-
-        i {
-          color: $success;
-        }
-      }
-    }
-
-  }
-}
-
 
 .sample-container{
   padding: 50px 0;
@@ -563,11 +417,6 @@ video {
 }
 
 @media screen and (max-width: 1140px) {
-  .featured-container .slider-banner {
-    .heading-section {
-      margin-left: 0;
-    }
-  }
   .content .image-banner{
     padding-left: 20px !important;
   }
@@ -610,20 +459,6 @@ video {
         font-size: 20px;
       }
     }
-  }
-
-  .featured-container .slider-banner {
-    .glide-wrapper {
-      max-height: 480px;
-    }
-
-    // .glide__arrow--left {
-    //   left: 40%;
-    // }
-
-    // .glide__arrow--right {
-    //   right: 40%;
-    // }
   }
 
   .industry-container, .thematic-container  {
@@ -694,7 +529,7 @@ video {
       left: 5%;
 
       h1 {
-        font-size: 32px;
+        font-size: 36px;
         font-weight: 600;
         margin-top: 0;
       }
@@ -702,45 +537,6 @@ video {
       p {
         font-size: 18px;
       }
-    }
-  }
-
-  .about-container .about-description {
-    .description{
-      font-size: 18px;
-      text-align: left;
-    }
-  }
-
-  .featured-container {
-    padding: 50px 0 200px;
-
-    .slider-banner {
-      .glide-wrapper {
-        height: 100vh;
-      }
-      .glide .glide__track .glide__slides {
-        height: 480px;
-      }
-      .content .centered {
-        top: 50%;
-        h1 {
-          font-size: 26px;
-          font-weight: 600;
-          margin-top: 0;
-        }
-
-        p {
-          font-size: 14px;
-        }
-      }
-
-      // .glide__arrow--left {
-      //   left: 35%;
-      // }
-      // .glide__arrow--right {
-      //   right: 35%;
-      // }
     }
   }
 
@@ -774,4 +570,10 @@ video {
     }
   }
 
+}
+
+@media screen and (max-width: 380px) {
+  .home-hero-container {
+    padding: 150px 30px 100px;
+  }
 }
