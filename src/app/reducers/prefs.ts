@@ -7,8 +7,8 @@ export interface AppState {
 }
 
 const initialState: AppState = {
-  title: 'Site Title',
-  description: 'Site description',
+  title: 'Digipeta',
+  description: 'Konsultan GIS Profesional',
 };
 
 // Reducers
@@ -18,9 +18,11 @@ function updateState(state = initialState, action: PayloadAction<any>) {
 
 // The function below is called a thunk and allows us to perform async logic.
 export const fetchPrefs = createAsyncThunk('prefs/fetch', async () => {
-  return await new Promise<AppState>(resolve => setTimeout(() => {
-    resolve({title: 'New Title', description: 'New Description'})
-  }, 1000));
+  return await new Promise<AppState>(resolve =>
+    setTimeout(() => {
+      resolve({ title: 'Digipeta', description: 'Konsultan GIS Profesional' });
+    }, 1000)
+  );
 });
 
 export const prefsSlice = createSlice({

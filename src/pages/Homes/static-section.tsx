@@ -5,12 +5,15 @@ import React from 'react';
 import { Button } from 'primereact/button';
 import { Link } from 'react-router-dom';
 
+
 export interface Props {
   picture: string;
   title: string;
   description: string;
   button: string;
   url: string;
+  button_wa: string;
+  url_wa: string;
   dataFeatures: any;
 }
 
@@ -36,6 +39,9 @@ function StaticSection(props: Props) {
             <Link to={props.url}>
               <Button label={props.button} />
             </Link>
+            <a href={props.url_wa} target="_blank" rel="noopener noreferrer">
+              <Button label={props.button_wa} icon="pi pi-phone" className="p-button-success" />
+            </a>
           </div>
         </div>
       </div>

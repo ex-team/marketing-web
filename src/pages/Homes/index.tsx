@@ -77,6 +77,8 @@ class Index extends React.Component<{}, IndexState> {
             description={this.state.homes.header_description}
             button={this.state.homes.header_button}
             url={this.state.homes.header_url}
+            button_wa={this.state.homes.header_button_wa}
+            url_wa={this.state.homes.header_url_wa}
             dataFeatures={this.state.features}
           />
         ) : this.state.homes.header_type === 1 ? (

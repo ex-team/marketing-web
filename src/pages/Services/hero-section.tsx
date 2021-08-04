@@ -38,6 +38,9 @@ function HeroSection(props: Props) {
           <a href="http://google.com">
             <Button label="Download Brosur" />
           </a>
+          <a href="https://wa.me/6289623498800/">
+            <Button label="Konsultasi" icon="pi pi-phone" className="p-button-success" />
+          </a>
         </div>
       )}
     </div>

@@ -38,8 +38,10 @@ export const dataHomes = {
   header_type: 0, // 0: Static Banner, 1: Slider Banner, 2: Video Banner
   header_title: 'GIS ON DEMAND',
   header_description: 'Jasa Pengembangan Sistem & aplikasi berbasis GIS ',
-  header_button: 'Service / Layanan',
+  header_button: 'Service',
   header_url: 'services',
+  header_button_wa: 'Konsultasi',
+  header_url_wa: 'https://wa.me/6289623498800/',
   header_image: LANDINGPAGE_5,
   header_video: VIDEO_1,
   abouts: true, // true for show, false to hidden
@@ -369,7 +371,7 @@ export const dataPages = [
     heading: 'Gis On Demand',
     subheading: 'Gratis Konsultasi dan Diskusi untuk Pengembangan Sistem',
     banner: BANNER_BG,
-    title: '',
+    title: 'Layanan',
     description: '',
   },
   {
