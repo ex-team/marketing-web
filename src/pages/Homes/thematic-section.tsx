@@ -46,7 +46,7 @@ function ThematicSection(props: Props) {
             <div className="p-grid">
               <div className="p-col-10 p-offset-1 p-justify-center">
                 <div className="p-grid p-justify-between">
-                  <div className="p-col-12 p-md-4 p-justify-center">
+                  <div className="theme p-col-12 p-md-4 p-justify-center">
                     <ul>
                       {thematics.slice(0, 4).map((data, idx) => {
                         if (loading) {
@@ -66,7 +66,7 @@ function ThematicSection(props: Props) {
                       })}
                     </ul>
                   </div>
-                  <div className="p-col-12 p-md-4 p-justify-center">
+                  <div className="theme p-col-12 p-md-4 p-justify-center">
                     <ul>
                       {thematics.slice(4, 8).map((data, idx) => {
                         if (loading) {
@@ -86,7 +86,7 @@ function ThematicSection(props: Props) {
                       })}
                     </ul>
                   </div>
-                  <div className="p-col-12 p-md-4 p-justify-center">
+                  <div className="theme p-col-12 p-md-4 p-justify-center">
                     <ul>
                       {thematics.slice(8, 12).map((data, idx) => {
                         if (loading) {
