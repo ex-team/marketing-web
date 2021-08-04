@@ -3,8 +3,8 @@
     "static/js/0.598bddc0.chunk.js": "/marketing-web/static/js/0.598bddc0.chunk.js",
     "static/js/0.598bddc0.chunk.js.map": "/marketing-web/static/js/0.598bddc0.chunk.js.map",
     "main.css": "/marketing-web/static/css/main.782387fb.chunk.css",
-    "main.js": "/marketing-web/static/js/main.4dbaf40d.chunk.js",
-    "main.js.map": "/marketing-web/static/js/main.4dbaf40d.chunk.js.map",
+    "main.js": "/marketing-web/static/js/main.bc0b107a.chunk.js",
+    "main.js.map": "/marketing-web/static/js/main.bc0b107a.chunk.js.map",
     "runtime-main.js": "/marketing-web/static/js/runtime-main.b3656ffb.js",
     "runtime-main.js.map": "/marketing-web/static/js/runtime-main.b3656ffb.js.map",
     "static/css/3.2069dc51.chunk.css": "/marketing-web/static/css/3.2069dc51.chunk.css",
@@ -50,13 +50,13 @@
     "static/media/logo_digipeta.6c24f196.svg": "/marketing-web/static/media/logo_digipeta.6c24f196.svg",
     "static/media/logo_light_digipeta.svg": "/marketing-web/static/media/logo_light_digipeta.6858ace6.svg",
     "static/media/App.scss": "/marketing-web/static/media/primeicons.e61f3495.woff",
-    "static/media/tema.26645d62.jpg": "/marketing-web/static/media/tema.26645d62.jpg"
+    "static/media/tema.26fdab92.jpg": "/marketing-web/static/media/tema.26fdab92.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b3656ffb.js",
     "static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js",
     "static/css/main.782387fb.chunk.css",
-    "static/js/main.4dbaf40d.chunk.js"
+    "static/js/main.bc0b107a.chunk.js"
   ]
 }
