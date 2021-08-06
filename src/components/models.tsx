@@ -23,6 +23,9 @@ import IMGPARTNER_5 from './../assets/images/logo/logo-5.svg';
 import IMGPARTNER_6 from './../assets/images/logo/logo-6.svg';
 import IMGPARTNER_7 from './../assets/images/logo/logo-7.svg';
 import logoLight from './../assets/images/logo_light_digipeta.svg';
+import SAMPLE_1 from './../assets/images/sample1.jpeg';
+import SAMPLE_2 from './../assets/images/sample2.jpeg';
+import SAMPLE_3 from './../assets/images/sample3.jpeg';
 // import LANDINGPAGE_1 from './../assets/images/landing-page1.png';
 // import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
 // import LANDINGPAGE_3 from './../assets/images/landing-page3.png';
@@ -308,72 +311,74 @@ export const dataServices = [
 export const dataSamples = [
   {
     id: 1,
-    title: 'Sistem Informasi Jalan dan Infrastruktur,',
-    description: 'Berisi tentang informasi database jalan dan pembangunan infrastruktur',
+    title: 'Sistem Informasi Jalan dan Jembatan',
+    description:
+      'Sistem Informasi ini sering disebut Database Jalan dan jembatan. Sistem ini dibutuhkan di semua dinas PUPR kabupaten untuk pengelolaan data aset mulai dari penyimpanan, updating, analisa dan penyajian data. Data masukan berupa peta digital dan data atribut sesuai dengan form DAK kementrian PUPR dan format kebijakan satu peta, seperti :',
     features: [
-      { id: 1, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 2, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 3, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 4, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 5, title: 'Lorem ipsum', description: 'Lorem ipsum' },
+      { id: 1, title: 'Ruas jalan', description: '' },
+      { id: 2, title: 'Status', description: '' },
+      { id: 3, title: 'Posisi', description: '' },
+      { id: 4, title: 'Dimensi (Panjang, lebar)', description: '' },
+      { id: 5, title: 'Jenis permukaan', description: '' },
+      { id: 6, title: 'Tingkat kerusakan', description: '' },
+      { id: 7, title: 'Dan lain-lain', description: '' },
     ],
-    thumbnail: IMG_1,
+    thumbnail: SAMPLE_1,
     url: '',
   },
   {
     id: 2,
-    title: 'Sistem Informasi Daerah Irigasi,',
-    description: 'Berisi tentang informasi database hasil survey aset dan Daerah Irigasi.',
+    title: 'Sistem Informasi Irigasi',
+    description:
+      'Sistem Informasi Irigasi digunakan oleh pemerintah daerah sebagai sistem penyimpanan dan pengelolaan data irigasi. Sistem ini mengelola data keirigasian mulai dari areal, saluran dan bangunan irigasi. Contoh data layer sistem informasi ini adalah ;',
     features: [
-      { id: 1, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 2, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 3, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 4, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 5, title: 'Lorem ipsum', description: 'Lorem ipsum' },
+      { id: 1, title: 'Daerah Irigasi (Baku, Fungsional, Potensial)', description: '' },
+      { id: 2, title: 'Saluran (primer, skunder, tersier)', description: '' },
+      { id: 3, title: 'Bangunan (bendung, pintu air, dll)', description: '' },
+      { id: 4, title: 'Sungai', description: '' },
     ],
-    thumbnail: IMG_2,
+    thumbnail: SAMPLE_2,
     url: '',
   },
   {
     id: 3,
-    title: 'Sistem Informasi Jalan dan Jembatan,',
-    description: 'Berisi tentang informasi Jalan, Titik Kerusakan dan Jembatan',
+    title: 'Sistem Informasi Jaringan Pipa PDAM',
+    description:
+      'Sistem informasi Jaringan Pipa PDAM berbasis GIS merupakan sebuah sistem yang sangat dibutuhkan oleh PDAM dalam pengelolaan aset. Integrasi sistem WebGIS dengan mobile mampu menaikkan efisiensi kerja dan meningkatkan sistem pelayanan konsumen yang lebih baik. Aset-aset PDAM yang dikelola dalam sistem dan bisa diintegrasikan dengan sistem yang sudah ada pada perusahaan adalah ;',
     features: [
-      { id: 1, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 2, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 3, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 4, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 5, title: 'Lorem ipsum', description: 'Lorem ipsum' },
+      { id: 1, title: 'Jaringan pipa', description: '' },
+      { id: 2, title: 'Jaringan SR/Pelanggan', description: '' },
+      { id: 3, title: 'Instalasi', description: '' },
+      { id: 4, title: 'Aksesoris', description: '' },
     ],
-    thumbnail: IMG_3,
+    thumbnail: SAMPLE_3,
     url: '',
   },
   {
     id: 4,
-    title: 'Sistem Informasi Pipa PDAM,',
-    description: 'Berisi tentang informasi Pipa PDAM',
-    features: [
-      { id: 1, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 2, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 3, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 4, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 5, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-    ],
+    title: 'Sistem Informasi Bangunan (IMB)',
+    description:
+      'Sistem Informasi Bangunan ini digunakan untuk managemen data IMB, Mulai dari pendataan bangunan eksisting sampai ke proses pengajuan ijin. Dengan kelengkapan data seperti peta Tata Ruang, topografi dan citra satelit sistem ini sangat memudahkan analisa awal lokasi bangunan ataupun mendeteksi permasalahan secara keruangan.',
+    features: [],
     thumbnail: IMG_5,
     url: '',
   },
   {
     id: 5,
-    title: 'Dan Sistem Informasi Lain-nya',
-    description: 'Lorem Ipsum',
-    features: [
-      { id: 1, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 2, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 3, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 4, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-      { id: 5, title: 'Lorem ipsum', description: 'Lorem ipsum' },
-    ],
+    title: 'Sistem Informasi Infrastruktur',
+    description:
+      'Sistem Informasi infrastruktur merupakan sistem yang sangat komplek karena digunakan untuk mengelola berbagai jenis dan type data. Jenis data aset infrastruktur termasuk utilitas yang dikelola seperti : jalan, jembatan, gedung, drainase, utilitas, tiang listrik, gorong-gorong, pipa, hydran, tiang telpon dan lain-lain. Sistem ini biasanya dibangun dengan konsep dinamis karena digunakan oleh beberapa bidang pengelola. Sistem bisa diintegrasikan dengan mobile sebagai alat pengambil data dilapangan yang langsung akan terkirim ke sistem utama (WebGIS) secara real time.',
+    features: [],
     thumbnail: IMG_6,
+    url: '',
+  },
+  {
+    id: 6,
+    title: 'Sistem Informasi Kehutanan',
+    description:
+      'Sistem informasi kehutanan ini diaplikasikan pada perusahaan tambang untuk mengelola data batas, rehabilitasi dan monitoring penanaman ',
+    features: [],
+    thumbnail: IMG_9,
     url: '',
   },
 ];
