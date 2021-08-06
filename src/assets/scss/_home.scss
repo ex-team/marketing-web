@@ -541,7 +541,7 @@ video {
     }
 
     .content .image-banner{
-      height: 250px;
+      height: 250px !important;
     }
 
     .content-section .sample {
@@ -566,5 +566,36 @@ video {
 @media screen and (max-width: 380px) {
   .home-hero-container {
     padding: 150px 30px 100px;
+  }
+
+  .sample-container{
+    .content .image-banner{
+      height: 200px !important;
+    }
+    .sample-slider {
+      height: 100vh !important;
+      margin: 0 !important;
+    }
+
+    .content-section .sample {
+      padding: 0 12px;
+
+      .heading-title {
+        margin-top: 30px;
+
+        h1 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 14px;
+          text-align: justify;
+        }
+      }
+    }
+
+    .glide__arrow {
+      top: 15% !important;
+    }
   }
 }
