@@ -30,45 +30,6 @@
       }
     }
 
-    .services {
-      padding: 1.5rem;
-
-      .pricing {
-        width: 100%;
-        height: 560px;
-        padding: 16px;
-
-        .heading {
-          text-align: center;
-          padding: 10px;
-          width: 100%;
-
-          h1 {
-            font-size: 20px;
-            margin: 12px 0;
-          }
-
-          img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-          }
-        }
-
-        .body {
-          padding: 0 20px;
-          .table-service {
-            width: 100%;
-
-            i {
-              color: $success;
-            }
-          }
-        }
-
-      }
-    }
-
     .content-services {
       .disclaimer{
         margin: 16px 0;
