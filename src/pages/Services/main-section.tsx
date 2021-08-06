@@ -44,7 +44,7 @@ function MainSection(props: Props) {
               <h1>{props.data.title}</h1>
               <ul className="services-heading">
                 {services.map((data, idx) => (
-                  <li key={idx}>
+                  <li key={idx} className="point-top">
                     <i className="pi pi-check-circle"></i> {data.title}
                     <ul>
                       <li>{data.description}</li>
