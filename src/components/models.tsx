@@ -13,15 +13,21 @@ import IMG_7 from './../assets/images/img-7.jpg';
 import IMG_8 from './../assets/images/img-8.jpg';
 import IMG_9 from './../assets/images/img-9.jpg';
 import BANNER_BG from './../assets/images/img-home.jpg';
+import IMGPARTNER_1 from './../assets/images/klien/1.png';
+import IMGPARTNER_2 from './../assets/images/klien/2.png';
+import IMGPARTNER_3 from './../assets/images/klien/3.png';
+import IMGPARTNER_4 from './../assets/images/klien/4.png';
+import IMGPARTNER_5 from './../assets/images/klien/5.png';
+import IMGPARTNER_6 from './../assets/images/klien/6.png';
+import IMGPARTNER_7 from './../assets/images/klien/7.png';
+import IMGPARTNER_8 from './../assets/images/klien/8.png';
+import IMGPARTNER_9 from './../assets/images/klien/9.png';
+import IMGPARTNER_10 from './../assets/images/klien/10.png';
+import IMGPARTNER_11 from './../assets/images/klien/11.png';
+import IMGPARTNER_12 from './../assets/images/klien/12.png';
+import IMGPARTNER_13 from './../assets/images/klien/13.png';
 import LANDINGPAGE_5 from './../assets/images/landingpage5.jpg';
 import logoLight2 from './../assets/images/logo-light.png';
-import IMGPARTNER_1 from './../assets/images/logo/logo-1.svg';
-import IMGPARTNER_2 from './../assets/images/logo/logo-2.svg';
-import IMGPARTNER_3 from './../assets/images/logo/logo-3.svg';
-import IMGPARTNER_4 from './../assets/images/logo/logo-4.svg';
-import IMGPARTNER_5 from './../assets/images/logo/logo-5.svg';
-import IMGPARTNER_6 from './../assets/images/logo/logo-6.svg';
-import IMGPARTNER_7 from './../assets/images/logo/logo-7.svg';
 import logoLight from './../assets/images/logo_light_digipeta.svg';
 import SAMPLE_1 from './../assets/images/sample1.jpeg';
 import SAMPLE_2 from './../assets/images/sample2.jpeg';
@@ -391,6 +397,12 @@ export const dataPartners = [
   { id: 5, name: 'E Company', url: 'company.com', images: IMGPARTNER_5 },
   { id: 6, name: 'F Company', url: 'company.com', images: IMGPARTNER_6 },
   { id: 7, name: 'G Company', url: 'company.com', images: IMGPARTNER_7 },
+  { id: 7, name: 'G Company', url: 'company.com', images: IMGPARTNER_8 },
+  { id: 7, name: 'G Company', url: 'company.com', images: IMGPARTNER_9 },
+  { id: 7, name: 'G Company', url: 'company.com', images: IMGPARTNER_10 },
+  { id: 7, name: 'G Company', url: 'company.com', images: IMGPARTNER_11 },
+  { id: 7, name: 'G Company', url: 'company.com', images: IMGPARTNER_12 },
+  { id: 7, name: 'G Company', url: 'company.com', images: IMGPARTNER_13 },
 ];
 
 // Page Setting
