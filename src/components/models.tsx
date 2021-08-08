@@ -29,9 +29,14 @@ import IMGPARTNER_13 from './../assets/images/klien/13.png';
 import LANDINGPAGE_5 from './../assets/images/landingpage5.jpg';
 import logoLight2 from './../assets/images/logo-light.png';
 import logoLight from './../assets/images/logo_light_digipeta.svg';
-import SAMPLE_1 from './../assets/images/sample1.jpeg';
-import SAMPLE_2 from './../assets/images/sample2.jpeg';
-import SAMPLE_3 from './../assets/images/sample3.jpeg';
+import SAMPLE_1 from './../assets/images/sample1.png';
+import SAMPLE_2 from './../assets/images/sample2.png';
+import SAMPLE_3 from './../assets/images/sample3.png';
+import SAMPLE_4 from './../assets/images/sample4.png';
+import SAMPLE_5 from './../assets/images/sample5.png';
+import SAMPLE_6 from './../assets/images/sample6.png';
+import SAMPLE_7 from './../assets/images/sample7.png';
+import SAMPLE_8 from './../assets/images/sample8.png';
 // import LANDINGPAGE_1 from './../assets/images/landing-page1.png';
 // import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
 // import LANDINGPAGE_3 from './../assets/images/landing-page3.png';
@@ -366,25 +371,43 @@ export const dataSamples = [
     description:
       'Sistem Informasi Bangunan ini digunakan untuk managemen data IMB, Mulai dari pendataan bangunan eksisting sampai ke proses pengajuan ijin. Dengan kelengkapan data seperti peta Tata Ruang, topografi dan citra satelit sistem ini sangat memudahkan analisa awal lokasi bangunan ataupun mendeteksi permasalahan secara keruangan.',
     features: [],
-    thumbnail: IMG_5,
+    thumbnail: SAMPLE_4,
     url: '',
   },
   {
     id: 5,
     title: 'Sistem Informasi Infrastruktur',
     description:
-      'Sistem Informasi infrastruktur merupakan sistem yang sangat komplek karena digunakan untuk mengelola berbagai jenis dan type data. Jenis data aset infrastruktur termasuk utilitas yang dikelola seperti : jalan, jembatan, gedung, drainase, utilitas, tiang listrik, gorong-gorong, pipa, hydran, tiang telpon dan lain-lain. Sistem ini biasanya dibangun dengan konsep dinamis karena digunakan oleh beberapa bidang pengelola. Sistem bisa diintegrasikan dengan mobile sebagai alat pengambil data dilapangan yang langsung akan terkirim ke sistem utama (WebGIS) secara real time.',
+      'Sistem Informasi infrastruktur merupakan sistem yang sangat komplek karena digunakan untuk mengelola berbagai jenis dan type data. Jenis data aset infrastruktur termasuk utilitas yang dikelola seperti ; jalan, jembatan, gedung, drainase, utilitas, tiang listrik, gorong-gorong, pipa, hydran, tiang telpon dan lain-lain. Sistem ini biasanya dibangun dengan konsep dinamis karena digunakan oleh beberapa bidang pengelola. Sistem bisa diintegrasikan dengan mobile sebagai alat pengambil data dilapangan yang langsung akan terkirim ke sistem utama (WebGIS) secara real time.',
     features: [],
-    thumbnail: IMG_6,
+    thumbnail: SAMPLE_5,
     url: '',
   },
   {
     id: 6,
-    title: 'Sistem Informasi Kehutanan',
+    title: 'Database dan Inspeksi Kehutanan di Pertambangan ',
     description:
-      'Sistem informasi kehutanan ini diaplikasikan pada perusahaan tambang untuk mengelola data batas, rehabilitasi dan monitoring penanaman ',
+      'Sistem informasi kehutanan ini diaplikasikan pada perusahaan tambang untuk mengelola data batas (IUP), rehabilitasi dan penanaman. Sistem diintegrasikan dengan mobile system yang digunakan sebagai alat monitoring atau inspeksi dilapangan. Mobile system untuk kegiatan inspeksi perawatan patok batas dan pengambilan data progres penanaman pada kegiatan rehabilitasi.',
     features: [],
-    thumbnail: IMG_9,
+    thumbnail: SAMPLE_6,
+    url: '',
+  },
+  {
+    id: 7,
+    title: 'Sistem Informasi Drainase',
+    description:
+      'Drainase merupakan bagian dari bidang infrastruktur atau utilitas. Dalam pengelolaan data sistem drainase ini berisikan tentang peta jaringan drainase dan data suport berupa peta jalan, sungai, tataruang dan kontur. Data-data ini kemudian digunakan sebagai bahan perencanaan atau kebijakan dalam pengelolaan jaringan drainase kota atau kabupaten.',
+    features: [],
+    thumbnail: SAMPLE_7,
+    url: '',
+  },
+  {
+    id: 8,
+    title: 'SI Biodiversitas (Keaneka Ragaman Hayati)',
+    description:
+      'Sistem Informasi Kehati merupakan integrasi Webgis dan mobile system. Selain digunakan untuk penyimpanan data keanekaragaman hayati (flora dan fauna) sistem juga digunakan untukk penyimpanan data sosial kehutanan seperti pencurian kayu, kebakaran dll. Mobile system digunakan sebagai tool pengambilan data survey maupun patroli. Data akan langsung terkirim dan akan dikelola oleh webgis. Kelengkapan  sistem tersebut berupa metode survey, Tracking, dan daftar flora dan fauna.',
+    features: [],
+    thumbnail: SAMPLE_8,
     url: '',
   },
 ];
