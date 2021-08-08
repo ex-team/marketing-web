@@ -2,9 +2,9 @@
   "files": {
     "static/js/0.598bddc0.chunk.js": "/marketing-web/static/js/0.598bddc0.chunk.js",
     "static/js/0.598bddc0.chunk.js.map": "/marketing-web/static/js/0.598bddc0.chunk.js.map",
-    "main.css": "/marketing-web/static/css/main.23b381c9.chunk.css",
-    "main.js": "/marketing-web/static/js/main.c12b7f85.chunk.js",
-    "main.js.map": "/marketing-web/static/js/main.c12b7f85.chunk.js.map",
+    "main.css": "/marketing-web/static/css/main.06a469b9.chunk.css",
+    "main.js": "/marketing-web/static/js/main.5b09a0f1.chunk.js",
+    "main.js.map": "/marketing-web/static/js/main.5b09a0f1.chunk.js.map",
     "runtime-main.js": "/marketing-web/static/js/runtime-main.9e760e49.js",
     "runtime-main.js.map": "/marketing-web/static/js/runtime-main.9e760e49.js.map",
     "static/css/3.2069dc51.chunk.css": "/marketing-web/static/css/3.2069dc51.chunk.css",
@@ -24,7 +24,7 @@
     "static/js/9.96bf3958.chunk.js.map": "/marketing-web/static/js/9.96bf3958.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/3.2069dc51.chunk.css.map": "/marketing-web/static/css/3.2069dc51.chunk.css.map",
-    "static/css/main.23b381c9.chunk.css.map": "/marketing-web/static/css/main.23b381c9.chunk.css.map",
+    "static/css/main.06a469b9.chunk.css.map": "/marketing-web/static/css/main.06a469b9.chunk.css.map",
     "static/js/3.9368e871.chunk.js.LICENSE.txt": "/marketing-web/static/js/3.9368e871.chunk.js.LICENSE.txt",
     "static/js/5.94639b68.chunk.js.LICENSE.txt": "/marketing-web/static/js/5.94639b68.chunk.js.LICENSE.txt",
     "static/media/1.2d8d2f96.png": "/marketing-web/static/media/1.2d8d2f96.png",
@@ -49,16 +49,21 @@
     "static/media/logo_digipeta.6c24f196.svg": "/marketing-web/static/media/logo_digipeta.6c24f196.svg",
     "static/media/logo_light_digipeta.svg": "/marketing-web/static/media/logo_light_digipeta.6858ace6.svg",
     "static/media/App.scss": "/marketing-web/static/media/primeicons.e61f3495.woff",
-    "static/media/sample1.e6d4ecba.jpeg": "/marketing-web/static/media/sample1.e6d4ecba.jpeg",
-    "static/media/sample2.b25380de.jpeg": "/marketing-web/static/media/sample2.b25380de.jpeg",
-    "static/media/sample3.d4558333.jpeg": "/marketing-web/static/media/sample3.d4558333.jpeg",
+    "static/media/sample1.07c79411.png": "/marketing-web/static/media/sample1.07c79411.png",
+    "static/media/sample2.b683fd12.png": "/marketing-web/static/media/sample2.b683fd12.png",
+    "static/media/sample3.ddf68017.png": "/marketing-web/static/media/sample3.ddf68017.png",
+    "static/media/sample4.7f8e0edf.png": "/marketing-web/static/media/sample4.7f8e0edf.png",
+    "static/media/sample5.807bfa40.png": "/marketing-web/static/media/sample5.807bfa40.png",
+    "static/media/sample6.edfc3b37.png": "/marketing-web/static/media/sample6.edfc3b37.png",
+    "static/media/sample7.ec4ae48c.png": "/marketing-web/static/media/sample7.ec4ae48c.png",
+    "static/media/sample8.7e82b7d5.png": "/marketing-web/static/media/sample8.7e82b7d5.png",
     "static/media/tema.26fdab92.jpg": "/marketing-web/static/media/tema.26fdab92.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9e760e49.js",
     "static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js",
-    "static/css/main.23b381c9.chunk.css",
-    "static/js/main.c12b7f85.chunk.js"
+    "static/css/main.06a469b9.chunk.css",
+    "static/js/main.5b09a0f1.chunk.js"
   ]
 }
