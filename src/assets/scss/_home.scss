@@ -414,7 +414,7 @@ video {
 
 @media screen and (max-width: 1140px) {
   .home-hero-container .devices {
-    top: 15%;
+    top: 8%;
     right: 0%;
   }
 
@@ -441,6 +441,11 @@ video {
 @media screen and (max-width: 768px) {
   .home-hero-container {
     text-align: left;
+  }
+
+  .home-hero-container .devices {
+    top: 6%;
+    right: 0%;
   }
 
   .home-hero-container .heading-title > h1 {
