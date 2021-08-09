@@ -6,6 +6,9 @@ import { Button } from 'primereact/button';
 import { Link } from 'react-router-dom';
 
 
+
+import DEVICE from './../../assets/images/device.png';
+
 export interface Props {
   picture: string;
   title: string;
@@ -21,7 +24,11 @@ function StaticSection(props: Props) {
   const features = props.dataFeatures;
   return (
     <div className="home-hero-container" style={{ backgroundImage: `url(${props.picture})` }}>
-      <div className="container">
+      <div className="overlay"></div>
+      <div className="devices">
+        <img src={DEVICE} alt="" />
+      </div>
+      <div className="container" style={{ zIndex: 9999 }}>
         <div className="heading-title">
           <h1>{props.title}</h1>
           <p>{props.description}</p>

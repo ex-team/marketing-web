@@ -26,7 +26,7 @@ import IMGPARTNER_10 from './../assets/images/klien/10.png';
 import IMGPARTNER_11 from './../assets/images/klien/11.png';
 import IMGPARTNER_12 from './../assets/images/klien/12.png';
 import IMGPARTNER_13 from './../assets/images/klien/13.png';
-import LANDINGPAGE_5 from './../assets/images/landingpage5.jpg';
+import LANDINGPAGE_1 from './../assets/images/landingpage_1.jpg';
 import logoLight2 from './../assets/images/logo-light.png';
 import logoLight from './../assets/images/logo_light_digipeta.svg';
 import SAMPLE_1 from './../assets/images/sample1.png';
@@ -37,10 +37,6 @@ import SAMPLE_5 from './../assets/images/sample5.png';
 import SAMPLE_6 from './../assets/images/sample6.png';
 import SAMPLE_7 from './../assets/images/sample7.png';
 import SAMPLE_8 from './../assets/images/sample8.png';
-// import LANDINGPAGE_1 from './../assets/images/landing-page1.png';
-// import LANDINGPAGE_2 from './../assets/images/landing-page2.png';
-// import LANDINGPAGE_3 from './../assets/images/landing-page3.png';
-// import LANDINGPAGE_4 from './../assets/images/landing-page4.png';
 import THEMA_BG from './../assets/images/tema.jpg';
 
 const VIDEO_1 = '/videos/video-1.mp4';
@@ -56,7 +52,7 @@ export const dataHomes = {
   header_url: 'services',
   header_button_wa: 'Konsultasi',
   header_url_wa: 'https://wa.me/6289623498800/',
-  header_image: LANDINGPAGE_5,
+  header_image: LANDINGPAGE_1,
   header_video: VIDEO_1,
   abouts: true, // true for show, false to hidden
   features: true, // true for show, false to hidden

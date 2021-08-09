@@ -24,6 +24,23 @@
   background-repeat: no-repeat;
 }
 
+.home-hero-container .overlay {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 3 !important;
+}
+
+.home-hero-container .devices {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  z-index: 1 !important;
+}
+
 .home-hero-container .hero-btn button {
   min-width: 120px;
   margin: 10px 16px 0 0;
@@ -492,6 +509,13 @@ video {
 }
 
 @media screen and (max-width: 480px) {
+  .home-hero-container .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .home-hero-container .devices {
+    top: 5%;
+    right: -80%;
+  }
   .home-slider-container .slider-banner .content .centered {
     left: 10%;
     top: 60%;
