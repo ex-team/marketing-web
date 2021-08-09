@@ -34,7 +34,7 @@ function StaticSection(props: Props) {
           <p>{props.description}</p>
           <div className="features p-grid p-justify-start">
             {features.map((data, idx) => (
-              <div key={idx} className="item p-col-12 p-md-3 p-lg-2">
+              <div key={idx} className="item p-py-1 p-col-12 p-md-3 p-lg-2">
                 <p className="p-0 p-m-0">
                   <i className="pi pi-check-circle"></i>
                   {data.title}
