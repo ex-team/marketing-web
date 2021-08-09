@@ -1,7 +1,10 @@
 import React from 'react';
 
+
+
 import { Skeleton } from 'primereact/skeleton';
 import { Link } from 'react-router-dom';
+
 
 export interface Props {
   data: {
@@ -27,7 +30,6 @@ export interface Props {
 }
 class MainSection extends React.Component<Props, {}> {
   state = {
-    data: { title: '', body: '', featured_image: '', author: { username: '' } },
     tags: [],
     latest: [],
     loading: true,
@@ -44,7 +46,6 @@ class MainSection extends React.Component<Props, {}> {
   updateData() {
     const data = this.props.data;
     this.setState({
-      data: data,
       tags: data.tags,
     });
   }
@@ -75,9 +76,9 @@ class MainSection extends React.Component<Props, {}> {
                 </div>
               ) : (
                 <div className="heading p-mb-4">
-                  <h1>{this.state.data.title}</h1>
+                  <h1>{this.props.data.title}</h1>
                   <div className="meta">
-                    <i className="pi pi-user p-mr-2"></i> {this.state.data.author.username} |{' '}
+                    <i className="pi pi-user p-mr-2"></i> {this.props.data.author.username} |{' '}
                     <i className="pi pi-tags"></i>
                     <ul>
                       {this.state.tags.map((data: any, idx) => (
@@ -93,17 +94,22 @@ class MainSection extends React.Component<Props, {}> {
                 {this.state.loading ? (
                   <Skeleton width="100%" height="100%" />
                 ) : (
-                  <img className="p-shadow-3" src={this.state.data.featured_image} alt={this.state.data.title} />
+                  <img className="p-shadow-3" src={this.props.data.featured_image} alt={this.props.data.title} />
                 )}
               </div>
               {this.state.loading ? (
                 <div>
-                  <Skeleton width="100%" className="p-mt-2"/>
-                  <Skeleton width="100%" className="p-mt-2"/>
-                  <Skeleton width="100%" className="p-mt-2"/>
+                  <Skeleton width="100%" className="p-mt-2" />
+                  <Skeleton width="100%" className="p-mt-2" />
+                  <Skeleton width="100%" className="p-mt-2" />
                 </div>
               ) : (
-                <p className="p-text-justify" dangerouslySetInnerHTML={{ __html: this.state.data.body }}></p>
+                <p
+                  className="p-text-justify"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.data.body.replace(/src="\/media\//g, 'src="https://karomap.com/media/'),
+                  }}
+                ></p>
               )}
             </div>
             <div className="right-content p-col p-lg-4">

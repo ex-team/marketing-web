@@ -29,8 +29,8 @@ const Get = (path: string) => {
   });
 };
 
-// const getBlogs = () => Get('post/?limit=0&offset=0&type=blogs');
 const getBlogs = () => Get('post/?limit=0&offset=0&type=blogs');
+// const getBlogs = () => Get('post/');
 const getDetailPost = slug => Get(`post/${slug}/`);
 const getCategoryBlogs = () => Get('category/');
 

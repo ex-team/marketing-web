@@ -42,8 +42,8 @@ class MainSection extends React.Component<Props, {}> {
       this.state.pageNumber * this.state.basicRows,
       this.state.pageNumber * this.state.basicRows + this.state.basicRows
     );
+    // console.log(slice)
     this.setState({ results: slice });
-    // console.log(slice);
   }
 
   updateCategory() {
@@ -66,6 +66,12 @@ class MainSection extends React.Component<Props, {}> {
       basicFirst: event.first,
       pageNumber: event.page,
     });
+
+    const newSlice: any = [...this.props.data].slice(
+      event.page * this.state.basicRows,
+      event.page * this.state.basicRows + this.state.basicRows
+    );
+    this.setState({ results: newSlice });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -87,18 +93,8 @@ class MainSection extends React.Component<Props, {}> {
     this.setState({ sortKey: value });
     if (value !== 'all') {
       const updatedItems = [...this.props.data].filter(data => {
-        // console.log('Array of categories :', data.categories)
-        data.categories.map(e => {
-          // console.log(Object.values(e).join(' ').toLowerCase().includes(value.toLowerCase()))
-          return e;
-        });
-        // return (data.categories.slug.indexOf(value) >= 0);
-        return data;
+        return !!data.categories.find(c => c.slug === value);
       });
-      // var updatedItems = [...this.props.data].map(function(el){
-      //   el.categories = el.categories.filter(function(x){ return x.slug === value; });
-      //   return el;
-      // });
       this.setState({ results: updatedItems });
     } else {
       this.setState({ results: this.props.data });
@@ -110,15 +106,15 @@ class MainSection extends React.Component<Props, {}> {
       <div className="main-container">
         <div className="container">
           <div className="filter-section p-grid">
-            <div className="category p-col p-xl-4">
+            <div className="category p-col-12 p-xl-4">
               <Dropdown
                 options={this.state.sortOptions}
                 value={this.state.sortKey}
-                placeholder="Select category"
+                placeholder="Pilih Kategori"
                 onChange={this.onSortCategory}
               />
             </div>
-            <div className="search-container p-col p-xl-4 p-xl-offset-4">
+            <div className="search-container p-col-12 p-xl-4 p-xl-offset-4">
               <div className="search">
                 <span className="p-input-icon-right">
                   <i className="pi pi-search" />
@@ -186,7 +182,7 @@ class MainSection extends React.Component<Props, {}> {
                         {new Date(blog.created_at).toDateString()}
                       </span>
                       <div className="description">
-                        <div className="body" dangerouslySetInnerHTML={{ __html: blog.body }}></div>
+                          <div className="body" dangerouslySetInnerHTML={{ __html: blog.body }}></div>
                       </div>
                     </div>
                   </div>

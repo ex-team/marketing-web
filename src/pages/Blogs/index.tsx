@@ -7,6 +7,7 @@ import API from '../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
 
+
 export interface IndexState {
   pages: any;
   blogs: any;
@@ -44,8 +45,9 @@ class Index extends Component<{}, IndexState> {
       });
     API.getBlogs()
       .then(result => {
+        const descRes = result.sort((a, b) => a - b).reverse();
         this.setState({
-          blogs: [...result],
+          blogs: [...descRes],
           totalRecords: result.length,
         });
       })

@@ -10,6 +10,7 @@ import API from '../../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
 
+
 export interface IndexDetailState {
   blog: any;
   latest: any;
@@ -65,8 +66,9 @@ class IndexDetail extends Component<RouteComponentProps, IndexDetailState> {
   getLatest = () => {
     API.getBlogs()
       .then(result => {
+        const descRes = result.sort((a, b) => a - b).reverse();
         this.setState({
-          latest: [...result],
+          latest: [...descRes],
         });
       })
       .catch(e => {
