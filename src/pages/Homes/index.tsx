@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Slider,
   dataAbouts,
   dataBlogs,
   dataFeatures,
@@ -23,13 +24,13 @@ import ThematicSection from './thematic-section';
 import VideoSection from './video-section';
 
 export interface IndexState {
-  homes: any;
-  sliders: any;
-  features: any;
+  homes: typeof dataHomes;
+  sliders: Slider[];
+  features: typeof dataFeatures;
   abouts: any;
   services: any;
-  thematics: any;
-  thematicSliders: any;
+  thematics: typeof dataThematics;
+  thematicSliders: typeof dataThematicSliders;
   samples: any;
   blogs: any;
   partners: any;

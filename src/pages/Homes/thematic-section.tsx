@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-
-
-
 // import Glide from '@glidejs/glide';
 // import { Button } from 'primereact/button';
 import { Skeleton } from 'primereact/skeleton';
+import React, { useEffect, useState } from 'react';
 
+import { dataThematicSliders, dataThematics } from '../../components/models';
 
 export interface Props {
-  data: any;
-  dataSlider: any;
+  data: typeof dataThematics;
+  dataSlider: typeof dataThematicSliders;
   heading: string;
   subheading: string;
   thematics_banner: string;

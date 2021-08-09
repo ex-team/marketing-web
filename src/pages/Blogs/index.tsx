@@ -7,8 +7,8 @@ import MainSection from './main-section';
 
 export interface IndexState {
   pages: any;
-  blogs: any;
-  categories: any;
+  blogs: any[];
+  categories: any[];
   totalRecords: number;
 }
 
@@ -19,43 +19,53 @@ class Index extends Component<{}, IndexState> {
     categories: [],
     totalRecords: 0,
   };
+
+  private _isMounted = false;
+
   constructor(props: {}) {
     super(props);
-
     this.scrollNavigation = this.scrollNavigation.bind(this);
   }
 
   componentDidMount() {
+    this._isMounted = true;
     window.addEventListener('scroll', this.scrollNavigation, true);
     this.getPostAPI();
   }
 
+  componentWillUnmount() {
+    this._isMounted = false;
+    window.removeEventListener('scroll', this.scrollNavigation, true);
+  }
+
+  /**
+   * TODO: Use redux for SSR
+   */
   getPostAPI = () => {
     API.getCategoryBlogs()
       .then(result => {
-        this.setState({
-          categories: [...result],
-        });
+        if (this._isMounted)
+          this.setState({
+            categories: [...result],
+          });
       })
       .catch(e => {
         console.error(e);
       });
     API.getBlogs()
       .then(result => {
-        const descRes = result.sort((a, b) => a - b).reverse();
-        this.setState({
-          blogs: [...descRes],
-          totalRecords: result.length,
-        });
+        if (this._isMounted) {
+          const descRes = result.sort((a, b) => a - b).reverse();
+          this.setState({
+            blogs: [...descRes],
+            totalRecords: result.length,
+          });
+        }
       })
       .catch(e => {
         console.error(e);
       });
   };
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollNavigation, true);
-  }
 
   scrollNavigation = () => {
     const doc = document.documentElement;

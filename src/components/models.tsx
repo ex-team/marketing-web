@@ -1,43 +1,43 @@
 // Footer
-import appStore from './../assets/images/AppStoreBadge.svg';
-import playStore from './../assets/images/GooglePlayBadge.svg';
+import appStore from '../assets/images/AppStoreBadge.svg';
+import playStore from '../assets/images/GooglePlayBadge.svg';
 // import SERVICE1 from './../assets/images/box1.png';
 // import SERVICE2 from './../assets/images/box2.png';
-import IMG_1 from './../assets/images/img-1.jpg';
-import IMG_2 from './../assets/images/img-2.jpg';
-import IMG_3 from './../assets/images/img-3.jpg';
-import IMG_4 from './../assets/images/img-4.jpg';
-import IMG_5 from './../assets/images/img-5.jpg';
-import IMG_6 from './../assets/images/img-6.jpg';
-import IMG_7 from './../assets/images/img-7.jpg';
-import IMG_8 from './../assets/images/img-8.jpg';
-import IMG_9 from './../assets/images/img-9.jpg';
-import BANNER_BG from './../assets/images/img-home.jpg';
-import IMGPARTNER_1 from './../assets/images/klien/1.png';
-import IMGPARTNER_2 from './../assets/images/klien/2.png';
-import IMGPARTNER_3 from './../assets/images/klien/3.png';
-import IMGPARTNER_4 from './../assets/images/klien/4.png';
-import IMGPARTNER_5 from './../assets/images/klien/5.png';
-import IMGPARTNER_6 from './../assets/images/klien/6.png';
-import IMGPARTNER_7 from './../assets/images/klien/7.png';
-import IMGPARTNER_8 from './../assets/images/klien/8.png';
-import IMGPARTNER_9 from './../assets/images/klien/9.png';
-import IMGPARTNER_10 from './../assets/images/klien/10.png';
-import IMGPARTNER_11 from './../assets/images/klien/11.png';
-import IMGPARTNER_12 from './../assets/images/klien/12.png';
-import IMGPARTNER_13 from './../assets/images/klien/13.png';
-import LANDINGPAGE_1 from './../assets/images/landingpage_1.jpg';
-import logoLight2 from './../assets/images/logo-light.png';
-import logoLight from './../assets/images/logo_light_digipeta.svg';
-import SAMPLE_1 from './../assets/images/sample1.png';
-import SAMPLE_2 from './../assets/images/sample2.png';
-import SAMPLE_3 from './../assets/images/sample3.png';
-import SAMPLE_4 from './../assets/images/sample4.png';
-import SAMPLE_5 from './../assets/images/sample5.png';
-import SAMPLE_6 from './../assets/images/sample6.png';
-import SAMPLE_7 from './../assets/images/sample7.png';
-import SAMPLE_8 from './../assets/images/sample8.png';
-import THEMA_BG from './../assets/images/tema.jpg';
+import IMG_1 from '../assets/images/img-1.jpg';
+import IMG_2 from '../assets/images/img-2.jpg';
+import IMG_3 from '../assets/images/img-3.jpg';
+import IMG_4 from '../assets/images/img-4.jpg';
+import IMG_5 from '../assets/images/img-5.jpg';
+import IMG_6 from '../assets/images/img-6.jpg';
+import IMG_7 from '../assets/images/img-7.jpg';
+import IMG_8 from '../assets/images/img-8.jpg';
+import IMG_9 from '../assets/images/img-9.jpg';
+import BANNER_BG from '../assets/images/img-home.jpg';
+import IMGPARTNER_1 from '../assets/images/klien/1.png';
+import IMGPARTNER_10 from '../assets/images/klien/10.png';
+import IMGPARTNER_11 from '../assets/images/klien/11.png';
+import IMGPARTNER_12 from '../assets/images/klien/12.png';
+import IMGPARTNER_13 from '../assets/images/klien/13.png';
+import IMGPARTNER_2 from '../assets/images/klien/2.png';
+import IMGPARTNER_3 from '../assets/images/klien/3.png';
+import IMGPARTNER_4 from '../assets/images/klien/4.png';
+import IMGPARTNER_5 from '../assets/images/klien/5.png';
+import IMGPARTNER_6 from '../assets/images/klien/6.png';
+import IMGPARTNER_7 from '../assets/images/klien/7.png';
+import IMGPARTNER_8 from '../assets/images/klien/8.png';
+import IMGPARTNER_9 from '../assets/images/klien/9.png';
+import LANDINGPAGE_1 from '../assets/images/landingpage_1.jpg';
+import logoLight from '../assets/images/logo_light_digipeta.svg';
+import logoLight2 from '../assets/images/logo-light.png';
+import SAMPLE_1 from '../assets/images/sample1.png';
+import SAMPLE_2 from '../assets/images/sample2.png';
+import SAMPLE_3 from '../assets/images/sample3.png';
+import SAMPLE_4 from '../assets/images/sample4.png';
+import SAMPLE_5 from '../assets/images/sample5.png';
+import SAMPLE_6 from '../assets/images/sample6.png';
+import SAMPLE_7 from '../assets/images/sample7.png';
+import SAMPLE_8 from '../assets/images/sample8.png';
+import THEMA_BG from '../assets/images/tema.jpg';
 
 const VIDEO_1 = '/videos/video-1.mp4';
 // const VIDEO_2 = '/videos/video-2.mp4';
@@ -81,7 +81,16 @@ export const dataHomes = {
   partners: true, // true for show, false to hidden
 };
 
-export const dataSliders = [
+export interface Slider {
+  id: number;
+  title: string;
+  description: string;
+  btn_name: string;
+  url: string;
+  images: string;
+}
+
+export const dataSliders: Slider[] = [
   {
     id: 1,
     title: 'A Company Lorem Ipsum Dummy',
@@ -288,7 +297,13 @@ export const dataThematicSliders = [
   },
 ];
 
-export const dataServices = [
+export interface ServiceDatum {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export const dataServices: ServiceDatum[] = [
   {
     id: 1,
     title: 'GISWeb',

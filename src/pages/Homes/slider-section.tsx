@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
-
 import Glide from '@glidejs/glide';
 import { Button } from 'primereact/button';
+import React, { useEffect } from 'react';
+
+import { Slider } from '../../components/models';
 
 export interface Props {
-  data: any;
+  data: Slider[];
 }
 function SliderSection(props: Props) {
   const sliders = props.data;

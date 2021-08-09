@@ -6,13 +6,24 @@ import React from 'react';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 
 export interface Props extends RouteComponentProps {
-  data: any;
-  categories: any;
+  data: any[];
+  categories: any[];
   totalRecords: number;
 }
 
-class MainSection extends React.Component<Props, {}> {
-  state = {
+export interface State {
+  results: any[];
+  basicFirst: number;
+  basicRows: number;
+  pageNumber: number;
+  searchKey: string;
+  sortKey: string;
+  loading: boolean;
+  sortOptions: any[];
+}
+
+class MainSection extends React.Component<Props, State> {
+  state: State = {
     results: [],
     basicFirst: 0,
     basicRows: 9,
@@ -23,18 +34,18 @@ class MainSection extends React.Component<Props, {}> {
     sortOptions: [],
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.updateData();
+    this.updateCategory();
+  }
 
   componentDidUpdate(prevProps: Props) {
-    if (prevProps !== this.props) {
-      this.updateData();
-      this.updateCategory();
-      this.setLoading();
-    }
+    if (prevProps.data !== this.props.data) this.updateData();
+    if (prevProps.categories !== this.props.categories) this.updateCategory();
   }
 
   updateData() {
-    const slice: any = [...this.props.data].slice(
+    const slice = this.props.data.slice(
       this.state.pageNumber * this.state.basicRows,
       this.state.pageNumber * this.state.basicRows + this.state.basicRows
     );
@@ -46,13 +57,10 @@ class MainSection extends React.Component<Props, {}> {
     const reValueCategory = this.props.categories.map(function (res) {
       return { id: res.id, label: res.title, value: res.slug };
     });
-    this.setState({ sortOptions: [...reValueCategory, { id: 0, label: 'All Category', value: 'all' }] });
-  }
-
-  setLoading() {
-    setTimeout(() => {
-      this.setState({ loading: false });
-    }, 700);
+    this.setState({
+      sortOptions: [...reValueCategory, { id: 0, label: 'All Category', value: 'all' }],
+      loading: !reValueCategory.length,
+    });
   }
 
   componentWillUnmount() {}

@@ -7,7 +7,9 @@ import App from './App';
 import { store } from './app/store';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.hydrate(
+const renderMethod = typeof window === 'undefined' ? ReactDOM.hydrate : ReactDOM.render;
+
+renderMethod(
   <Provider store={store}>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App />
