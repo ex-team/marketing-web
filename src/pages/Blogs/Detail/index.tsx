@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-
-
-
 import { RouteComponentProps } from 'react-router-dom';
-
-
 
 import API from '../../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
-
 
 export interface IndexDetailState {
   blog: any;

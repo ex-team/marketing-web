@@ -1,13 +1,9 @@
-import React from 'react';
-
-
-
 import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import { Paginator } from 'primereact/paginator';
 import { Skeleton } from 'primereact/skeleton';
+import React from 'react';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
-
 
 export interface Props extends RouteComponentProps {
   data: any;
@@ -182,7 +178,12 @@ class MainSection extends React.Component<Props, {}> {
                         {new Date(blog.created_at).toDateString()}
                       </span>
                       <div className="description">
-                          <div className="body" dangerouslySetInnerHTML={{ __html: blog.body.replace(/src="\/media\//g, 'src="https://karomap.com/media/') }}></div>
+                        <div
+                          className="body"
+                          dangerouslySetInnerHTML={{
+                            __html: blog.body.replace(/src="\/media\//g, 'src="https://karomap.com/media/'),
+                          }}
+                        ></div>
                       </div>
                     </div>
                   </div>

@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 
-
-
 import { dataPages } from '../../components/models';
 import API from '../../components/services';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
-
 
 export interface IndexState {
   pages: any;

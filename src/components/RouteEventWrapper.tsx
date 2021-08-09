@@ -1,8 +1,7 @@
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-import { withRouter, RouteComponentProps } from 'react-router-dom';
-
-class RouteEventWrapper extends React.Component<RouteComponentProps<{}>, {}> {
+class RouteEventWrapper extends React.Component<RouteComponentProps> {
   componentDidUpdate() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

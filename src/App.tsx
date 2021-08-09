@@ -1,23 +1,31 @@
-import React, { Suspense } from 'react';
-
-
-
-import { connect } from 'react-redux';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-
-
-
 import './App.scss';
+
+import React, { ComponentType } from 'react';
+import { ConnectedProps, connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import { fetchPrefs } from './app/reducers/prefs';
-import RouteEventWrapper from './components/RouteEventWrapper';
+import { AppDispatch, RootState } from './app/store';
 import Layout from './components/layouts';
 import RedirectToDashboard from './components/redirect';
+import RouteEventWrapper from './components/RouteEventWrapper';
+import IndexBlog from './pages/Blogs';
+import IndexDetail from './pages/Blogs/Detail';
+import IndexHome from './pages/Homes';
+import IndexService from './pages/Services';
 
-const IndexHome = React.lazy(() => import('./pages/Homes'));
-const IndexService = React.lazy(() => import('./pages/Services'));
-const IndexDetail = React.lazy(() => import('./pages/Blogs/Detail'));
-const IndexBlog = React.lazy(() => import('./pages/Blogs'));
+/**
+ * SSR window polyfill
+ */
+if (typeof window === 'undefined') {
+  global.window = {} as any;
+}
+
+// const IndexHome = React.lazy(() => import('./pages/Homes'));
+// const IndexService = React.lazy(() => import('./pages/Services'));
+// const IndexDetail = React.lazy(() => import('./pages/Blogs/Detail'));
+// const IndexBlog = React.lazy(() => import('./pages/Blogs'));
 
 const routes = [
   { path: '/', component: IndexHome, exact: true },
@@ -27,7 +35,7 @@ const routes = [
   { path: '/dashboard', component: RedirectToDashboard, isWithoutLayout: true, exact: true },
 ];
 
-function withLayout(WrappedComponent) {
+function withLayout(WrappedComponent: ComponentType<any>) {
   return class extends React.Component {
     render() {
       return (
@@ -39,12 +47,8 @@ function withLayout(WrappedComponent) {
   };
 }
 
-export interface Props {
-  prefs: {
-    title: string;
-    description: string;
-  };
-  dispatch: any;
+export interface Props extends ConnectedProps<typeof connector> {
+  dispatch: AppDispatch;
 }
 
 class App extends React.Component<Props, {}> {
@@ -75,34 +79,25 @@ class App extends React.Component<Props, {}> {
   render() {
     return (
       <React.Fragment>
-        <Router basename={process.env.PUBLIC_URL}>
-          <Suspense fallback>
-            <RouteEventWrapper>
-              <TransitionGroup className="transition-group">
-                <CSSTransition timeout={{ enter: 300, exit: 300 }} classNames="fade">
-                  <Switch>
-                    {routes.map((route, idx) =>
-                      route.isWithoutLayout ? (
-                        <Route path={route.path} exact={route.exact} component={route.component} key={idx} />
-                      ) : (
-                        <Route
-                          path={route.path}
-                          exact={route.exact}
-                          component={withLayout(route.component)}
-                          key={idx}
-                        />
-                      )
-                    )}
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            </RouteEventWrapper>
-          </Suspense>
-        </Router>
+        <RouteEventWrapper>
+          <TransitionGroup className="transition-group">
+            <CSSTransition timeout={{ enter: 300, exit: 300 }} classNames="fade">
+              <Switch>
+                {routes.map((route, idx) =>
+                  route.isWithoutLayout ? (
+                    <Route path={route.path} exact={route.exact} component={route.component} key={idx} />
+                  ) : (
+                    <Route path={route.path} exact={route.exact} component={withLayout(route.component)} key={idx} />
+                  )
+                )}
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        </RouteEventWrapper>
       </React.Fragment>
     );
   }
 }
 
-
-export default connect((state: any) => ({ prefs: state.prefs }))(App);
+const connector = connect((state: RootState) => ({ prefs: state.prefs }));
+export default connector(App);

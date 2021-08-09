@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { dataPages, dataServices } from '../../components/models';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
@@ -6,16 +7,15 @@ import MainSection from './main-section';
 export interface IndexState {
   pages: any;
   services: any;
-};
+}
 
 class Index extends Component<{}, IndexState> {
-
   state: IndexState = {
     pages: dataPages[1],
     services: dataServices,
   };
 
-  constructor(props : {}) {
+  constructor(props: {}) {
     super(props);
     this.scrollNavigation = this.scrollNavigation.bind(this);
   }
