@@ -182,7 +182,7 @@ class MainSection extends React.Component<Props, {}> {
                         {new Date(blog.created_at).toDateString()}
                       </span>
                       <div className="description">
-                          <div className="body" dangerouslySetInnerHTML={{ __html: blog.body }}></div>
+                          <div className="body" dangerouslySetInnerHTML={{ __html: blog.body.replace(/src="\/media\//g, 'src="https://karomap.com/media/') }}></div>
                       </div>
                     </div>
                   </div>
