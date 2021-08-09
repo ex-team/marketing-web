@@ -2,11 +2,11 @@
   "files": {
     "static/js/0.598bddc0.chunk.js": "/marketing-web/static/js/0.598bddc0.chunk.js",
     "static/js/0.598bddc0.chunk.js.map": "/marketing-web/static/js/0.598bddc0.chunk.js.map",
-    "main.css": "/marketing-web/static/css/main.1e84f192.chunk.css",
+    "main.css": "/marketing-web/static/css/main.2105fbe8.chunk.css",
     "main.js": "/marketing-web/static/js/main.c82b12ef.chunk.js",
     "main.js.map": "/marketing-web/static/js/main.c82b12ef.chunk.js.map",
-    "runtime-main.js": "/marketing-web/static/js/runtime-main.752ccdc2.js",
-    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.752ccdc2.js.map",
+    "runtime-main.js": "/marketing-web/static/js/runtime-main.8e9af90d.js",
+    "runtime-main.js.map": "/marketing-web/static/js/runtime-main.8e9af90d.js.map",
     "static/css/3.2069dc51.chunk.css": "/marketing-web/static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js": "/marketing-web/static/js/3.9368e871.chunk.js",
     "static/js/3.9368e871.chunk.js.map": "/marketing-web/static/js/3.9368e871.chunk.js.map",
@@ -20,11 +20,11 @@
     "static/js/7.ecc36580.chunk.js.map": "/marketing-web/static/js/7.ecc36580.chunk.js.map",
     "static/js/8.b4590816.chunk.js": "/marketing-web/static/js/8.b4590816.chunk.js",
     "static/js/8.b4590816.chunk.js.map": "/marketing-web/static/js/8.b4590816.chunk.js.map",
-    "static/js/9.82e976dc.chunk.js": "/marketing-web/static/js/9.82e976dc.chunk.js",
-    "static/js/9.82e976dc.chunk.js.map": "/marketing-web/static/js/9.82e976dc.chunk.js.map",
+    "static/js/9.01beb3c4.chunk.js": "/marketing-web/static/js/9.01beb3c4.chunk.js",
+    "static/js/9.01beb3c4.chunk.js.map": "/marketing-web/static/js/9.01beb3c4.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/3.2069dc51.chunk.css.map": "/marketing-web/static/css/3.2069dc51.chunk.css.map",
-    "static/css/main.1e84f192.chunk.css.map": "/marketing-web/static/css/main.1e84f192.chunk.css.map",
+    "static/css/main.2105fbe8.chunk.css.map": "/marketing-web/static/css/main.2105fbe8.chunk.css.map",
     "static/js/3.9368e871.chunk.js.LICENSE.txt": "/marketing-web/static/js/3.9368e871.chunk.js.LICENSE.txt",
     "static/js/5.94639b68.chunk.js.LICENSE.txt": "/marketing-web/static/js/5.94639b68.chunk.js.LICENSE.txt",
     "static/media/1.2d8d2f96.png": "/marketing-web/static/media/1.2d8d2f96.png",
@@ -61,10 +61,10 @@
     "static/media/tema.26fdab92.jpg": "/marketing-web/static/media/tema.26fdab92.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.752ccdc2.js",
+    "static/js/runtime-main.8e9af90d.js",
     "static/css/3.2069dc51.chunk.css",
     "static/js/3.9368e871.chunk.js",
-    "static/css/main.1e84f192.chunk.css",
+    "static/css/main.2105fbe8.chunk.css",
     "static/js/main.c82b12ef.chunk.js"
   ]
 }
