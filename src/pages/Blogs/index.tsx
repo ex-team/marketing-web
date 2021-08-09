@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
+import DocumentMeta, { DocumentMetaProps } from 'react-document-meta';
+import { ConnectedProps, connect } from 'react-redux';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
+import { RootState } from '../../app/store';
 import { dataPages } from '../../components/models';
 import API from '../../components/services';
+import { absoluteUrl } from '../../utils';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
 
-export interface IndexState {
+type ExtraProps = RouteComponentProps & ConnectedProps<typeof connector>;
+export interface Props extends ExtraProps {}
+
+export interface State {
   pages: any;
   blogs: any[];
   categories: any[];
   totalRecords: number;
 }
 
-class Index extends Component<{}, IndexState> {
-  state: IndexState = {
+class Index extends Component<Props, State> {
+  state: State = {
     pages: dataPages[2],
     blogs: [],
     categories: [],
@@ -22,20 +30,13 @@ class Index extends Component<{}, IndexState> {
 
   private _isMounted = false;
 
-  constructor(props: {}) {
-    super(props);
-    this.scrollNavigation = this.scrollNavigation.bind(this);
-  }
-
   componentDidMount() {
     this._isMounted = true;
-    window.addEventListener('scroll', this.scrollNavigation, true);
     this.getPostAPI();
   }
 
   componentWillUnmount() {
     this._isMounted = false;
-    window.removeEventListener('scroll', this.scrollNavigation, true);
   }
 
   /**
@@ -67,19 +68,17 @@ class Index extends Component<{}, IndexState> {
       });
   };
 
-  scrollNavigation = () => {
-    const doc = document.documentElement;
-    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    const topnavEl = document.getElementById('topnav');
-    if (top > 80) {
-      topnavEl?.classList.add('nav-sticky');
-    } else {
-      topnavEl?.classList.remove('nav-sticky');
-    }
-  };
   render() {
+    const { prefs } = this.props;
+    const meta: DocumentMetaProps = {
+      title: ['Blogs', prefs.title].join(' | '),
+      canonical: absoluteUrl(this.props.match.url),
+      extend: true,
+    };
+
     return (
       <React.Fragment>
+        <DocumentMeta {...meta} />
         <HeroSection data={this.state.pages} />
         <MainSection
           data={this.state.blogs}
@@ -90,4 +89,6 @@ class Index extends Component<{}, IndexState> {
     );
   }
 }
-export default Index;
+
+const connector = connect((state: RootState) => ({ prefs: state.prefs }));
+export default connector(withRouter(Index));

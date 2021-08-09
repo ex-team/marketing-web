@@ -7,7 +7,7 @@ import App from './App';
 import { store } from './app/store';
 import * as serviceWorker from './serviceWorker';
 
-const renderMethod = typeof window === 'undefined' ? ReactDOM.hydrate : ReactDOM.render;
+const renderMethod = process.env.NODE_ENV === 'production' ? ReactDOM.hydrate : ReactDOM.render;
 
 renderMethod(
   <Provider store={store}>

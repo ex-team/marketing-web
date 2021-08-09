@@ -1,18 +1,14 @@
 import React from 'react';
+import DocumentMeta, { DocumentMetaProps } from 'react-document-meta';
+import { ConnectedProps, connect } from 'react-redux';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
+import { RootState } from '../../app/store';
 import {
-  Slider,
-  dataAbouts,
-  dataBlogs,
-  dataFeatures,
-  dataHomes,
-  dataPartners,
-  dataSamples,
-  dataServices,
-  dataSliders,
-  dataThematicSliders,
-  dataThematics
+  Slider, dataAbouts, dataBlogs, dataFeatures, dataHomes, dataPartners, dataSamples, dataServices, dataSliders,
+  dataThematicSliders, dataThematics
 } from '../../components/models';
+import { absoluteUrl } from '../../utils';
 import BlogSection from './blog-section';
 import IndustrySection from './industry-section';
 import PartnerSection from './partner-section';
@@ -23,7 +19,10 @@ import StaticSection from './static-section';
 import ThematicSection from './thematic-section';
 import VideoSection from './video-section';
 
-export interface IndexState {
+type ExtraProps = RouteComponentProps & ConnectedProps<typeof connector>;
+export interface Props extends ExtraProps {}
+
+export interface State {
   homes: typeof dataHomes;
   sliders: Slider[];
   features: typeof dataFeatures;
@@ -36,8 +35,8 @@ export interface IndexState {
   partners: any;
 }
 
-class Index extends React.Component<{}, IndexState> {
-  state: IndexState = {
+class Index extends React.Component<Props, State> {
+  state: State = {
     homes: dataHomes,
     sliders: dataSliders,
     features: dataFeatures,
@@ -50,26 +49,17 @@ class Index extends React.Component<{}, IndexState> {
     partners: dataPartners,
   };
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.scrollNavigation, true);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollNavigation, true);
-  }
-  scrollNavigation = () => {
-    const doc = document.documentElement;
-    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    const topnavEl = document.getElementById('topnav');
-    if (top > 80) {
-      topnavEl?.classList.add('nav-sticky');
-    } else {
-      topnavEl?.classList.remove('nav-sticky');
-    }
-  };
-
   render() {
+    const { prefs } = this.props;
+    const meta: DocumentMetaProps = {
+      title: ['Home', prefs.title].join(' | '),
+      canonical: absoluteUrl(this.props.match.url),
+      extend: true,
+    };
+
     return (
       <React.Fragment>
+        <DocumentMeta {...meta} />
         {this.state.homes.header_type === 0 ? (
           <StaticSection
             picture={this.state.homes.header_image}
@@ -131,4 +121,6 @@ class Index extends React.Component<{}, IndexState> {
     );
   }
 }
-export default Index;
+
+const connector = connect((state: RootState) => ({ prefs: state.prefs }));
+export default connector(withRouter(Index));

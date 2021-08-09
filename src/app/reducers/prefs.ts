@@ -1,14 +1,17 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-
+import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export interface AppState {
   title: string;
   description: string;
+  author: string;
+  keywords: string[];
 }
 
 const initialState: AppState = {
   title: 'Digipeta',
   description: 'Konsultan GIS Profesional',
+  author: 'CV Karomap Semesta',
+  keywords: ['gis', 'webgis', 'jalan', 'jembatan', 'irigasi', 'pdam'],
 };
 
 // Reducers
@@ -17,10 +20,11 @@ function updateState(state = initialState, action: PayloadAction<any>) {
 }
 
 // The function below is called a thunk and allows us to perform async logic.
-export const fetchPrefs = createAsyncThunk('prefs/fetch', async () => {
-  return await new Promise<AppState>(resolve =>
+export const fetchPrefs = createAsyncThunk('prefs/fetch', () => {
+  /** TODO: Fetch remote preferences */
+  return new Promise<AppState>(resolve =>
     setTimeout(() => {
-      resolve({ title: 'Digipeta', description: 'Konsultan GIS Profesional' });
+      resolve(initialState);
     }, 1000)
   );
 });

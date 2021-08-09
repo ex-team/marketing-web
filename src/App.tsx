@@ -1,19 +1,21 @@
 import './App.scss';
 
 import React, { ComponentType } from 'react';
+import DocumentMeta, { DocumentMetaProps } from 'react-document-meta';
 import { ConnectedProps, connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { fetchPrefs } from './app/reducers/prefs';
 import { AppDispatch, RootState } from './app/store';
+import RouteEventWrapper from './components/RouteEventWrapper';
 import Layout from './components/layouts';
 import RedirectToDashboard from './components/redirect';
-import RouteEventWrapper from './components/RouteEventWrapper';
 import IndexBlog from './pages/Blogs';
 import IndexDetail from './pages/Blogs/Detail';
 import IndexHome from './pages/Homes';
 import IndexService from './pages/Services';
+import { absoluteUrl } from './utils';
 
 /**
  * SSR window polyfill
@@ -35,16 +37,12 @@ const routes = [
   { path: '/dashboard', component: RedirectToDashboard, isWithoutLayout: true, exact: true },
 ];
 
-function withLayout(WrappedComponent: ComponentType<any>) {
-  return class extends React.Component {
-    render() {
-      return (
-        <Layout>
-          <WrappedComponent {...this.props}></WrappedComponent>
-        </Layout>
-      );
-    }
-  };
+function withLayout(WrappedComponent: ComponentType<any>): React.FunctionComponent {
+  return (props: any) => (
+    <Layout>
+      <WrappedComponent {...props}></WrappedComponent>
+    </Layout>
+  );
 }
 
 export interface Props extends ConnectedProps<typeof connector> {
@@ -52,33 +50,48 @@ export interface Props extends ConnectedProps<typeof connector> {
 }
 
 class App extends React.Component<Props, {}> {
-  _setMeta() {
-    document.title = this.props.prefs.title;
-    let metaDescription = document.head.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      let meta = document.createElement('meta');
-      meta.name = 'description';
-      document.head.append(meta);
-      meta.content = this.props.prefs.description;
-    }
-    metaDescription?.setAttribute('content', this.props.prefs.description);
-  }
-
   componentDidMount() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    this._setMeta();
     this.props.dispatch(fetchPrefs());
-    // console.log(this.props);
-    // console.log(this.props.dispatch(fetchPrefs()));
+    window.addEventListener('scroll', this.scrollNavigation, true);
   }
 
-  componentDidUpdate() {
-    this._setMeta();
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.scrollNavigation, true);
   }
+
+  scrollNavigation = () => {
+    const doc = document.documentElement;
+    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    const topnavEl = document.getElementById('topnav');
+    if (top > 80) {
+      topnavEl?.classList.add('nav-sticky');
+    } else {
+      topnavEl?.classList.remove('nav-sticky');
+    }
+  };
 
   render() {
+    const { prefs } = this.props;
+    const bannerUrl = absoluteUrl('/assets/images/banner.jpg');
+    const meta: DocumentMetaProps = {
+      title: prefs.title,
+      description: prefs.description,
+      meta: {
+        name: {
+          author: prefs.author,
+          keywords: prefs.keywords.join(','),
+        },
+        property: {
+          'og:image': bannerUrl,
+        },
+      },
+      auto: { ograph: true },
+    };
+
     return (
       <React.Fragment>
+        <DocumentMeta {...meta} />
         <RouteEventWrapper>
           <TransitionGroup className="transition-group">
             <CSSTransition timeout={{ enter: 300, exit: 300 }} classNames="fade">

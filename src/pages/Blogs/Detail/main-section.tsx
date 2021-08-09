@@ -1,10 +1,6 @@
-import React from 'react';
-
-
-
 import { Skeleton } from 'primereact/skeleton';
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 
 export interface Props {
   data: {
@@ -31,36 +27,19 @@ export interface Props {
 class MainSection extends React.Component<Props, {}> {
   state = {
     tags: [],
-    latest: [],
     loading: true,
   };
 
   componentDidUpdate(prevProps: Props) {
-    if (prevProps !== this.props) {
-      this.updateData();
-      this.setLoading();
-      this.updateLatest();
-    }
+    if (prevProps.data !== this.props.data) this.updateData();
   }
 
   updateData() {
     const data = this.props.data;
     this.setState({
       tags: data.tags,
+      loading: !data,
     });
-  }
-
-  updateLatest() {
-    const data = this.props.latest;
-    this.setState({
-      latest: data,
-    });
-  }
-
-  setLoading() {
-    setTimeout(() => {
-      this.setState({ loading: false });
-    }, 700);
   }
 
   render() {
@@ -116,7 +95,7 @@ class MainSection extends React.Component<Props, {}> {
               <h5>Recent Blogs</h5>
               <div className="custom-skeleton p-pt-4">
                 <ul className="p-m-0 p-p-0">
-                  {this.state.latest.slice(0, 5).map((data: any, idx) => {
+                  {this.props.latest.slice(0, 5).map((data: any, idx) => {
                     if (this.state.loading) {
                       return (
                         <li key={idx} className="p-mb-3">

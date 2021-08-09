@@ -1,48 +1,45 @@
 import React, { Component } from 'react';
+import DocumentMeta, { DocumentMetaProps } from 'react-document-meta';
+import { ConnectedProps, connect } from 'react-redux';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
+import { RootState } from '../../app/store';
 import { dataPages, dataServices } from '../../components/models';
+import { absoluteUrl } from '../../utils';
 import HeroSection from './hero-section';
 import MainSection from './main-section';
 
-export interface IndexState {
+type ExtraProps = RouteComponentProps & ConnectedProps<typeof connector>;
+export interface Props extends ExtraProps {}
+
+export interface State {
   pages: any;
-  services: any;
+  services: any[];
 }
 
-class Index extends Component<{}, IndexState> {
-  state: IndexState = {
+class Index extends Component<Props, State> {
+  state: State = {
     pages: dataPages[1],
     services: dataServices,
   };
 
-  constructor(props: {}) {
-    super(props);
-    this.scrollNavigation = this.scrollNavigation.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.scrollNavigation, true);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollNavigation, true);
-  }
-  scrollNavigation = () => {
-    const doc = document.documentElement;
-    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    const topnavEl = document.getElementById('topnav');
-    if (top > 80) {
-      topnavEl?.classList.add('nav-sticky');
-    } else {
-      topnavEl?.classList.remove('nav-sticky');
-    }
-  };
   render() {
+    const { prefs } = this.props;
+    const meta: DocumentMetaProps = {
+      title: ['Services', prefs.title].join(' | '),
+      canonical: absoluteUrl(this.props.match.url),
+      extend: true,
+    };
+
     return (
       <React.Fragment>
+        <DocumentMeta {...meta} />
         <HeroSection data={this.state.pages} />
         <MainSection data={this.state.pages} services={this.state.services} />
       </React.Fragment>
     );
   }
 }
-export default Index;
+
+const connector = connect((state: RootState) => ({ prefs: state.prefs }));
+export default connector(withRouter(Index));
