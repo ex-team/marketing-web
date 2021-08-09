@@ -28,13 +28,13 @@ function StaticSection(props: Props) {
       <div className="devices">
         <img src={DEVICE} alt="" />
       </div>
-      <div className="container" style={{ zIndex: 9999 }}>
+      <div className="container" style={{ zIndex: 90 }}>
         <div className="heading-title">
           <h1>{props.title}</h1>
           <p>{props.description}</p>
           <div className="features p-grid p-justify-start">
             {features.map((data, idx) => (
-              <div key={idx} className="p-col-12 p-md-3 p-lg-2">
+              <div key={idx} className="item p-col-12 p-md-3 p-lg-2">
                 <p>
                   <i className="pi pi-check-circle"></i>
                   {data.title}
