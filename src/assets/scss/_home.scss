@@ -632,6 +632,18 @@ video {
     }
   }
 
+  .home-hero-container .devices {
+    top: 8%;
+    right: 0%;
+    width: 340px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
   .sample-container{
     .content .image-banner{
       height: 200px !important;
