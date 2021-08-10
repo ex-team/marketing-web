@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/marketing-web/static/css/main.ad06d61b.chunk.css",
+    "main.css": "/marketing-web/static/css/main.e640cbbd.chunk.css",
     "main.js": "/marketing-web/static/js/main.95f02aff.chunk.js",
     "main.js.map": "/marketing-web/static/js/main.95f02aff.chunk.js.map",
     "runtime-main.js": "/marketing-web/static/js/runtime-main.3dac5d6d.js",
@@ -10,7 +10,7 @@
     "static/js/2.abe85c01.chunk.js.map": "/marketing-web/static/js/2.abe85c01.chunk.js.map",
     "index.html": "/marketing-web/index.html",
     "static/css/2.2069dc51.chunk.css.map": "/marketing-web/static/css/2.2069dc51.chunk.css.map",
-    "static/css/main.ad06d61b.chunk.css.map": "/marketing-web/static/css/main.ad06d61b.chunk.css.map",
+    "static/css/main.e640cbbd.chunk.css.map": "/marketing-web/static/css/main.e640cbbd.chunk.css.map",
     "static/js/2.abe85c01.chunk.js.LICENSE.txt": "/marketing-web/static/js/2.abe85c01.chunk.js.LICENSE.txt",
     "static/media/1.2d8d2f96.png": "/marketing-web/static/media/1.2d8d2f96.png",
     "static/media/10.4e75eef4.png": "/marketing-web/static/media/10.4e75eef4.png",
@@ -53,7 +53,7 @@
     "static/js/runtime-main.3dac5d6d.js",
     "static/css/2.2069dc51.chunk.css",
     "static/js/2.abe85c01.chunk.js",
-    "static/css/main.ad06d61b.chunk.css",
+    "static/css/main.e640cbbd.chunk.css",
     "static/js/main.95f02aff.chunk.js"
   ]
 }
