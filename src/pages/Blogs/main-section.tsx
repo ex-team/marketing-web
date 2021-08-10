@@ -110,7 +110,7 @@ class MainSection extends React.Component<Props, State> {
       <div className="main-container">
         <div className="container">
           <div className="filter-section p-grid">
-            <div className="category p-col-12 p-xl-4">
+            <div className="category p-col-12 p-sm-6 p-lg-4">
               <Dropdown
                 options={this.state.sortOptions}
                 value={this.state.sortKey}
@@ -118,7 +118,7 @@ class MainSection extends React.Component<Props, State> {
                 onChange={this.onSortCategory}
               />
             </div>
-            <div className="search-container p-col-12 p-xl-4 p-xl-offset-4">
+            <div className="search-container p-col-12 p-sm-6 p-lg-4 p-lg-offset-4">
               <div className="search">
                 <span className="p-input-icon-right">
                   <i className="pi pi-search" />
@@ -130,7 +130,7 @@ class MainSection extends React.Component<Props, State> {
           <div className="content-section p-pt-4">
             {this.state.loading ? (
               <div className="p-grid">
-                <div className="p-col p-md-6 p-xl-4 blog-box">
+                <div className="p-col-12 p-md-6 p-xl-4 blog-box">
                   <div className="blog-cover">
                     <Skeleton width="100%" height="100%" />
                   </div>
@@ -139,7 +139,7 @@ class MainSection extends React.Component<Props, State> {
                     <Skeleton width="100%" />
                   </div>
                 </div>
-                <div className="p-col p-md-6 p-xl-4 blog-box">
+                <div className="p-col-12 p-md-6 p-xl-4 blog-box">
                   <div className="blog-cover">
                     <Skeleton width="100%" height="100%" />
                   </div>
@@ -148,7 +148,7 @@ class MainSection extends React.Component<Props, State> {
                     <Skeleton width="100%" />
                   </div>
                 </div>
-                <div className="p-col p-md-6 p-xl-4 blog-box">
+                <div className="p-col-12 p-md-6 p-xl-4 blog-box">
                   <div className="blog-cover">
                     <Skeleton width="100%" height="100%" />
                   </div>
@@ -161,7 +161,7 @@ class MainSection extends React.Component<Props, State> {
             ) : (
               <div className="p-grid">
                 {this.state.results.map((blog: any, idx) => (
-                  <div key={idx} className="p-col p-md-6 p-xl-4 blog-box">
+                  <div key={idx} className="p-col-12 p-md-6 p-xl-4 blog-box">
                     <div className="blog-cover p-shadow-3">
                       <ul>
                         {blog.categories.map((category: any, idx) => (

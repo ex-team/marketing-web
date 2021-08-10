@@ -13,24 +13,85 @@
     .heading-section {
       margin-bottom: 50px;
     }
-    .heading-section .services-heading{
-      padding-left: 10px !important;
+    // .heading-section .services-heading{
+    //   padding-left: 10px !important;
 
-      .point-top {
-        margin-bottom: 10px;
-      }
+    //   .point-top {
+    //     margin-bottom: 10px;
+
+    //     .icon {
+    //       display: inline;
+    //       width: 40px;
+    //       height: 40px;
+
+    //       img {
+    //         width: 40px;
+    //         height: 40px;
+    //         object-fit: scale-down;
+    //       }
+    //     }
+
+    //     span {
+    //       font-weight: 600;
+    //       margin-left: 8px;
+    //     }
+
+    //     ul {
+    //       margin-left: 16px;
+    //     }
+
+    //     li.description{
+    //       font-weight: 300;
+    //     }
+    //   }
+    // }
+
+    // .heading-section ul {
+    //   list-style: none;
+
+    //   i {
+    //     margin-right: 12px;
+    //     color: $success;
+    //   }
+    // }
+
+    .services {
+      margin-top: 20px;
     }
 
-    .heading-section ul {
-      list-style: none;
+    .services .item {
+      padding: 16px 12px !important;
 
-      i {
-        margin-right: 12px;
-        color: $success;
-      }
+      // .content {
+      //   padding: 16px;
+      // }
+    }
+
+    .services .item:hover {
+      background-color: $gray-100;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .services .item .icon {
+      color: $success;
+      height: 40px;
+    }
+
+    .services .item .title {
+      font-size: 16px;
+      margin: 16px 0 8px;
+    }
+    .services .item .description {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 1.5;
     }
 
     .content-services {
+      h3 {
+        font-size: 24px;
+      }
       .disclaimer{
         margin: 16px 0;
         text-align: left;
@@ -65,8 +126,13 @@
 
     .content-services .download-brosur {
       list-style: none;
+      padding-left: 8px !important;
     }
 
+    .content-services .order {
+      list-style: none;
+      padding-left: 8px !important;
+    }
     .content-services .order li a {
       text-decoration: none;
       font-weight: 600;
@@ -79,5 +145,40 @@
 @media screen and (min-width: 1440px) {
   .services .pricing {
     max-width: 450px;
+  }
+
+  .main-container .content-container {
+    .services .item .title {
+      height: 30px;
+      font-size: 20px;
+    }
+
+    .services .item .description {
+      text-align: justify;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .main-container .content-container .services .item .title {
+    font-size: 20px;
+  }
+  .main-container .content-container .content-services h3 {
+      font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-container .content-container .services .item .title {
+    font-size: 22px;
+  }
+  .main-container .content-container .content-services h3 {
+      font-size: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .main-container .content-container .services .item .title {
+    font-size: 18px;
   }
 }

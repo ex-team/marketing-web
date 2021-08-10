@@ -1,5 +1,6 @@
-import { Button } from 'primereact/button';
 import React from 'react';
+
+import { Button } from 'primereact/button';
 
 import { ServiceDatum } from '../../components/models';
 
@@ -22,31 +23,31 @@ function MainSection(props: Props) {
         <div className="content-container">
           <div className="heading-section">
             <h1>{props.data.title}</h1>
-            <ul className="services-heading">
+            <div className="services p-grid">
               {props.services.map((data, idx) => (
-                <li key={idx} className="point-top">
-                  <div className="icon">
-                    <img src={data.icon} alt={data.title} />
+                <div key={idx} className="item p-col-12 p-sm-6 p-lg-4 p-xl-3">
+                  <div className="content">
+                    <div className="icon">
+                      <img src={data.icon} alt={data.title} />
+                    </div>
+                    <h3 className="title">{data.title}</h3>
+                    <p className="description">{data.description}</p>
                   </div>
-                  <span>{data.title}</span>
-                  <ul>
-                    <li className="description">{data.description}</li>
-                  </ul>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           <div className="content-services">
-            <h3>Download Browsur dan Harga</h3>
+            <h3>Download Brosur dan Harga</h3>
             <ul className="download-brosur">
               <li>
-                <a href="http://google.com">
+                <a href="https://bit.ly/brosurdigipeta2021">
                   <Button label="Download Brosur" icon="pi pi-cloud-download" />
                 </a>
               </li>
             </ul>
-            <h3>Cara pemesanan :</h3>
+            <h3>Cara Pemesanan :</h3>
             <ul className="order">
               <li>
                 <a href="mailto:contact.digipeta@gmail.com" target="_blank" rel="noopener noreferrer">

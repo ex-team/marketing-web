@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+
+
+
 import DocumentMeta, { DocumentMetaProps } from 'react-document-meta';
 import { ConnectedProps, connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+
+
 
 import { RootState } from '../../app/store';
 import { dataPages, dataServices } from '../../components/models';
 import { absoluteUrl } from '../../utils';
 import HeroSection from './hero-section';
-import MainSection from './main-section';
+// import MainSection from './main-section';
+import MainSection from './new';
+
 
 type ExtraProps = RouteComponentProps & ConnectedProps<typeof connector>;
 export interface Props extends ExtraProps {}

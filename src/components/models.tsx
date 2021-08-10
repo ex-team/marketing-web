@@ -14,10 +14,6 @@ import IMG_8 from '../assets/images/img-8.jpg';
 import IMG_9 from '../assets/images/img-9.jpg';
 import BANNER_BG from '../assets/images/img-home.jpg';
 import IMGPARTNER_1 from '../assets/images/klien/1.png';
-import IMGPARTNER_10 from '../assets/images/klien/10.png';
-import IMGPARTNER_11 from '../assets/images/klien/11.png';
-import IMGPARTNER_12 from '../assets/images/klien/12.png';
-import IMGPARTNER_13 from '../assets/images/klien/13.png';
 import IMGPARTNER_2 from '../assets/images/klien/2.png';
 import IMGPARTNER_3 from '../assets/images/klien/3.png';
 import IMGPARTNER_4 from '../assets/images/klien/4.png';
@@ -26,6 +22,10 @@ import IMGPARTNER_6 from '../assets/images/klien/6.png';
 import IMGPARTNER_7 from '../assets/images/klien/7.png';
 import IMGPARTNER_8 from '../assets/images/klien/8.png';
 import IMGPARTNER_9 from '../assets/images/klien/9.png';
+import IMGPARTNER_10 from '../assets/images/klien/10.png';
+import IMGPARTNER_11 from '../assets/images/klien/11.png';
+import IMGPARTNER_12 from '../assets/images/klien/12.png';
+import IMGPARTNER_13 from '../assets/images/klien/13.png';
 import LANDINGPAGE_1 from '../assets/images/landingpage_1.jpg';
 import logoLight2 from '../assets/images/logo-light.png';
 import logoLight from '../assets/images/logo_light_digipeta.svg';
@@ -37,6 +37,10 @@ import SAMPLE_5 from '../assets/images/sample5.png';
 import SAMPLE_6 from '../assets/images/sample6.png';
 import SAMPLE_7 from '../assets/images/sample7.png';
 import SAMPLE_8 from '../assets/images/sample8.png';
+import ICONSERVICE_4 from '../assets/images/services/custom.svg';
+import ICONSERVICE_3 from '../assets/images/services/integrasi.svg';
+import ICONSERVICE_2 from '../assets/images/services/mobilegis.svg';
+import ICONSERVICE_1 from '../assets/images/services/webgis.svg';
 import THEMA_BG from '../assets/images/tema.jpg';
 
 const VIDEO_1 = '/videos/video-1.mp4';
@@ -47,7 +51,7 @@ export const dataHomes = {
   id: 1,
   header_type: 0, // 0: Static Banner, 1: Slider Banner, 2: Video Banner
   header_title: 'GIS ON DEMAND',
-  header_description: 'Jasa Pengembangan Sistem & aplikasi berbasis GIS ',
+  header_description: 'Jasa Pengembangan Sistem & Aplikasi Berbasis GIS ',
   header_button: 'Service',
   header_url: 'services',
   header_button_wa: 'Konsultasi',
@@ -73,7 +77,7 @@ export const dataHomes = {
   thematics_banner: THEMA_BG,
   thematics_slider: false, // true for show, false to hidden
   samples: true, // true for show, false to hidden
-  samples_heading: 'Sample dan Demo',
+  samples_heading: 'Sampel dan Demo',
   samples_subheading: '',
   blogs: false, // true for show, false to hidden
   blogs_heading: 'News and Product Updates',
@@ -300,6 +304,7 @@ export const dataThematicSliders = [
 export interface ServiceDatum {
   id: number;
   title: string;
+  icon: string;
   description: string;
 }
 
@@ -307,24 +312,28 @@ export const dataServices: ServiceDatum[] = [
   {
     id: 1,
     title: 'GISWeb',
+    icon: ICONSERVICE_1,
     description:
       'Gisweb merupakan Sistem Informasi berbasis Geografi yang dijalankan secara online. Pada saat ini GIS sudah hampir digunakan disemua bidang pekerjaan khususnya dalam pengelolaan data aset spatial baik dipemerintahan maupun swasta. Dengan ditunjang fitur-fitur analisa seperti statistik GIS mampu memberikan nilai lebih dalam penyajian data secara visual dan memudahkan dalam pengambilan keputusan.',
   },
   {
     id: 2,
     title: 'Mobile GIS',
+    icon: ICONSERVICE_2,
     description:
       'Mobille GIS merupakan tool untuk pengambilan data (Mobile Data Collection) berbasis lokasi. Kami melayani pengembangan aplikasi khusus untuk pengambilan data yang bisa menyesuaikan kebutuhan perusahaan atau organisasi. Beberapa contoh penggunaan aplikasi mobile GIS ini seperti survey data kependudukan, survey sosial, survey pelanggan, survey flora dan fauna dan lain-lain.',
   },
   {
     id: 3,
     title: 'Integrasi Webgis dan Mobile',
+    icon: ICONSERVICE_3,
     description:
       'Integrasi dua sistem ini sangat powerfull dalam pekerjaan managemen data dan monitoring aset. Mobile berfungsi sebagai alat pengambilan data dilokasi yang langsung akan terkirim secara realtime. Data dari lapangan yang diterima oleh Webgis akan diolah, dianalisa serta disajikan secara otomatis. Integrasi sistem ini mampu meningkatkan efisiensi kerja dan nilai ekonomis bagi organisasi baik pemerintah maupun swasta.',
   },
   {
     id: 4,
     title: 'Custom',
+    icon: ICONSERVICE_4,
     description:
       'Layanan custom berupa pengembangan sistem dan fitur-fiturnya sesuai dengan permintaan klien. Contoh pengembangan sistem pada pemerintah seperti sistem monitoring kebakaran, sistem patroli kehutanan, monitoring aset infrastruktur, sistem informasi dan tanggap bencana. Pengembangan sistem di swasta seperti ; sistem pemanenan sawit, tracking logistik, inspeksi pipa dan haulling, analisa bisnis, dan lain-lain.',
   },
@@ -455,8 +464,8 @@ export const dataPages = [
     id: 2,
     name: 'Service',
     heading: 'Gis On Demand',
-    subheading: 'Gratis Konsultasi dan Diskusi untuk Pengembangan Sistem',
-    banner: BANNER_BG,
+    subheading: 'Gratis konsultasi dan diskusi untuk pengembangan sistem',
+    banner: LANDINGPAGE_1,
     title: 'Layanan',
     description: '',
   },
@@ -464,8 +473,8 @@ export const dataPages = [
     id: 3,
     name: 'Blog',
     heading: 'Blogs',
-    subheading: 'Dapatkan berbagi informasi dan berita terbaru terkait produk dan layanan kami.',
-    banner: BANNER_BG,
+    subheading: 'Dapatkan berbagai informasi dan berita terbaru terkait produk dan layanan kami',
+    banner: LANDINGPAGE_1,
     title: '',
     description: '',
   },
@@ -476,7 +485,7 @@ export const dataFooter = [
   {
     logo: logoLight,
     logo2: logoLight2,
-    description: 'Kami konsultan yang khusus bergerak dibidang pengembangan sistem informasi berbasis GIS',
+    description: 'Kami konsultan profesional yang khusus bergerak dibidang pengembangan sistem informasi berbasis GIS.',
     downloads: [
       {
         name: 'Apps Store',
@@ -519,7 +528,7 @@ export const dataFooter = [
       },
       {
         name: 'Email',
-        description: 'contact@digipeta.com',
+        description: 'contact.digipeta@gmail.com',
       },
       {
         name: 'Alamat',

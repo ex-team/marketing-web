@@ -19,7 +19,7 @@ function HeroSection(props: Props) {
       <div className="container title-heading p-text-center">
         <h1>{props.data.heading}</h1>
         <p>{props.data.subheading}</p>
-        <a href="http://google.com">
+        <a href="https://bit.ly/brosurdigipeta2021">
           <Button label="Download Brosur" icon="pi pi-cloud-download" />
         </a>
         <a href="https://wa.me/6289623498800/">
