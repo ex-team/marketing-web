@@ -45,6 +45,7 @@ import ICONSERVICE_2 from '../assets/images/services/mobilegis.svg';
 import ICONSERVICE_1 from '../assets/images/services/webgis.svg';
 import THEMA_BG from '../assets/images/tema.jpg';
 
+
 const VIDEO_1 = '/videos/video-1.mp4';
 // const VIDEO_2 = '/videos/video-2.mp4';
 
@@ -764,5 +765,15 @@ export const dataBlogs = [
     author: 'admin',
     created_at: '2021-06-10 17:59:50',
     updated_at: '2021-06-10 18:59:50',
+  },
+];
+
+export const speedDials = [
+  {
+    label: 'Hubungi Kami',
+    icon: 'pi pi-phone',
+    command: () => {
+      window.location.href = 'https://wa.me/6289623498800/';
+    },
   },
 ];

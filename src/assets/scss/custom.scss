@@ -24,6 +24,25 @@
   color: var(--primary-color-text);
 }
 
+.custom-speedial {
+  position: fixed;
+  bottom: 70px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.p-speeddial {
+  padding: 5px;
+}
+.p-speeddial-button.p-button.p-button-icon-only {
+  width: 3rem;
+  height: 3rem;
+}
+
 .hero-container {
   width: 100%;
   height: 60vh;
