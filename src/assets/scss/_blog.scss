@@ -227,4 +227,29 @@
   .main-container .blog-cover {
     height: 200px !important;
   }
+  .main-container .left-content .featured-image {
+    width: 100%;
+    height: 300px !important;
+    padding: 8px !important;
+  }
+
+  .main-container .left-content p img {
+    width: -webkit-fill-available;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-container .left-content .heading h1 {
+    font-size: 22px;
+  }
+
+  .main-container .left-content .featured-image {
+    width: 100%;
+    height: 200px !important;
+    padding: 5px !important;
+  }
+
+  .main-container .meta {
+    font-size: 12px;
+  }
 }

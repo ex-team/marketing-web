@@ -1,6 +1,7 @@
 // Footer
 import appStore from '../assets/images/AppStoreBadge.svg';
 import playStore from '../assets/images/GooglePlayBadge.svg';
+import BLOGPAGE from '../assets/images/blog.jpg';
 // import SERVICE1 from './../assets/images/box1.png';
 // import SERVICE2 from './../assets/images/box2.png';
 import IMG_1 from '../assets/images/img-1.jpg';
@@ -37,6 +38,7 @@ import SAMPLE_5 from '../assets/images/sample5.png';
 import SAMPLE_6 from '../assets/images/sample6.png';
 import SAMPLE_7 from '../assets/images/sample7.png';
 import SAMPLE_8 from '../assets/images/sample8.png';
+import SERVICEPAGE from '../assets/images/service.jpg';
 import ICONSERVICE_4 from '../assets/images/services/custom.svg';
 import ICONSERVICE_3 from '../assets/images/services/integrasi.svg';
 import ICONSERVICE_2 from '../assets/images/services/mobilegis.svg';
@@ -465,7 +467,7 @@ export const dataPages = [
     name: 'Service',
     heading: 'Gis On Demand',
     subheading: 'Gratis konsultasi dan diskusi untuk pengembangan sistem',
-    banner: LANDINGPAGE_1,
+    banner: SERVICEPAGE,
     title: 'Layanan',
     description: '',
   },
@@ -474,7 +476,7 @@ export const dataPages = [
     name: 'Blog',
     heading: 'Blogs',
     subheading: 'Dapatkan berbagai informasi dan berita terbaru terkait produk dan layanan kami',
-    banner: LANDINGPAGE_1,
+    banner: BLOGPAGE,
     title: '',
     description: '',
   },

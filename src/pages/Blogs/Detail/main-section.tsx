@@ -47,7 +47,7 @@ class MainSection extends React.Component<Props, {}> {
       <div className="main-container">
         <div className="container">
           <div className="content-container p-grid">
-            <div className="left-content p-col p-lg-8">
+            <div className="left-content p-col-12 p-lg-8">
               {this.state.loading ? (
                 <div className="heading p-mb-4">
                   <Skeleton width="75%" height="30px" className="p-mb-2 p-mt-2" />
